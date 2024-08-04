@@ -73,6 +73,7 @@
 
 
 
+
 document.addEventListener('DOMContentLoaded', () => {
     console.log('DOM fully loaded and parsed');
     loadCartItems();
@@ -82,17 +83,17 @@ function loadCartItems() {
     console.log('Loading cart items');
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
     console.log('Cart:', cart);
-    
+
     const cartItemsContainer = document.getElementById('cart-items');
     if (!cartItemsContainer) {
         console.error('Cart items container not found');
         return;
     }
 
-    let subtotal = 0;
+    let total = 0;
     cartItemsContainer.innerHTML = cart.map(item => {
         console.log('Item:', item);
-        subtotal += item.price * item.quantity;
+        total += item.pricePerUnit;
         return `
             <div class="cart-item">
                 <img src="${item.image}" alt="${item.name}">
@@ -112,23 +113,20 @@ function loadCartItems() {
             </div>`;
     }).join('');
 
-    updateCartSummary(subtotal);
+    updateCartSummary(total);
 }
 
-function updateCartSummary(subtotal) {
-    console.log('Updating cart summary. Subtotal:', subtotal);
-    const subtotalElement = document.getElementById('subtotal');
+function updateCartSummary(total) {
+    console.log('Updating cart summary. Total:', total);
     const totalElement = document.getElementById('total');
 
-    if (!subtotalElement || !totalElement) {
-        console.error('Subtotal or total elements not found');
+    if (!totalElement) {
+        console.error('Total element not found');
         return;
     }
 
-    subtotalElement.textContent = `₹${subtotal.toFixed(2)}`;
-    totalElement.textContent = `₹${subtotal.toFixed(2)}`;
+    totalElement.textContent = `₹${total.toFixed(2)}`;
 
-    console.log('Subtotal element updated:', subtotalElement.textContent);
     console.log('Total element updated:', totalElement.textContent);
 }
 
@@ -138,4 +136,11 @@ function removeFromCart(productId) {
     localStorage.setItem('cart', JSON.stringify(cart));
     loadCartItems();
     updateCartCount();
+}
+
+function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const totalCount = cart.reduce((total, item) => total + item.quantity, 0);
+    document.querySelector('.fa-shopping-bag + span').textContent = totalCount;
+    localStorage.setItem('cartCount', totalCount);
 }

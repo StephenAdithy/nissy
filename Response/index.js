@@ -343,6 +343,8 @@ function generateProductHTML(product) {
                     </div>
                 </div>`;
 }
+
+
 function addToCartWithSelectedWeight(productId) {
     const selectedWeightElement = document.querySelector(`input[name='weight-${productId}']:checked`);
     if (!selectedWeightElement) {
