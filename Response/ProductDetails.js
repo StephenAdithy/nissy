@@ -9,7 +9,6 @@ $(document).ready(function() {
         if ($button.hasClass('inc')) {
             var newVal = parseFloat(oldValue) + 1;
         } else {
-            // Don't allow decrementing below 1
             if (oldValue > 1) {
                 var newVal = parseFloat(oldValue) - 1;
             } else {
@@ -24,7 +23,6 @@ function loadProductDetails(id) {
         console.error('Products data is not available.');
         return;
     }
-    debugger
     const product = products[id];
     if (product) {
         if (product.productImage && product.productImage.length > 0) {
@@ -97,14 +95,12 @@ window.onload = function () {
 };
 
 function loadProduct(productId) {
-    // Check if the container exists
     const productDetailsContainer = document.getElementById('product-details-container');
     if (!productDetailsContainer) {
         console.error('Container with ID product-details-container not found.');
         return;
     }
 
-    // Build the HTML content
     const productDetails = `
         <div class="mt-4">
             <div class="product__details__quantity">
@@ -129,14 +125,11 @@ function loadProduct(productId) {
 }
 
 function handleAddToCart(productId) {
-    debugger
     let selectedWeight = document.querySelector("input[name='weight']:checked")?.value;
     
-    // Get the quantity from the input field
     let quantityElement = document.getElementById(`quantity-${productId}`);
     let quantity = quantityElement ? parseInt(quantityElement.value) : 1;
 
-    // Validate inputs
     if (!selectedWeight) {
         console.error('No weight selected');
         return;
@@ -147,11 +140,9 @@ function handleAddToCart(productId) {
         return;
     }
 
-    // Get the product from the products array
     let product = products.find(p => p.id === productId);
     
     if (product) {
-        // Call the function to add to cart
         addToCart(productId, selectedWeight, quantity);
     } else {
         console.error('Product not found');
