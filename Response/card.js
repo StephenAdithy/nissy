@@ -98,17 +98,16 @@ function loadCartItems() {
                 <img src="${item.image}" alt="${item.name}">
                 <div class="shoping__cart__table-products-details">
                     <h5>${item.name}</h5>
-                    <div class="shoping__cart__table-products-details-para">${item.description}</div>
-                    <div>${item.weight}</div>
+                    <div>Weight: ${item.weight}</div>
+                    <div>Quantity: <span id="quantity-${item.id}">${item.quantity}</span></div>
+
                     <div class="shoping__cart__table-products-details-amtcounter">
-                        <div>${item.price}/-</div>
+                        <div>Price: ${item.pricePerUnit}/-</div>
                     </div>
-                    <div class="shoping__cart__table-products-details-remove" onclick="removeFromCart(${item.id})">REMOVE</div>
+                    <div>${item.availability}</div>
                 </div>
                 <div class="counter">
-                    <button class="counter-section-countbutton" onclick="changeQuantity1(-1,${item.id})">-</button>
-                    <span id="quantity-${item.id}">${item.quantity}</span>
-                    <button class="counter-section-countbutton" onclick="changeQuantity1(1,${item.id})">+</button>
+                    <button class="shoping__cart__table-products-details-remove" onclick="removeFromCart(${item.id})">REMOVE</button>
                 </div>
             </div>`;
     }).join('');
@@ -128,7 +127,11 @@ function updateCartSummary(subtotal) {
 
     subtotalElement.textContent = `₹${subtotal.toFixed(2)}`;
     totalElement.textContent = `₹${subtotal.toFixed(2)}`;
+
+    console.log('Subtotal element updated:', subtotalElement.textContent);
+    console.log('Total element updated:', totalElement.textContent);
 }
+
 function removeFromCart(productId) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     cart = cart.filter(item => item.id !== productId);
