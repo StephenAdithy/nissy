@@ -2557,6 +2557,9 @@ span[id^=quantity-] {
   padding: 0 26px;
   height: 100%;
 }
+.footer__widget .map {
+  height: 170px;
+}
 .footer__widget .footer__widget__social a {
   display: inline-block;
   height: 41px;
