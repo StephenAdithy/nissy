@@ -142,12 +142,15 @@
                         <div class="sidebar__item">
                             <h4>Categories</h4>
                             <ul>
-                                <li><a href="#">Malt</a></li>
-                                <li><a href="#">Baby Food</a></li>
-                                <li><a href="#">Natural Protien Powder</a></li>
-                                <li><a href="#">Skin Care</a></li>
-                                <li><a href="#">Hair Care</a></li>
-                                <li><a href="#">Baby Combo</a></li>
+                                <ul>
+                                    <li><a href="#" data-category="Malt">Malt</a></li>
+                                    <li><a href="#" data-category="babyfood">Baby Food</a></li>
+                                    <li><a href="#" data-category="naturalprotienpowder">Natural Protien Powder</a></li>
+                                    <li><a href="#" data-category="skincare">Skin Care</a></li>
+                                    <li><a href="#" data-category="Hair Care">Hair Care</a></li>
+                                    <li><a href="#" data-category="Baby Combo">Baby Combo</a></li>
+                                </ul>
+                                
                             </ul>
                         </div>
 
@@ -252,3 +255,18 @@
 </body>
 
 </html>
+
+<style>
+    .active-category {
+        font-weight: bold;
+        color: green !important; 
+    }
+    #product-container {
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+}
+
+#product-container.fade-out {
+    opacity: 0;
+}
+</style>
