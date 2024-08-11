@@ -532,56 +532,6 @@
     <!--Uncomment this line-->
     <script src="//cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/script.js"></script>
 
-
-    <script>
-        $(document).ready(function () {
-            const categories = [
-                { img: "img/categories/cat-1.jpg", title: "Fresh Fruit" },
-                { img: "img/categories/cat-2.jpg", title: "Dried Fruit" },
-                { img: "img/categories/cat-3.jpg", title: "Vegetables" },
-                { img: "img/categories/cat-4.jpg", title: "Drink Fruits" },
-                { img: "img/categories/cat-5.jpg", title: "Drink Fruits" },
-                { img: "img/categories/cat-6.jpg", title: "Drink Fruits" },
-                // Add more categories as needed
-            ];
-
-            function loadCategories() {
-                const container = $('.categories__slider1');
-                container.empty(); // Clear any existing content
-
-                categories.forEach(category => {
-                    const categoryItem = `
-                    <div class="item">
-                        <div class="categories__item">
-                            <img src="${category.img}" alt="${category.title}">
-                            <h5><a href="#">${category.title}</a></h5>
-                        </div></div>
-                    `;
-
-                    container.append(categoryItem);
-                });
-
-                // Initialize Owl Carousel
-                container.owlCarousel({
-                    loop: true,
-                    margin: 10,
-                    nav: true,
-                    responsive: {
-                        0: {
-                            items: 1
-                        },
-                        600: {
-                            items: 2
-                        },
-                        1000: {
-                            items: 3
-                        }
-                    }
-                });
-            }
-            loadCategories();
-        });
-    </script>
 </body>
 
 </html>
