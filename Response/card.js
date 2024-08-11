@@ -68,3 +68,7 @@ function updateCartCount() {
     document.querySelector('.fa-shopping-bag + span').textContent = totalCount;
     localStorage.setItem('cartCount', totalCount);
 }
+function saveCartForCheckout() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    localStorage.setItem('checkoutCart', JSON.stringify(cart));
+}
