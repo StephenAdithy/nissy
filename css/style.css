@@ -358,9 +358,6 @@ ol {
   margin-right: 6px;
 }
 
-.header__logo {
-  padding: 15px 0;
-}
 .header__logo a {
   display: inline-block;
 }
@@ -441,7 +438,6 @@ ol {
 
 .header__cart {
   text-align: right;
-  padding: 24px 0;
 }
 .header__cart ul {
   display: inline-block;
@@ -495,12 +491,26 @@ ol {
   display: none;
 }
 
+.navbar-nav {
+  float: right;
+  align-items: center;
+  gap: 20px;
+}
+
+.btn_nav {
+  padding: 5px 15px;
+  border: 1px solid gray;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: black;
+  font-size: 18px;
+  font-weight: 600;
+}
+
 /*---------------------
   Hero
 -----------------------*/
-.hero {
-  padding-bottom: 50px;
-}
 .hero.hero-normal {
   padding-bottom: 30px;
 }
@@ -518,6 +528,10 @@ ol {
 }
 .hero.hero-normal .hero__search {
   margin-bottom: 0;
+}
+
+.bannerhero {
+  padding: 0;
 }
 
 .hero__categories__all {
@@ -1159,12 +1173,12 @@ span[id^=quantity-] {
 .breadcrumb-section {
   display: flex;
   align-items: center;
-  padding: 45px 0 40px;
+  padding: 30px 0 40px;
 }
 
 .breadcrumb__text h2 {
   font-size: 46px;
-  color: #ffffff;
+  color: black;
   font-weight: 700;
 }
 
@@ -1341,7 +1355,7 @@ span[id^=quantity-] {
   Shop Grid
 -----------------------*/
 .product {
-  padding-top: 80px;
+  padding-top: 0px;
   padding-bottom: 80px;
 }
 
