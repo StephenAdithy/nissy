@@ -358,6 +358,9 @@ ol {
   margin-right: 6px;
 }
 
+.header__logo {
+  padding: 15px 0;
+}
 .header__logo a {
   display: inline-block;
 }
@@ -773,6 +776,7 @@ ol {
   position: relative;
   overflow: hidden;
   background-position: center center;
+  transition: background-image 0.3s ease-in-out;
 }
 
 .featured__item__pic__hover {
@@ -915,6 +919,10 @@ ol {
   margin-bottom: 70px;
 }
 
+.bannerht {
+  height: 600px;
+}
+
 /*--------------------------*/
 /* Add your CSS styling here */
 .container {
@@ -953,14 +961,16 @@ ol {
 }
 
 .featured__item__text-optionbtn {
-  font-size: 20px;
+  font-size: 15px;
   padding: 5px 20px;
   width: 80%;
   margin-top: 15px;
   margin-bottom: 20px;
-  background: #88e188;
+  background: #7fad39;
   border: 1px solid;
-  border-radius: 20px;
+  border-radius: 2px;
+  color: white;
+  font-weight: 700;
   cursor: pointer;
 }
 
