@@ -30,7 +30,7 @@
 html,
 body {
   height: 100%;
-  font-family: "Cairo", sans-serif;
+  font-family: "Auto", sans-serif;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
 }
@@ -365,7 +365,6 @@ ol {
   display: inline-block;
 }
 .header__logo img {
-  padding-left: 20px;
   max-width: 100%;
   height: 70px;
 }
@@ -831,6 +830,7 @@ ol {
 }
 .featured__item__text h6 a {
   color: #252525;
+  text-decoration: none;
 }
 .featured__item__text h5 {
   color: #252525;
@@ -2536,6 +2536,7 @@ span[id^=quantity-] {
   color: #1c1c1c;
   font-size: 14px;
   line-height: 32px;
+  text-decoration: none;
 }
 .footer__widget p {
   font-size: 14px;

@@ -1,85 +1,55 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Ogani Template">
-    <meta name="keywords" content="Ogani, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ogani | Template</title>
-
+    <title>Bootstrap Navbar</title>
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
-
-    <!-- Css Styles -->
+    <!-- Bootstrap CSS -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
     <link rel="stylesheet" href="css/nice-select.css" type="text/css">
     <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
-
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-image: url('./img/featured/bg.jpg');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-attachment: fixed;
-        }
-    </style>
 </head>
 
 <body>
-    <!-- Page Preloder -->
-    <div id="preloder">
-        <div class="loader"></div>
-    </div>
-    <!-- Humberger Begin -->
-    <div class="humberger__menu__overlay"></div>
-    <div class="humberger__menu__wrapper">
-        <div class="humberger__menu__logo">
-            <a href="#"><img src="img/Nissy/Logo.png" alt=""></a>
-        </div>
-        <nav class="humberger__menu__nav mobile-menu">
-            <ul>
-                <li class="active"><a href="./index.html">Home</a></li>
-                <li><a href="./shop-grid.html">Products</a></li>
-                <li><a href="./contact.html">Contact Us</a></li>
-                <li><a href="./shop-grid.html">About</a></li>
-            </ul>
-        </nav>
-        <div id="mobile-menu-wrap"></div>
-    </div>
-    <!-- Humberger End -->
-
-    <!-- Header Section Begin -->
-    <header class="header">
-
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 logo-align">
-                    <div class="header__logo">
-                        <a href="./index.html"><img src="img/Nissy/Logo.png" alt="" class="logoimg"></a>
-                    </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <div class="header__logo">
+                <a href="./index.html"><img src="img/Nissy/Logo.png" alt="" class="logoimg"></a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="col-lg-6">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./shop-grid.html">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./AboutUs.html">About Us</a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="col-lg-6 headalign">
-                    <nav class="header__menu">
-                        <ul>
-                            <li class="active"><a href="./index.html">Home</a></li>
-                            <li><a href="./shop-grid.html">Products</a></li>
-                            <li><a href="./contact.html">Contact Us</a></li>
-                            <li><a href="./shop-grid.html">About</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="col-lg-2">
+
+                <div class="col-lg-6">
                     <div class="header__cart">
                         <ul>
                             <li>
@@ -94,12 +64,10 @@
                     </div>
                 </div>
             </div>
-
-            <div class="humberger__open">
-                <i class="fa fa-bars"></i>
-            </div>
         </div>
-    </header>
+    </nav>
+
+
     <div id="favoritesPopup" class="popup">
         <div class="popup-content">
             <span class="close" onclick="closeFavoritesPopup()">&times;</span>
@@ -114,30 +82,27 @@
         <div class="col-lg-12">
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                 </ol>
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img class="d-block w-100 bannerht" src="img//Category/banner.jpg" alt="First slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100 bannerht" src="img/banner/Banner2.jpg" alt="Second slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100 bannerht" src="img/banner/Banner3.jpg" alt="Third slide">
-                    </div>
+                  <div class="carousel-item active">
+                    <img class="d-block w-100" src="img/banner/banner-1.jpg" alt="First slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="img/banner/banner-2.jpg" alt="Second slide">
+                  </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
                 </a>
                 <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
                 </a>
-            </div>
+              </div>
         </div>
     </section>
     <!-- Hero Section End -->
@@ -146,62 +111,25 @@
         <div class="container">
             <h4 class="mt-5 mb-4 text-center heading">Top Categories</h4>
             <div class="row no-gutters">
-                <div class="col-lg-3 col-md-3 col-sm-3 col-6 mb-4 grid1">
-                    <img class="sect1 mb-4" src="img/Category/3.jpg" alt="Alternate Text">
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-3 col-6 mb-4 grid1">
-                    <img class="sect1 mb-4" src="img/Category/Me.jpg" alt="Alternate Text">
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-3 col-6 mb-4 grid1">
-                    <img class="sect1 mb-4" src="img/Category/2.jpg" alt="Alternate Text">
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-3 col-6 mb-4 grid1">
-                    <img class="sect1 mb-4" src="img/Category/1.jpg" alt="Alternate Text">
+                <div class="owl-carousel owl-theme testimonial-slider">
+                    <div class="item">
+                        <img class="sect1 mb-4" src="img/Category/3.jpg" data-category="Malt"  alt="Alternate Text">
+                    </div>
+                    <div class="item">
+                        <img class="sect1 mb-4" src="img/Category/Me.jpg" data-category="babyfood" alt="Alternate Text">
+                    </div>
+                    <div class="item">
+                        <img class="sect1 mb-4" src="img/Category/2.jpg" data-category="skincare" alt="Alternate Text">
+                    </div>
+                    <div class="item">
+                        <img class="sect1 mb-4" src="img/Category/1.jpg" data-category="naturalprotienpowder" alt="Alternate Text">
+                    </div>
                 </div>
             </div>
+
         </div>
     </section>
-    <!-- products Section End -->
-
-
-    <!-- Categories Section Begin -->
-    <!-- <section class="categories">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title">
-                        <h2 class="text-center">Top Categories</h2>
-                    </div>
-                </div> -->
-    <!-- <div class="categories__slider owl-carousel mt-3">
-                    <div class="col-lg-3">
-                        <div class="categories__item set-bg" data-setbg="img/categories/cat-1.jpg">
-                            <h5><a href="#">Fresh Fruit</a></h5>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="categories__item set-bg" data-setbg="img/categories/cat-2.jpg">
-                            <h5><a href="#">Dried Fruit</a></h5>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="categories__item set-bg" data-setbg="img/categories/cat-3.jpg">
-                            <h5><a href="#">Vegetables</a></h5>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="categories__item set-bg" data-setbg="img/categories/cat-4.jpg">
-                            <h5><a href="#">Drink Fruits</a></h5>
-                        </div>
-                    </div>
-                </div> -->
-
-    <!-- <div class="categories__slider1 owl-carousel mt-3"></div> -->
-
-    <!-- </div>
-        </div>
-    </section> -->
-    <!-- Categories Section End -->
+    <!-- products Section End -->   
 
     <!-- Featured Section Begin -->
     <section class="featured spad">
@@ -223,196 +151,47 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="row featured__filter"> -->
-            <!-- <div
-                    class="featured__filter-items featured__filter-items col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
-                    <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/Nissy/Newimages/2.jpg">
-                            <ul class="featured__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="featured__item__text">
-                            <h6><a href="#">Crab Pool Security</a></h6>
-                            <h5>$30.00</h5>
-                            <button class="featured__item__text-optionbtn" onclick="openNav()">Select Option</button>
-
-                            <div id="overlay" class="overlay" onclick="closeNav()"></div>
-
-                            <div id="mySidenav" class="sidenav">
-                                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                                <div class="sidenav-content">
-                                    <div class="slider">
-                                        <div class="slides">
-                                            <img src="./img/featured/feature-product-1.jpg" alt="image">
-                                            <img src="./img/featured/feature-product-2.jpg" alt="image">
-                                        </div>
-                                        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-                                        <button class="next" onclick="moveSlide(1)">&#10095;</button>
-                                    </div>
-                                    <div class="main-content">
-                                        <div class="main-content-heading"><a>Hair oil</a></div>
-                                        <p>(300.00 - 1200.00)</p>
-                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam odio
-                                            quidem aliquid voluptatem veritatis maxime eaque voluptatum expedita illo
-                                            excepturi atque at assumenda quod, delectus ipsa aliquam cupiditate cum
-                                            tempora.</p>
-                                        <div>
-                                            <h4>Weight</h4>
-                                            <div class="weight-display">
-                                                <label><input type="radio" name="weight" value="1L"> 1 Liter</label><br>
-                                                <label><input type="radio" name="weight" value="250ml"> 250
-                                                    ml</label><br>
-                                                <label><input type="radio" name="weight" value="500ml"> 500 ml</label>
-                                            </div>
-
-                                        </div>
-                                        <div class="order-section">
-                                            <button class="order-section-countbutton"
-                                                onclick="changeQuantity(-1)">-</button>
-                                            <span id="quantity">1</span>
-                                            <button class="order-section-countbutton"
-                                                onclick="changeQuantity(1)">+</button>
-                                            <button class="add-to-cart">Add to Cart</button>
-                                            <button class="buy-now">Buy Now</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
             <div class="row featured__filter"></div>
-
-            <!-- <div class="featured__filter-items col-lg-3 col-md-4 col-sm-6 mix fresh-meat vegetables">
-                    <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/Nissy/Newimages/6.jpg">
-                            <ul class="featured__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="featured__item__text">
-                            <h6><a href="shop-details.html?id=1">Crab Pool Security</a></h6>
-                            <h5>$30.00</h5>
-                            <button class="featured__item__text-optionbtn" onclick="location.href='shop-details.html?id=1'">Select Option</button>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="featured__filter-items col-lg-3 col-md-4 col-sm-6 mix vegetables fastfood">
-                    <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/Nissy/Newimages/3.jpg">
-                            <ul class="featured__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="featured__item__text">
-                            <h6><a href="shop-details.html?id=2">Crab Pool Security</a></h6>
-                            <h5>$30.00</h5>
-                            <button class="featured__item__text-optionbtn" onclick="location.href='shop-details.html?id=2'">Select Option</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="featured__filter-items col-lg-3 col-md-4 col-sm-6 mix vegetables fresh-meat">
-                    <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/Nissy/Newimages/4.jpg">
-                            <ul class="featured__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="featured__item__text">
-                            <h6><a href="#">Crab Pool Security</a></h6>
-                            <h5>$30.00</h5>
-                            <button class="featured__item__text-optionbtn">Select Option</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="featured__filter-items col-lg-3 col-md-4 col-sm-6 mix fastfood oranges">
-                    <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/Nissy/Newimages/5.jpg">
-                            <ul class="featured__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="featured__item__text">
-                            <h6><a href="#">Crab Pool Security</a></h6>
-                            <h5>$30.00</h5>
-                            <button class="featured__item__text-optionbtn">Select Option</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="featured__filter-items col-lg-3 col-md-4 col-sm-6 mix fresh-meat vegetables">
-                    <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/Nissy/Newimages/6.jpg">
-                            <ul class="featured__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="featured__item__text">
-                            <h6><a href="#">Crab Pool Security</a></h6>
-                            <h5>$30.00</h5>
-                            <button class="featured__item__text-optionbtn">Select Option</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="featured__filter-items col-lg-3 col-md-4 col-sm-6 mix oranges fastfood">
-                    <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/Nissy/Newimages/7.jpg">
-                            <ul class="featured__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="featured__item__text">
-                            <h6><a href="#">Crab Pool Security</a></h6>
-                            <h5>$30.00</h5>
-                            <button class="featured__item__text-optionbtn">Select Option</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="featured__filter-items col-lg-3 col-md-4 col-sm-6 mix fresh-meat vegetables">
-                    <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/Nissy/Newimages/8.jpg">
-                            <ul class="featured__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="featured__item__text">
-                            <h6><a href="#">Crab Pool Security</a></h6>
-                            <h5>$30.00</h5>
-                            <button class="featured__item__text-optionbtn">Select Option</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="featured__filter-items col-lg-3 col-md-4 col-sm-6 mix fastfood vegetables">
-                    <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/Nissy/Newimages/10.jpg">
-                            <ul class="featured__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="featured__item__text">
-                            <h6><a href="#">Crab Pool Security</a></h6>
-                            <h5>$30.00</h5>
-                            <button class="featured__item__text-optionbtn">Select Option</button>
-                        </div>
-                    </div>
-                </div> -->
         </div>
         </div>
     </section>
     <!-- Featured Section End -->
 
     <!-- Banner Begin -->
+
+    <!-- Gallery -->
     <div class="banner">
+        <div class="container">
+            <div class="grid-header">
+                <h3>Gallery</h3>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-6 gallerycol mb-3">
+                    <img src="img/Nissy/Newimages/1.jpg" class="w-100 gallery gallery1 mb-3" alt="Boat on Calm Water" />
+                    <img src="img/Nissy/Newimages/2.jpg" class="w-100 gallery gallery2 mb-3"
+                        alt="Wintry Mountain Landscape" />
+                </div>
+                <div class="col-lg-3 col-md-4 col-6 gallerycol mb-3">
+                    <img src="img/Nissy/Newimages/7.jpg" class="w-100 gallery gallery2 mb-3"
+                        alt="Mountains in the Clouds" />
+                    <img src="img/Nissy/Newimages/8.jpg" class="w-100 gallery gallery1 mb-3" alt="Boat on Calm Water" />
+                </div>
+                <div class="col-lg-3 col-md-4 col-6 gallerycol mb-3">
+                    <img src="img/Nissy/Newimages/10.jpg" class="w-100 gallery gallery2 mb-3" alt="Waves at Sea" />
+                    <img src="img/Nissy/Newimages/6.jpg" class="w-100 gallery gallery1 mb-3"
+                        alt="Yosemite National Park" />
+                </div>
+                <div class="col-lg-3 col-md-4 col-6 gallerycol mb-3">
+                    <img src="img/Nissy/Newimages/10.jpg" class="w-100 gallery gallery1 mb-3" alt="Waves at Sea" />
+                    <img src="img/Nissy/Newimages/6.jpg" class="w-100 gallery gallery2 mb-3"
+                        alt="Yosemite National Park" />
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Gallery -->
+    <!-- <div class="banner">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12">
@@ -421,7 +200,6 @@
                         <p>Resize the browser window to see the responsive effect.</p>
                     </div>
 
-                    <!-- Photo Grid -->
                     <div class="grid-row">
                         <div class="grid-column">
                             <img src="img/gallery/gallery 1.jpg" style="width:100%">
@@ -431,7 +209,6 @@
 
                         </div>
                         <div class="grid-column">
-                            <!-- <img src="img/gallery/gallery 7.jpg" style="width:100%"> -->
                             <img src="img/gallery/gallery 10.jpg" style="width:100%">
                             <img src="img/gallery/gallery 9.jpg" style="width:100%">
                         </div>
@@ -449,7 +226,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Banner End -->
 
     <footer class="footer spad">
@@ -471,7 +248,7 @@
                     <div class="footer__widget">
                         <h6>Useful Links</h6>
                         <ul>
-                            <li><a href="#">About Us</a></li>
+                            <li><a href="#" data-toggle="modal" data-target="#exampleModalCenter">About Us</a></li>
                             <li><a href="#">Delivery infomation</a></li>
                             <li><a href="#">Privacy Policy</a></li>
                         </ul>
@@ -513,33 +290,152 @@
         </div>
     </footer>
 
-    <!-- Js Plugins -->
-    <!-- <script src="js/jquery-3.3.1.min.js"></script> -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Who We Are</h5>
+                    <button type="button" class="closebtn" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" style="font-size: xx-large;">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    The modal plugin toggles your hidden content on demand, via data attributes or JavaScript. It also
+                    adds .modal-open to the
+
+                    <body> to override default scrolling behavior and generates a .modal-backdrop to provide a click
+                        area for dismissing shown modals when clicking outside the modal.
+                        Activate a modal without writing JavaScript. Set data-toggle="modal" on a controller element,
+                        like a button, along with a data-target="#foo" or href="#foo" to target a specific modal to
+                        toggle.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.nice-select.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/jquery.slicknav.js"></script>
     <script src="js/mixitup.min.js"></script>
-    <script src="js/owl.carousel.js"></script>
+    <!-- <script src="js/owl.carousel.js"></script> -->
     <script src="js/main.js"></script>
     <script src="Response/Option.js"></script>
     <script src="Response/index.js"></script>
     <script src="Response/UpdateCount.js"></script>
+    <script>
+       document.addEventListener('DOMContentLoaded', function() {
+            // Select all images with the class 'sect1'
+            const imageElements = document.querySelectorAll('img.sect1');
+
+            imageElements.forEach(image => {
+                image.addEventListener('click', function() {
+                    const selectedCategory = this.getAttribute('data-category');
+                    if (selectedCategory) {
+                        window.location.href = `shop-grid.html?category=${selectedCategory}`;
+                    }
+                });
+            });
+        });
+        $(document).ready(function () {
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 20,
+                nav: true,
+                dots: true,
+                autoplay: false,
+                autoplayTimeout: 5000,
+                navText: [
+                    '<i class="fa fa-chevron-left" aria-hidden="true"></i>',
+                    '<i class="fa fa-chevron-right" aria-hidden="true"></i>'
+                ],
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    540: {
+                        items: 2
+                    },
+                    767: {
+                        items: 2
+                    },
+                    1024: {
+                        items: 3
+                    }
+                },
+
+            });
+        });
+    </script>
+
 </body>
 
 </html>
+
+
+
 <style>
-    .sect1 {
-        position: relative;
-        width: 100%;
-        padding: 20px;
+    .modal-header {
+        background: #88e188;
+    }
+
+    .modal-title {
+        color: white;
+        font-weight: 900;
+    }
+
+    @media(max-width:540px) {
+        .gallerycol {
+            margin-bottom: -40px !important;
+        }
+    }
+
+    .closebtn {
+        background: transparent;
+        border: 1px solid transparent;
+    }
+
+    .gallerycol {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .gallery1 {
+        height: 30%;
+    }
+
+    .gallery2 {
+        height: 50%;
+    }
+
+    .gallery:hover {
+        scale: 1.1;
         transition: all 1s ease 0s;
     }
 
-    .sect1:hover {
-        scale: 1.1;
-        transition: all 1s ease 0s;
+    /* body {
+        margin: 0;
+        padding: 0;
+        background-image: url('./img/featured/bg.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+    } */
+
+    .testimonial-slider .sect1 {
+        padding: 35px;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
     }
 
     .heading {
@@ -571,25 +467,6 @@
         height: auto;
     }
 
-    .prev,
-    .next {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background-color: rgba(0, 0, 0, 0.5);
-        color: white;
-        border: none;
-        padding: 10px;
-        cursor: pointer;
-    }
-
-    .prev {
-        left: 10px;
-    }
-
-    .next {
-        right: 10px;
-    }
 
     .set-bg {
         background-size: cover;
@@ -621,6 +498,66 @@
 
     .fa-heart.favorited {
         color: red;
+    }
+
+    .owl-nav button.owl-prev,
+    .owl-nav button.owl-next {
+        border-radius: 50%;
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        z-index: 1000;
+        /* Ensure they are on top of other elements */
+        transform: translateY(-50%);
+    }
+
+    .owl-carousel .owl-nav {
+        top: -234px;
+    }
+
+    .fa .fa-chevron-left .fa .fa-chevron-right {
+        font-size: x-large;
+    }
+
+    .owl-nav button.owl-prev {
+        left: 0;
+        /* Adjust as needed */
+    }
+
+    .owl-nav button.owl-next {
+        right: 0;
+        /* Adjust as needed */
+    }
+
+    .owl-carousel .owl-nav {
+        position: relative;
+        /* Ensure positioning context */
+        width: 100%;
+    }
+
+    .owl-nav button {
+        opacity: 1;
+        /* Ensure buttons are visible */
+        display: block;
+    }
+
+
+    .owl-carousel .owl-dot.active {
+        color: green;
+    }
+
+    .owl-theme .owl-dots .owl-dot span {
+        background: gray;
+    }
+
+    .owl-theme .owl-dots .owl-dot.active span,
+    .owl-theme .owl-dots .owl-dot:hover span {
+        background: green;
+    }
+
+    .owl-theme .owl-nav [class*=owl-]:hover {
+        background: transparent;
+        color: black;
     }
 
     .popup {
@@ -656,47 +593,8 @@
         margin-right: 15px;
     }
 
-    .testimony-wrap {
-        display: flex;
-        align-items: center;
-        padding: 20px;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        background: #fff;
-    }
-
-    .testimonial-content {
-        font-size: 16px;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        max-width: 200px;
-        /* Adjust this width as needed */
-    }
-
-    .testimonial-content:hover::after {
-        content: attr(data-full-text);
-        white-space: normal;
-        position: absolute;
-        background: rgba(0, 0, 0, 0.8);
-        color: #fff;
-        padding: 10px;
-        border-radius: 5px;
-        z-index: 10;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        max-width: 300px;
-        /* Adjust the width of the tooltip */
-    }
-
     .text {
         flex: 1;
-    }
-
-    .owl-item {
-        width: 400px !important;
-        padding: 30px;
     }
 
     .quote {
