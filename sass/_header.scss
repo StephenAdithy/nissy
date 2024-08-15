@@ -165,7 +165,7 @@
 }
 
 .header__logo {
-    padding: 15px 0;
+    // padding: 15px 0;
 
     a {
         display: inline-block;
@@ -271,7 +271,7 @@
 
 .header__cart {
     text-align: right;
-    padding: 24px 0;
+    // padding: 24px 0;
 
     ul {
         display: inline-block;
@@ -331,4 +331,21 @@
 
 .humberger__open {
     display: none;
+}
+
+.navbar-nav {
+    float: right;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn_nav {
+    padding: 5px 15px;
+    border: 1px solid gray;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
 }
