@@ -52,7 +52,7 @@
                             <a class="nav-link" href="./contact.html">Contact</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./shop-grid.html">About Us</a>
+                            <a class="nav-link" href="./AboutUs.html">About Us</a>
                         </li>
                         <div class="header__cart">
                             <ul>
@@ -84,6 +84,7 @@
     <!-- Header Section End -->
 
     <!-- Hero Section Begin -->
+
      <section id="home">
     <div class="hero">
         <!-- Second Swiper -->
@@ -114,7 +115,7 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                 </a>
-            </div>
+              </div>
         </div>
     </div>
 </section>
@@ -127,23 +128,24 @@
             </div>
             <div class="row no-gutters">
                 <div class="owl-carousel owl-theme testimonial-slider">
-                    <div class="item mb-4 grid1">
-                        <img class="sect1 mb-4" src="img/Category/3.jpg" alt="Alternate Text">
+                    <div class="item">
+                        <img class="sect1 mb-4" src="img/Category/3.jpg" data-category="Malt"  alt="Alternate Text">
                     </div>
-                    <div class="item mb-4 grid1">
-                        <img class="sect1 mb-4" src="img/Category/Me.jpg" alt="Alternate Text">
+                    <div class="item">
+                        <img class="sect1 mb-4" src="img/Category/Me.jpg" data-category="babyfood" alt="Alternate Text">
                     </div>
-                    <div class="item mb-4 grid1">
-                        <img class="sect1 mb-4" src="img/Category/2.jpg" alt="Alternate Text">
+                    <div class="item">
+                        <img class="sect1 mb-4" src="img/Category/2.jpg" data-category="skincare" alt="Alternate Text">
                     </div>
-                    <div class="item mb-4 grid1">
-                        <img class="sect1 mb-4" src="img/Category/1.jpg" alt="Alternate Text">
+                    <div class="item">
+                        <img class="sect1 mb-4" src="img/Category/1.jpg" data-category="naturalprotienpowder" alt="Alternate Text">
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
-    <!-- products Section End -->
+    <!-- products Section End -->   
 
     <!-- Featured Section Begin -->
     <section class="featured spad">
@@ -179,6 +181,9 @@
             <h2>Our production Gallery</h2>
         </div>
         <div class="container">
+            <div class="grid-header">
+                <h3>Gallery</h3>
+            </div>
             <div class="row">
                 <div class="col-lg-3 col-md-4 col-6 gallerycol mb-3">
                     <img src="img/Nissy/Newimages/1.jpg" class="w-100 gallery gallery1 mb-3" alt="Boat on Calm Water" />
@@ -247,7 +252,7 @@
                     <div class="footer__widget">
                         <h6>Useful Links</h6>
                         <ul>
-                            <li><a href="#">About Us</a></li>
+                            <li><a href="#" data-toggle="modal" data-target="#exampleModalCenter">About Us</a></li>
                             <li><a href="#">Delivery infomation</a></li>
                             <li><a href="#">Privacy Policy</a></li>
                         </ul>
@@ -289,6 +294,32 @@
         </div>
     </footer>
 
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Who We Are</h5>
+                    <button type="button" class="closebtn" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" style="font-size: xx-large;">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    The modal plugin toggles your hidden content on demand, via data attributes or JavaScript. It also
+                    adds .modal-open to the
+
+                    <body> to override default scrolling behavior and generates a .modal-backdrop to provide a click
+                        area for dismissing shown modals when clicking outside the modal.
+                        Activate a modal without writing JavaScript. Set data-toggle="modal" on a controller element,
+                        like a button, along with a data-target="#foo" or href="#foo" to target a specific modal to
+                        toggle.
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Bootstrap JS and dependencies -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
@@ -305,6 +336,19 @@
     <script src="Response/index.js"></script>
     <script src="Response/UpdateCount.js"></script>
     <script>
+       document.addEventListener('DOMContentLoaded', function() {
+            // Select all images with the class 'sect1'
+            const imageElements = document.querySelectorAll('img.sect1');
+
+            imageElements.forEach(image => {
+                image.addEventListener('click', function() {
+                    const selectedCategory = this.getAttribute('data-category');
+                    if (selectedCategory) {
+                        window.location.href = `shop-grid.html?category=${selectedCategory}`;
+                    }
+                });
+            });
+        });
         $(document).ready(function () {
             $('.owl-carousel').owlCarousel({
                 loop: true,
@@ -389,6 +433,7 @@
         height: 330px;
     }
 
+
     .swiper-slide img {
         display: block;
         width: 100%;
@@ -401,14 +446,24 @@
         color: #000;
         /* Change color as needed */
     }
-</style>
+    .modal-header {
+        background: #88e188;
+    }
 
+    .modal-title {
+        color: white;
+        font-weight: 900;
+    }
 
-<style>
     @media(max-width:540px) {
         .gallerycol {
             margin-bottom: -40px !important;
         }
+    }
+
+    .closebtn {
+        background: transparent;
+        border: 1px solid transparent;
     }
 
     .gallerycol {
@@ -429,7 +484,7 @@
         transition: all 1s ease 0s;
     }
 
-    body {
+    /* body {
         margin: 0;
         padding: 0;
         /* background-image: url('./img/featured/bg.jpg');
@@ -439,16 +494,12 @@
         background-attachment: fixed; */
     }
 
-    .sect1 {
-        position: relative;
-        width: 100%;
-        padding: 20px;
-        transition: all 1s ease 0s;
-    }
 
-    .sect1:hover {
-        scale: 1.1;
-        transition: all 1s ease 0s;
+    .testimonial-slider .sect1 {
+        padding: 35px;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
     }
 
     .heading {
@@ -490,25 +541,6 @@
         height: auto;
     }
 
-    .prev,
-    .next {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background-color: rgba(0, 0, 0, 0.5);
-        color: white;
-        border: none;
-        padding: 10px;
-        cursor: pointer;
-    }
-
-    .prev {
-        left: 10px;
-    }
-
-    .next {
-        right: 10px;
-    }
 
     .set-bg {
         background-size: cover;
@@ -542,6 +574,66 @@
         color: red;
     }
 
+    .owl-nav button.owl-prev,
+    .owl-nav button.owl-next {
+        border-radius: 50%;
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        z-index: 1000;
+        /* Ensure they are on top of other elements */
+        transform: translateY(-50%);
+    }
+
+    .owl-carousel .owl-nav {
+        top: -234px;
+    }
+
+    .fa .fa-chevron-left .fa .fa-chevron-right {
+        font-size: x-large;
+    }
+
+    .owl-nav button.owl-prev {
+        left: 0;
+        /* Adjust as needed */
+    }
+
+    .owl-nav button.owl-next {
+        right: 0;
+        /* Adjust as needed */
+    }
+
+    .owl-carousel .owl-nav {
+        position: relative;
+        /* Ensure positioning context */
+        width: 100%;
+    }
+
+    .owl-nav button {
+        opacity: 1;
+        /* Ensure buttons are visible */
+        display: block;
+    }
+
+
+    .owl-carousel .owl-dot.active {
+        color: green;
+    }
+
+    .owl-theme .owl-dots .owl-dot span {
+        background: gray;
+    }
+
+    .owl-theme .owl-dots .owl-dot.active span,
+    .owl-theme .owl-dots .owl-dot:hover span {
+        background: green;
+    }
+
+    .owl-theme .owl-nav [class*=owl-]:hover {
+        background: transparent;
+        color: black;
+    }
+
     .popup {
         display: none;
         position: fixed;
@@ -573,40 +665,6 @@
         background-position: center;
         border-radius: 50%;
         margin-right: 15px;
-    }
-
-    .testimony-wrap {
-        display: flex;
-        align-items: center;
-        padding: 20px;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        background: #fff;
-    }
-
-    .testimonial-content {
-        font-size: 16px;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        max-width: 200px;
-        /* Adjust this width as needed */
-    }
-
-    .testimonial-content:hover::after {
-        content: attr(data-full-text);
-        white-space: normal;
-        position: absolute;
-        background: rgba(0, 0, 0, 0.8);
-        color: #fff;
-        padding: 10px;
-        border-radius: 5px;
-        z-index: 10;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        max-width: 300px;
-        /* Adjust the width of the tooltip */
     }
 
     .text {
