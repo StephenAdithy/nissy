@@ -483,17 +483,59 @@ function addToCart(productId, selectedWeight, quantity, pricePerUnit) {
     showToast('Item added to cart!');
 }
 
+
 function renderProducts(products) {
     const container = document.querySelector('.featured__filter');
     container.innerHTML = products.map(generateProductHTML).join('');
 }
 
+// Function to filter products by category
+function filterProductsByCategory(category) {
+    const filteredProducts = products.filter(product => product.category === category);
+    renderProducts(filteredProducts);
+}
+
+// Function to set the active category and load products
+function setActiveCategory(category) {
+    filterProductsByCategory(category);
+    // Update active class
+    document.querySelectorAll('.featured__controls a').forEach(link => {
+        link.classList.toggle('active', link.getAttribute('data-category') === category);
+    });
+}
+
+// Document ready function
 $(document).ready(function () {
-    renderProducts(products);
+    const defaultCategory = 'Malt'; 
+    setActiveCategory(defaultCategory);
     updateFavoriteCount();
     loadFavorites();
     updateCartCount();
+
+    // Add click event listeners for category filters
+    $('.featured__controls a').on('click', function() {
+        const category = $(this).data('category');
+        setActiveCategory(category);
+    });
 });
+
+// function renderProducts(products) {
+//     const container = document.querySelector('.featured__filter');
+//     container.innerHTML = products.map(generateProductHTML).join('');
+// }
+
+// function filterProductsByCategory(category) {
+//     const filteredProducts = products.filter(product => product.category === category);
+//     renderProducts(filteredProducts);
+// }
+
+
+// $(document).ready(function () {
+//     renderProducts(products);
+//     updateFavoriteCount();
+//     loadFavorites();
+//     updateCartCount();
+// });
 document.addEventListener('DOMContentLoaded', function () {
     const cartCount = localStorage.getItem('cartCount') || 0;
     document.querySelector('.fa-shopping-bag + span').textContent = cartCount;
