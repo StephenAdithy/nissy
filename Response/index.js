@@ -220,7 +220,7 @@ const products = [
         rate: " ₹ 400.00",
         productImage: [
             "img/product/details/product-details-1.jpg",
-            "img/product/details/thumb-1.jpg",
+            "img/product/details/thumb-4.jpg",
             "img/product/details/thumb-2.jpg",
             "img/product/details/thumb-3.jpg",
             "img/product/details/thumb-4.jpg"
@@ -246,7 +246,7 @@ const products = [
         rate: " ₹ 400.00",
         productImage: [
             "img/product/details/product-details-1.jpg",
-            "img/product/details/thumb-1.jpg",
+            "img/product/details/thumb-4.jpg",
             "img/product/details/thumb-2.jpg",
             "img/product/details/thumb-3.jpg",
             "img/product/details/thumb-4.jpg"
@@ -273,7 +273,7 @@ const products = [
         rate: " ₹ 400.00",
         productImage: [
             "img/product/details/product-details-1.jpg",
-            "img/product/details/thumb-1.jpg",
+            "img/product/details/thumb-4.jpg",
             "img/product/details/thumb-2.jpg",
             "img/product/details/thumb-3.jpg",
             "img/product/details/thumb-4.jpg"
@@ -287,62 +287,6 @@ const products = [
     // Add more products as needed
 ];
 
-// function generateProductHTML(product) {
-//     const weightOptionsHTML = product.weights.map(weight =>
-//         `<label>
-//         <input type="radio" name="weight-${product.id}" value="${weight.value}" data-price="${weight.price}" onclick="updatePrice(${product.id})"> 
-//         ${weight.label}
-//     </label><br>`).join('');
-//     const imagesHTML = product.images.map(img =>
-//         `<img src="${img}" alt="image">`).join('');
-
-//     return `
-//                 <div class="featured__filter-items col-lg-3 col-md-4 col-sm-6 mix ${product.category}">
-//                     <div class="featured__item">
-//                         <div class="featured__item__pic set-bg" onclick="location.href='shop-details.html?id=${product.id}'" style="background-image: url(${product.image});"> 
-//                        </div>
-//                         <div class="featured__item__text">
-//                             <h6><a href="#">${product.name}</a></h6>
-//                             <h5>${product.price}</h5>
-//                             <button class="featured__item__text-optionbtn" onclick="openNav(${product.id})">Select Option</button>
-//                             <div id="overlay-${product.id}" class="overlay" onclick="closeNav(${product.id})"></div>
-//                             <div id="mySidenav-${product.id}" class="sidenav">
-//                                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav(${product.id})">&times;</a>
-//                                 <div class="sidenav-content">
-//                                     <div class="slider" id="slider-${product.id}">
-//                                         <div class="slides" id="slides-${product.id}">
-//                                             ${imagesHTML}
-//                                         </div>
-//                                         <button class="prev" onclick="moveSlide(${product.id}, -1)">&#10094;</button>
-//                                         <button class="next" onclick="moveSlide(${product.id}, 1)">&#10095;</button>
-//                                     </div>
-//                                     <div class="main-content">
-//                                         <div class="main-content-heading"><a>${product.name}</a></div>
-//                                         <p>${product.price}</p>
-//                                         <p>${product.description}</p>
-//                                         <div>
-//                                             <h4>Weight</h4>
-//                                             <div class="weight-display">
-//                                                 ${weightOptionsHTML}
-//                                             </div>
-//                                         </div>
-//                                         <div id="price-display-${product.id}" class="price-display">
-//                                     Price: ₹<span id="calculated-price-${product.id}">0</span>
-//                                 </div>
-//                                         <div class="order-section">
-//                                             <button class="order-section-countbutton" onclick="changeQuantity1(-1, ${product.id})">-</button>
-//                                             <span id="quantity-${product.id}">1</span>
-//                                             <button class="order-section-countbutton" onclick="changeQuantity1(1, ${product.id})">+</button>
-//                                     <button class="add-to-cart" onclick="addToCartWithSelectedWeight(${product.id})">Add to Cart</button>
-//                                     <button class="buy-now" onclick="buyNow(${product.id}, '${product.name}', '${product.price}')">Buy Now</button>
-//                                         </div>
-//                                     </div>
-//                                 </div>
-//                             </div>
-//                         </div>
-//                     </div>
-//                 </div>`;
-// }
 
 
 function generateProductHTML(product) {
@@ -392,7 +336,7 @@ function generateProductHTML(product) {
                                             <span id="quantity-${product.id}">1</span>
                                             <button class="order-section-countbutton" onclick="changeQuantity1(1, ${product.id})">+</button>
                                     <button class="add-to-cart" onclick="addToCartWithSelectedWeight(${product.id})">Add to Cart</button>
-                                    <button class="buy-now" onclick="buyNow(${product.id}, '${product.name}', '${product.price}')">Buy Now</button>
+                                            <button class="buy-now" onclick="buyNow(${product.id})">Buy Now</button>
                                         </div>
                                     </div>
                                 </div>
@@ -431,55 +375,42 @@ function addToCartWithSelectedWeight(productId) {
     addToCart(productId, selectedWeight, quantity, pricePerUnit);
 }
 
-// function addToCartWithSelectedWeight(productId) {
-//     const selectedWeightElement = document.querySelector(`input[name='weight-${productId}']:checked`);
-//     if (!selectedWeightElement) {
-//         console.error(`No weight selected for product ID: ${productId}`);
-//         return;
-//     }
 
-//     const selectedWeight = selectedWeightElement.value;
-//     const pricePerUnit = parseFloat(selectedWeightElement.getAttribute('data-price'));
-
-//     console.log("Quantity:", selectedWeight);
-
-//     const quantityElement = document.getElementById(`quantity-${productId}`);
-//     if (!quantityElement) {
-//         console.error(`Quantity element with ID quantity-${productId} not found`);
-//         return;
-//     }
-
-//     const quantity = parseInt(quantityElement.textContent); 
-
-//     if (isNaN(quantity)) {
-//         console.error('Invalid quantity value');
-//         return;
-//     }
-
-//     addToCart(productId, selectedWeight, quantity, pricePerUnit); 
-// }
-
-
-function buyNow(productId, productName, productPrice) {
-    const quantity = document.getElementById(`quantity-${productId}`).innerText;
-    const weightOptions = document.getElementsByName(`weight-${productId}`);
-    let selectedWeight = null;
-    for (let option of weightOptions) {
-        if (option.checked) {
-            selectedWeight = option.value;
-            break;
-        }
-    }
-
-    if (!selectedWeight) {
-        alert('Please select a weight option.');
+function buyNow(productId) {
+    // Get selected product
+    const product = products.find(p => p.id === productId);
+    
+    // Get the selected weight value and price
+    const selectedWeightElement = document.querySelector(`input[name="weight-${productId}"]:checked`);
+    
+    if (!selectedWeightElement) {
+        alert("Please select a weight option.");
         return;
     }
+    
+    const selectedWeight = selectedWeightElement.value;
+    const pricePerUnit = parseFloat(selectedWeightElement.getAttribute('data-price'));
+    
+    const quantity = parseInt(document.getElementById(`quantity-${productId}`).textContent);
 
-    const product = { id: productId, name: productName, price: productPrice, quantity, weight: selectedWeight };
-    localStorage.setItem('checkoutProduct', JSON.stringify(product));
-    location.href = 'checkout.html';
+    // Prepare product data
+    const productToCheckout = {
+        id: product.id,
+        name: product.name,
+        pricePerUnit: pricePerUnit * quantity,
+        quantity: quantity,
+        image: product.image,
+        weight: selectedWeight
+    };
+
+    // Save to localStorage
+    localStorage.setItem('checkoutCart', JSON.stringify([productToCheckout]));
+
+    // Redirect to checkout page
+    window.location.href = 'checkout.html';
 }
+
+
 
 
 function updatePrice(productId) {
@@ -492,6 +423,17 @@ function updatePrice(productId) {
     if (selectedWeight && priceDisplay) {
         const pricePerUnit = parseFloat(selectedWeight.getAttribute('data-price'));
         console.log("Price per unit:", pricePerUnit);
+        const totalPrice = pricePerUnit * quantity;
+        priceDisplay.textContent = totalPrice.toFixed(2);
+    }
+}
+function updatePrice1(productId) {
+    const selectedWeight = document.querySelector(`input[name='weight']:checked`);
+    const quantity = parseInt(document.getElementById(`quantity-${productId}`).value);
+    const priceDisplay = document.getElementById(`calculated-price-${productId}`);
+
+    if (selectedWeight && priceDisplay) {
+        const pricePerUnit = parseFloat(selectedWeight.getAttribute('data-price'));
         const totalPrice = pricePerUnit * quantity;
         priceDisplay.textContent = totalPrice.toFixed(2);
     }
@@ -509,36 +451,6 @@ function showToast(message) {
     }, 3000);
 }
 
-// function addToCart(productId, selectedWeight, quantity,pricePerUnit) {
-    
-//     const product = products.find(p => p.id === productId);
-
-//     if (!selectedWeight) {
-//         alert('Please select a weight option.');
-//         return;
-//     }
-
-//     if (isNaN(quantity) || quantity < 1) {
-//         alert('Please select a valid quantity.');
-//         return;
-//     }
-//     let cart = JSON.parse(localStorage.getItem('cart')) || [];
-//     const updatedprice = quantity * pricePerUnit;
-//     const existingProductIndex = cart.findIndex(item => item.id === product.id && item.weight === selectedWeight && item.pricePerUnit == updatedprice);
-
-//     if (existingProductIndex !== -1) {
-//         cart[existingProductIndex].quantity += quantity;
-//     } else {
-//         cart.push({ ...product, weight: selectedWeight, pricePerUnit:updatedprice, quantity: quantity });
-//     }
-
-//     localStorage.setItem('cart', JSON.stringify(cart));
-
-//     updateCartCount();
-//     closeNav(productId);
-
-//     showToast('Item added to cart!');
-// }
 
 function addToCart(productId, selectedWeight, quantity, pricePerUnit) {
     const product = products.find(p => p.id === productId);
@@ -634,7 +546,7 @@ function changeQuantity(amount, productId) {
             newValue = 1;
         }
         quantityElement.value = newValue;
-        updatePrice(productId);
+        updatePrice1(productId);
     }
 }
 

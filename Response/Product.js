@@ -45,7 +45,7 @@ function loadProducts(productsToLoad) {
                 `<img src="${img}" alt="image">`).join('');
 
             const productItem = `
-                <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="col-lg-4 col-md-6 col-6">
                     <div class="product__item">
                         <div class="product__item__pic set-bg" style="background-image: url(${product.image});" onclick="location.href='shop-details.html?id=${product.id}'">
                             <ul class="product__item__pic__hover">
