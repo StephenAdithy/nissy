@@ -20,19 +20,19 @@ function loadCartItems() {
         total += item.pricePerUnit;
         return `
             <div class="cart-item">
-                <img src="${item.image}" alt="${item.name}">
+                <img class="cart-image" src="${item.image}" alt="${item.name}">
                 <div class="shoping__cart__table-products-details">
-                    <h5>${item.name}</h5>
-                    <div>Weight: ${item.weight}</div>
-                    <div>Quantity: <span id="quantity-${item.id}">${item.quantity}</span></div>
+                    <div class="shopping_cart-name">${item.name}</div>
+                    <div class="shopping_cart-weigth"><span>${item.weight}</span></div>
+                    <div class="shopping_cart-quantity">Quantity: <span id="quantity-${item.id}">${item.quantity}</span></div>
 
                     <div class="shoping__cart__table-products-details-amtcounter">
-                        <div>Price: ${item.pricePerUnit}/-</div>
+                        <div>₹ ${item.pricePerUnit}/-</div>
                     </div>
-                    <div>${item.availability}</div>
+                    <div class="shopping__cart-availability">${item.availability}</div>
                 </div>
                 <div class="counter">
-                    <button class="shoping__cart__table-products-details-remove" onclick="removeFromCart(${item.id}, '${item.weight}')">REMOVE</button>
+                    <button class="shoping__cart__table-products-details-remove" onclick="removeFromCart(${item.id}, '${item.weight}')">Remove</button>
                 </div>
             </div>`;
     }).join('');
