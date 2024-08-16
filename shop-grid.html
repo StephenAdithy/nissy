@@ -18,7 +18,6 @@
     <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
     <link rel="stylesheet" href="css/nice-select.css" type="text/css">
     <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
@@ -118,7 +117,7 @@
     <section class="product spad">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-md-5">
+                <div class="col-lg-3 col-md-12">
                     <div class="sidebar">
                         <div class="sidebar__item">
                             <h4>Categories</h4>
@@ -137,6 +136,8 @@
 
                     </div>
                 </div>
+                <div class="col-lg-9 col-md-12">
+                    <h4>Products</h4>
                 <div class="col-lg-9 col-md-7">
                     <div class="row" id="product-container">
                     </div>
@@ -147,7 +148,14 @@
     <!-- Product Section End -->
 
     <!-- Footer Section Begin -->
-    <footer class="footer spad">
+    <footer class="footer" style="background: #7fad39;">
+        <svg class="footer-wave-svg" viewBox="0 0 1200 100" preserveAspectRatio="none">
+            <path class="footer-wave-path"
+                  d="M851.8,100c125,0,288.3-45,348.2-64V0H0v44c3.7-1,7.3-1.9,11-2.9C80.7,22,151.7,10.8,223.5,6.3C276.7,2.9,330,4,383,9.8 
+                     c52.2,5.7,103.3,16.2,153.4,32.8C623.9,71.3,726.8,100,851.8,100z"
+                  fill="#fff"> 
+            </path>
+        </svg>        
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-6 col-sm-6">
@@ -166,19 +174,13 @@
                     <div class="footer__widget">
                         <h6>Useful Links</h6>
                         <ul>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">About Our Shop</a></li>
-                            <li><a href="#">Secure Shopping</a></li>
+                            <li><a href="#" data-toggle="modal" data-target="#exampleModalCenter">About Us</a></li>
                             <li><a href="#">Delivery infomation</a></li>
                             <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Our Sitemap</a></li>
                         </ul>
                         <ul>
                             <li><a href="#">Who We Are</a></li>
                             <li><a href="#">Our Services</a></li>
-                            <li><a href="#">Projects</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Innovation</a></li>
                             <li><a href="#">Testimonials</a></li>
                         </ul>
                     </div>
@@ -186,15 +188,14 @@
                 <div class="col-lg-4 col-md-12">
                     <div class="footer__widget">
                         <div class="map">
-                            <iframe
+                            <!-- <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49116.39176087041!2d-86.41867791216099!3d39.69977417971648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886ca48c841038a1%3A0x70cfba96bf847f0!2sPlainfield%2C%20IN%2C%20USA!5e0!3m2!1sen!2sbd!4v1586106673811!5m2!1sen!2sbd"
-                                style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                                style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> -->
                         </div>
                         <div class="footer__widget__social mt-3">
                             <a href="#"><i class="fa fa-facebook"></i></a>
                             <a href="#"><i class="fa fa-instagram"></i></a>
                             <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-pinterest"></i></a>
                         </div>
                     </div>
                 </div>
@@ -206,10 +207,7 @@
                         <div class="footer__copyright__text">
                             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                                 Copyright &copy;
-                                <script>document.write(new Date().getFullYear());</script> All rights reserved | This
-                                template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a
-                                    href="https://colorlib.com" target="_blank">Colorlib</a>
-                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                <script>document.write(new Date().getFullYear());</script> All rights reserved
                             </p>
                         </div>
                     </div>
@@ -226,7 +224,7 @@
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/jquery.slicknav.js"></script>
     <script src="js/mixitup.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/owl.carousel.js"></script>
     <script src="js/main.js"></script>
     <script src="Response/index.js"></script>
     <script src="Response/Product.js"></script>

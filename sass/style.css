@@ -74,7 +74,6 @@ h6 {
 p {
   font-size: 16px;
   font-family: "Cairo", sans-serif;
-  color: #6f6f6f;
   font-weight: 400;
   line-height: 26px;
   margin: 0 0 15px 0;
@@ -2639,8 +2638,7 @@ span[id^=quantity-] {
   Footer
 -----------------------*/
 .footer {
-  background: #F3F6FA;
-  padding-top: 70px;
+  /* background: #F3F6FA; */
   padding-bottom: 0;
 }
 
@@ -2649,7 +2647,7 @@ span[id^=quantity-] {
 }
 .footer__about ul li {
   font-size: 16px;
-  color: #1c1c1c;
+  color: white;
   line-height: 36px;
   list-style: none;
 }
@@ -2678,7 +2676,7 @@ span[id^=quantity-] {
   list-style: none;
 }
 .footer__widget ul li a {
-  color: #1c1c1c;
+  color: white;
   font-size: 14px;
   line-height: 32px;
 }
@@ -2742,7 +2740,6 @@ span[id^=quantity-] {
   border-top: 1px solid #ebebeb;
   padding: 15px 0;
   overflow: hidden;
-  margin-top: 20px;
 }
 
 .footer__copyright__text {
