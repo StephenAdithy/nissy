@@ -265,7 +265,8 @@
                             </div>
                             <div class="checkout__input">
                                 <p>Address<span>*</span></p>
-                                <input type="text" id="address" placeholder="Street Address" class="checkout__input__add">
+                                <input type="text" id="address" placeholder="Street Address"
+                                    class="checkout__input__add">
                                 <input type="text" id="apartment" placeholder="Apartment, suite, unit, etc. (optional)">
                                 <span class="error-message" id="address-error"></span>
                             </div>
@@ -310,13 +311,20 @@
     <!-- Checkout Section End -->
 
     <!-- Footer Section Begin -->
-    <footer class="footer spad">
+    <footer class="footer" style="background: #7fad39;">
+        <svg class="footer-wave-svg" viewBox="0 0 1200 100" preserveAspectRatio="none">
+            <path class="footer-wave-path"
+                  d="M851.8,100c125,0,288.3-45,348.2-64V0H0v44c3.7-1,7.3-1.9,11-2.9C80.7,22,151.7,10.8,223.5,6.3C276.7,2.9,330,4,383,9.8 
+                     c52.2,5.7,103.3,16.2,153.4,32.8C623.9,71.3,726.8,100,851.8,100z"
+                  fill="#fff"> 
+            </path>
+        </svg>        
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="footer__about">
                         <div class="footer__about__logo">
-                            <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                            <a href="./index.html"><img src="img/Nissy/Logo.png" alt=""></a>
                         </div>
                         <ul>
                             <li>Address: 60-49 Road 11378 New York</li>
@@ -329,53 +337,42 @@
                     <div class="footer__widget">
                         <h6>Useful Links</h6>
                         <ul>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">About Our Shop</a></li>
-                            <li><a href="#">Secure Shopping</a></li>
+                            <li><a href="#" data-toggle="modal" data-target="#exampleModalCenter">About Us</a></li>
                             <li><a href="#">Delivery infomation</a></li>
                             <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Our Sitemap</a></li>
                         </ul>
                         <ul>
                             <li><a href="#">Who We Are</a></li>
                             <li><a href="#">Our Services</a></li>
-                            <li><a href="#">Projects</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Innovation</a></li>
                             <li><a href="#">Testimonials</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-12">
                     <div class="footer__widget">
-                        <h6>Join Our Newsletter Now</h6>
-                        <p>Get E-mail updates about our latest shop and special offers.</p>
-                        <form action="#">
-                            <input type="text" placeholder="Enter your mail">
-                            <button type="submit" class="site-btn">Subscribe</button>
-                        </form>
-                        <div class="footer__widget__social">
+                        <div class="map">
+                            <!-- <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49116.39176087041!2d-86.41867791216099!3d39.69977417971648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886ca48c841038a1%3A0x70cfba96bf847f0!2sPlainfield%2C%20IN%2C%20USA!5e0!3m2!1sen!2sbd!4v1586106673811!5m2!1sen!2sbd"
+                                style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> -->
+                        </div>
+                        <div class="footer__widget__social mt-3">
                             <a href="#"><i class="fa fa-facebook"></i></a>
                             <a href="#"><i class="fa fa-instagram"></i></a>
                             <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-pinterest"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
+
             <div class="row">
                 <div class="col-lg-12">
                     <div class="footer__copyright">
                         <div class="footer__copyright__text">
                             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                                 Copyright &copy;
-                                <script>document.write(new Date().getFullYear());</script> All rights reserved | This
-                                template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a
-                                    href="https://colorlib.com" target="_blank">Colorlib</a>
-                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                <script>document.write(new Date().getFullYear());</script> All rights reserved
                             </p>
                         </div>
-                        <div class="footer__copyright__payment"><img src="img/payment-item.png" alt=""></div>
                     </div>
                 </div>
             </div>
@@ -392,122 +389,126 @@
     <script src="js/mixitup.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
-   
+
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-          const checkoutCart = JSON.parse(localStorage.getItem('checkoutCart')) || [];
-          const checkoutOrderContainer = document.getElementById('order-items');
-          const totalElement = document.getElementById('total');
-          const submitButton = document.querySelector('.site-btn');
-          let total = 0;
-  
-          const renderCart = () => {
-              checkoutOrderContainer.innerHTML = ''; // Clear the container before rendering
-              total = 0; // Reset total
-  
-              checkoutCart.forEach((item, index) => {
-                  total += item.pricePerUnit;
-  
-                  const itemHTML = `
-                  <div class="row" data-index="${index}">
-                      <div class="col-lg-4 col-md-4 col-sm-4">
-                          <img src="${item.image}" class="prodimg" alt="${item.name}">
-                      </div>
-                      <div class="col-lg-6 col-md-6 col-sm-6 contentalign">
-                          <strong>${item.name}</strong><br>
-                          <strong>₹${(item.pricePerUnit).toFixed(2)}</strong><br> 
-                          <strong>Qty: ${item.quantity}</strong>
-                      </div>
-                      <div class="col-lg-2 col-md-2 col-sm-2 contentalign">
-                          <a href="#">
-                              <i class="fa fa-window-close closebtn" aria-hidden="true"></i>
-                          </a>                                        
-                      </div>
-                  </div>`;
-  
-                  checkoutOrderContainer.insertAdjacentHTML('beforeend', itemHTML);
-              });
-  
-              totalElement.textContent = `₹${total.toFixed(2)}`;
-          };
-  
-          const validateForm = () => {
-              // Get input values
-              const firstName = document.getElementById('first-name').value.trim();
-              const lastName = document.getElementById('last-name').value.trim();
-              const address = document.getElementById('address').value.trim();
-              const city = document.getElementById('city').value.trim();
-              const state = document.getElementById('state').value.trim();
-              const postcode = document.getElementById('postcode').value.trim();
-              const phone = document.getElementById('phone').value.trim();
-  
-              // Clear previous error messages
-              document.querySelectorAll('.error-message').forEach(el => el.textContent = '');
-  
-              // Initialize a flag for validation
-              let isValid = true;
-  
-              // Validation checks
-              if (firstName === '') {
-                  document.getElementById('first-name-error').textContent = 'First Name is required.';
-                  isValid = false;
-              }
-              if (lastName === '') {
-                  document.getElementById('last-name-error').textContent = 'Last Name is required.';
-                  isValid = false;
-              }
-              if (address === '') {
-                  document.getElementById('address-error').textContent = 'Address is required.';
-                  isValid = false;
-              }
-              if (city === '') {
-                  document.getElementById('city-error').textContent = 'Town/City is required.';
-                  isValid = false;
-              }
-              if (state === '') {
-                  document.getElementById('state-error').textContent = 'Country/State is required.';
-                  isValid = false;
-              }
-              if (postcode === '') {
-                  document.getElementById('postcode-error').textContent = 'Postcode/ZIP is required.';
-                  isValid = false;
-              }
-              if (phone === '') {
-                  document.getElementById('phone-error').textContent = 'Phone is required.';
-                  isValid = false;
-              }
-  
-              return isValid;
-          };
-  
-          renderCart();
-  
-          document.getElementById('checkout-form').addEventListener('submit', (event) => {
-              if (!validateForm()) {
-                  event.preventDefault();
-              }
-          });
+            const checkoutCart = JSON.parse(localStorage.getItem('checkoutCart')) || [];
+            const checkoutOrderContainer = document.getElementById('order-items');
+            const totalElement = document.getElementById('total');
+            let total = 0;
+
+            const renderCart = () => {
+                checkoutOrderContainer.innerHTML = '';
+                total = 0; 
+
+                checkoutCart.forEach((item, index) => {
+                    total += item.pricePerUnit;
+
+                    const itemHTML = `
+            <div class="row" data-index="${index}">
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <img src="${item.image}" class="prodimg" alt="${item.name}">
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 contentalign">
+                    <strong>${item.name}</strong><br>
+                    <strong>₹${(item.pricePerUnit).toFixed(2)}</strong><br> 
+                    <strong>Qty: ${item.quantity}</strong><br>
+                    <strong>Weight: ${item.weight}</strong>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2 contentalign">
+                    <button class="remove-item" data-index="${index}">
+            <i class="fa fa-window-close closebtn" aria-hidden="true"></i>
+        </button>                                     
+                </div>
+            </div>`;
+
+                    checkoutOrderContainer.insertAdjacentHTML('beforeend', itemHTML);
+                });
+
+                totalElement.textContent = `₹${total.toFixed(2)}`;
+                const removeButtons = document.querySelectorAll('.remove-item');
+                removeButtons.forEach((button, index) => {
+                    button.addEventListener('click', () => removeItem(index));
+                });
+            };
+            const removeItem = (index) => {
+                checkoutCart.splice(index, 1); 
+                localStorage.setItem('checkoutCart', JSON.stringify(checkoutCart)); 
+                renderCart(); 
+            };
+            const validateForm = () => {
+                const firstName = document.getElementById('first-name').value.trim();
+                const lastName = document.getElementById('last-name').value.trim();
+                const address = document.getElementById('address').value.trim();
+                const city = document.getElementById('city').value.trim();
+                const state = document.getElementById('state').value.trim();
+                const postcode = document.getElementById('postcode').value.trim();
+                const phone = document.getElementById('phone').value.trim();
+
+                document.querySelectorAll('.error-message').forEach(el => el.textContent = '');
+
+                let isValid = true;
+
+                if (firstName === '') {
+                    document.getElementById('first-name-error').textContent = 'First Name is required.';
+                    isValid = false;
+                }
+                if (lastName === '') {
+                    document.getElementById('last-name-error').textContent = 'Last Name is required.';
+                    isValid = false;
+                }
+                if (address === '') {
+                    document.getElementById('address-error').textContent = 'Address is required.';
+                    isValid = false;
+                }
+                if (city === '') {
+                    document.getElementById('city-error').textContent = 'Town/City is required.';
+                    isValid = false;
+                }
+                if (state === '') {
+                    document.getElementById('state-error').textContent = 'Country/State is required.';
+                    isValid = false;
+                }
+                if (postcode === '') {
+                    document.getElementById('postcode-error').textContent = 'Postcode/ZIP is required.';
+                    isValid = false;
+                }
+                if (phone === '') {
+                    document.getElementById('phone-error').textContent = 'Phone is required.';
+                    isValid = false;
+                }
+                if(total == 0){
+                    alert('Please select any product');
+                    window.location.href = 'shop-grid.html';
+                    return false;
+                }
+                return isValid;
+            };
+
+            renderCart();
+
+            document.getElementById('checkout-form').addEventListener('submit', (event) => {
+                if (!validateForm()) {
+                    event.preventDefault();
+                }
+            });
         });
-      </script>
+    </script>
 </body>
 
 </html>
 
 <style>
     .error-message {
-    color: red;
-    font-size: 0.875em;
-    display: block;
-    margin-top: 0.25em;
-}
+        color: red;
+        font-size: 0.875em;
+        display: block;
+        margin-top: 0.25em;
+    }
 
     .prodimg {
         padding: 10px;
-    }
-
-    .contentalign {
-        padding: 20px;
     }
 
     .closebtn {
