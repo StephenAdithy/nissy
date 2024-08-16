@@ -2,7 +2,7 @@
   Contact
 -----------------------*/
 .contact {
-  padding-top: 80px;
+  padding-top: 50px;
   padding-bottom: 50px;
 }
 
@@ -111,7 +111,7 @@
 }
 
 .contact-form {
-  padding-top: 80px;
+  padding-top: 10px;
   padding-bottom: 80px;
 
   form {
@@ -149,8 +149,100 @@
     }
 
     button {
-      font-size: 18px;
+      font-size: 14px;
       letter-spacing: 2px;
     }
   }
+}
+
+.contact-main {
+
+  &-getin {
+    font-size: 30px;
+    font-weight: 700;
+  }
+
+  &-content {
+    font-size: 14px;
+    padding-top: 15px;
+    font-weight: 500;
+  }
+
+  &-details {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    padding-top: 30px;
+    column-gap: 10px;
+
+    @media (max-width: 1023px) {
+      display: grid;
+    }
+
+    .contact-details {
+      flex: 1;
+      min-width: calc(50% - 10px);
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      padding: 20px;
+
+      img {
+        width: 40px;
+      }
+
+      &_info {
+        &-header {
+          font-size: 16px;
+          font-weight: 600;
+          color: #6da96d;
+        }
+
+        &-content {
+          font-size: 14px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  &-follow {
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 30px;
+    text-align: center;
+  }
+
+  &-social {
+    display: flex;
+    gap: 10px;
+    padding-top: 10px;
+    justify-content: center;
+
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+
+.orderone {
+  order: 1;
+}
+
+.ordertwo {
+  order: 2;
+}
+
+/* Tablet and Mobile */
+@media (max-width: 1023px) {
+  .orderone {
+      order: 2; /* Move to the second position */
+  }
+
+  .ordertwo {
+      order: 1; /* Move to the first position */
+      padding-bottom: 30px;
+  }
+
 }
