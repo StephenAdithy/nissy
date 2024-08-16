@@ -2,7 +2,7 @@
   Hero
 -----------------------*/
 .hero {
-    padding-bottom: 50px;
+    // padding-bottom: 50px;
 
     &.hero-normal {
         padding-bottom: 30px;
@@ -24,6 +24,10 @@
             margin-bottom: 0;
         }
     }
+}
+
+.bannerhero{
+    padding: 0;
 }
 
 .hero__categories__all {
