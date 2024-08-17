@@ -66,7 +66,7 @@ $(document).ready(function(){
     ];
 
     function getTestimonial() {
-        const imageUrlBase = ''; // Add base URL if needed
+        const imageUrlBase = ''; 
         const TestimonialContainer = $('#TestimonialContainer');
 
         products.forEach(function(testimonial) {
