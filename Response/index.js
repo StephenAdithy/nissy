@@ -548,8 +548,22 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function openNav(id) {
-    document.getElementById(`mySidenav-${id}`).style.width = "400px";
+    // Detect the screen width
+    const screenWidth = window.innerWidth;
+
+    // Set width based on screen size
+    let width;
+    if (screenWidth <= 768) { // Tablet and mobile view
+        width = "100%";
+    } else {
+        width = "500px"; // Desktop view
+    }
+
+    // Apply the width to the sidebar
+    document.getElementById(`mySidenav-${id}`).style.width = width;
     document.getElementById(`overlay-${id}`).style.display = "block";
+
+    // Initialize the current index and show slides
     currentIndex[id] = 0;
     showSlides(id);
 }
