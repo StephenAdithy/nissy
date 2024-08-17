@@ -491,7 +491,6 @@ ol {
 }
 
 .navbar-nav {
-  float: right;
   align-items: center;
   gap: 20px;
 }
