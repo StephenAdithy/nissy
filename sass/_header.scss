@@ -284,6 +284,7 @@
 
             a {
                 position: relative;
+                color: black;
 
                 i {
                     font-size: 18px;
@@ -332,6 +333,7 @@
 .navbar-nav {
     align-items: center;
     gap: 20px;
+    justify-content: flex-end;
 }
 
 .btn_nav {
@@ -349,8 +351,4 @@
 
 .navbar-light .navbar-nav .nav-link.active{
     color: #6da96d;
-}
-
-.navbar-collapse{
-    justify-content: flex-end;
 }
