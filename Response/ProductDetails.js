@@ -1,8 +1,7 @@
-    function getQueryParameter(name) {
+function getQueryParameter(name) {
     let urlParams = new URLSearchParams(window.location.search);
     return urlParams.get(name);
 }
-
 function loadProductDetails(id) {
     if (typeof products === 'undefined') {
         console.error('Products data is not available.');
@@ -11,7 +10,7 @@ function loadProductDetails(id) {
     const product = products[id];
     if (product) {
         if (product.productImage && product.productImage.length > 0) {
-        document.querySelector(".product__details__pic__item img").src = product.productImage[0];
+            document.querySelector(".product__details__pic__item img").src = product.productImage[0];
         }
         let slider = document.querySelector(".product__details__pic__slider");
         slider.innerHTML = "";
@@ -19,9 +18,9 @@ function loadProductDetails(id) {
             let img = document.createElement("img");
             img.src = product.productImage[i];
             img.setAttribute("data-imgbigurl", product.productImage[i]);
-            img.addEventListener("click", function() {
-            document.querySelector(".product__details__pic__item img").src = this.src;
-        });
+            img.addEventListener("click", function () {
+                document.querySelector(".product__details__pic__item img").src = this.src;
+            });
             slider.appendChild(img);
         }
         document.querySelector(".product__details__text h3").innerText = product.name;
@@ -64,10 +63,10 @@ function loadProductDetails(id) {
             input.name = "weight";
             input.id = weight.id;
             input.value = weight.value;
-            input.setAttribute("data-price", weight.price); 
-            if (index === 0) {
-                input.checked = true;
-            }
+            input.setAttribute("data-price", weight.price);
+            // if (index === 0) {
+            //     input.checked = true;
+            // }
             let label = document.createElement("label");
             label.className = "form-check-label";
             label.setAttribute("for", weight.id);
@@ -76,14 +75,25 @@ function loadProductDetails(id) {
             formCheck.appendChild(label);
             col.appendChild(formCheck);
             weightContainer.appendChild(col);
+            input.addEventListener("change", function () {
+                debugger
+                const selectedWeightPrice = parseFloat(this.getAttribute('data-price'));
+                const quantity = parseInt(document.querySelector(`#quantity-${product.id}`).value);
+                updatePriceDisplay(selectedWeightPrice, quantity);
+            });
         });
-
         let infoList = document.querySelector(".product-details-info");
         infoList.querySelector("li:nth-child(1) span").innerText = product.availability;
         infoList.querySelector("li:nth-child(2) span").innerHTML = product.shipping;
         infoList.querySelector("li:nth-child(3) span").innerText = product.weightDetail;
         infoList.querySelector("li:nth-child(4) span").innerText = product.rate;
     }
+}
+
+function updatePriceDisplay(price, quantity) {
+    debugger
+    const totalPrice = price * quantity;
+    document.querySelector(".product__details__price").innerText = `₹${totalPrice.toFixed(2)}`;
 }
 
 
@@ -109,17 +119,16 @@ function loadProduct(productId) {
         <div class="mt-4">
             <div class="product__details__quantity">
                 <div class="quantity">
-                    <div class="pro-qty">
-                        <span class="dec qtybtn" onclick="changeQuantity(-1, ${productId})">-</span>
-                        <input id="quantity-${productId}" type="text" value="1">
-                        <span class="inc qtybtn" onclick="changeQuantity(1, ${productId})">+</span>
-                    </div>
+                   <div class="pro-qty">
+    <span class="dec qtybtn" onclick="changeQuantity(-1, ${productId})">-</span>
+    <input id="quantity-${productId}" type="text" value="1" readonly="true">
+    <span class="inc qtybtn" onclick="changeQuantity(1, ${productId})">+</span>
+</div>
+
                 </div>
             </div>                            
             <a class="primary-btn" onclick="handleAddToCart(${productId}); return false;">ADD TO CART</a>
             <a class="primary-btn" onclick="buyNow1(${productId})">BUY NOW</a>
-            <div id="price-display-${productId}" class="price-display">
-                                    Price: ₹<span id="calculated-price-${productId}">0</span>
         </div>
     `;
 
@@ -130,23 +139,24 @@ function loadProduct(productId) {
     }
 }
 
+
 function buyNow1(productId) {
     const product = products.find(p => p.id === productId);
-    
+
     if (!product) {
         console.error('Product not found');
         return;
     }
     const selectedWeightElement = document.querySelector("input[name='weight']:checked");
-    
+
     if (!selectedWeightElement) {
         alert("Please select a weight option.");
         return;
     }
-    
+
     const selectedWeight = selectedWeightElement.value;
     const pricePerUnit = parseFloat(selectedWeightElement.getAttribute('data-price'));
-    
+
     const quantityElement = document.getElementById(`quantity-${productId}`);
     const quantity = quantityElement ? parseInt(quantityElement.value) : 1;
 
@@ -175,7 +185,7 @@ function handleAddToCart(productId) {
         console.error('No weight selected');
         return;
     }
-    
+
     let selectedWeight = selectedWeightElement.value;
     let pricePerUnit = parseFloat(selectedWeightElement.getAttribute('data-price'));
 
@@ -188,7 +198,7 @@ function handleAddToCart(productId) {
     }
 
     let product = products.find(p => p.id === productId);
-    
+
     if (product) {
         addToCart(productId, selectedWeight, quantity, pricePerUnit);
     } else {
