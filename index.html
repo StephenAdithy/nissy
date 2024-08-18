@@ -60,14 +60,115 @@
     to { bottom: 0; opacity: 0; }
 }
 
+.sidenav-wish {
+        height: 100%;
+        /* 100% Full-height */
+        width: 0;
+        /* 0 width - change this with JavaScript */
+        position: fixed;
+        /* Stay in place */
+        z-index: 2;
+        /* Stay on top */
+        top: 0;
+        right: 0;
+        /* Slide in from the right */
+        background-color: #efeaea;
+        /* Black*/
+        overflow-x: hidden;
+        /* Disable horizontal scroll */
+        transition: 0.5s;
+        /* 0.5 second transition effect to slide in the sidenav */
+        padding-top: 60px;
+        /* Place content 60px from the top */
+    }
+
+    .sidenav-wish a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .sidenav-wish a:hover {
+        color: #f1f1f1;
+    }
+
+    .sidenav-wish .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+
+    .wish-list {
+        font-size: 24px;
+        text-align: center;
+        font-weight: 700;
+        padding-bottom: 20px;
+    }
+
+    .Wish-list-main {
+        display: grid;
+        grid-template-columns: 30% 60% 10%;
+        padding: 10px 30px;
+    }
+
+    .Wish-list-img img {
+        width: 100%;
+    }
+
+    .Wish-list-content {
+        padding-left: 20px;
+    }
+
+    .Wish-list-content-header {
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .Wish-list-content-rate {
+        padding: 20px 0px;
+
+        span {
+            text-decoration: line-through;
+        }
+    }
+
+    .Wish-list-content-viewpro {
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+
+    #overlaywl {
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: none;
+    }
+
+    @media screen and (max-width: 768px) {
+        .sidenav-wish {
+            width: 0px;
+            right: 0;
+        }
+    }
 </style>
 <head>
+   
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootstrap Navbar</title>
-    <!-- Google Font -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Home</title>
+	<link rel="shortcut icon" type="image/x-icon" href="img/Nissy/Logo.png">
+
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet"
@@ -80,7 +181,6 @@
     <link rel="stylesheet" href="css/style.css" type="text/css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
-    <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <div id="toast" class="toast">
@@ -120,9 +220,12 @@
                         <div class="header__cart">
                             <ul>
                                 <li>
-                                    <button class="btn_nav" onclick="showFavoritesPopup()">Wishlist <a href="#"><i
+                                    <button class="btn_nav" id="heartIcon">
+                                        Wishlist <a href="#"><i class="fa fa-heart"></i> <span id="favorite-count">0</span></a>
+                                    </button>
+                                    <!-- <button class="btn_nav" id="heartIcon">Wishlist <a href="#"><i
                                                 class="fa fa-heart"></i>
-                                            <span id="favorite-count"></span></a></button>
+                                            <span id="favorite-count"></span></a></button> -->
                                 </li>
                                 <li>
                                     <button class="btn_nav"><a href="shoping-cart.html">Cart <i
@@ -137,13 +240,18 @@
         </nav>
     </header>
 
-    <div id="favoritesPopup" class="popup">
-        <div class="popup-content">
-            <span class="close" onclick="closeFavoritesPopup()">&times;</span>
-            <h3>Favorites</h3>
-            <div id="favoritesList"></div>
-        </div>
+   
+
+    <!-- Side Navbar -->
+    <div id="sideNavbarwl" class="sidenav-wish">
+        <a href="javascript:void(0)" class="closebtn" id="closeNavwl">&times;</a>
+        <div class="wish-list">Wishlist</div>
+        <h3>Favorites</h3>
+        <div id="favoritesList"></div>
     </div>
+
+    <!-- Overlay -->
+    <div id="overlaywl"></div>
     <!-- Header Section End -->
 
     <!-- Hero Section Begin -->
@@ -274,22 +382,6 @@
         <div class="section-title">
             <h2>Happy Clients</h2>
         </div>
-        <!-- <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12">
-                    <div class="swiper mySwiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide"> <img src="img/Category/Review 01 .png" alt=""> </div>
-                            <div class="swiper-slide"><img src="img/Category/Review 01 .png" alt=""></div>
-                            <div class="swiper-slide"><img src="img/Category/Review 01 .png" alt=""></div>
-                            <div class="swiper-slide"><img src="img/Category/Review 01 .png" alt=""></div>
-                            <div class="swiper-slide"><img src="img/Category/Review 01 .png" alt=""></div>
-                        </div>
-                        <div class="swiper-pagination"></div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
         <div class="container">
             <div class="row">
                 <div class="owl-carousel owl-theme testimonial-slider">
@@ -421,6 +513,7 @@
     </footer>
 
 
+    
     <!-- Modal -->
     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
         aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -461,6 +554,7 @@
     <script src="Response/Option.js"></script>
     <script src="Response/index.js"></script>
     <script src="Response/UpdateCount.js"></script>
+ 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const categoryImages = document.querySelectorAll('.sect1');
@@ -472,7 +566,6 @@
                 });
             });
         });
-        // Document ready function
         $(document).ready(function () {
             const defaultCategory = 'Malt';
             setActiveCategory(defaultCategory);
@@ -480,7 +573,6 @@
             loadFavorites();
             updateCartCount();
 
-            // Add click event listeners for category filters
             $('.featured__controls a').on('click', function () {
                 const category = $(this).data('category');
                 setActiveCategory(category);
@@ -488,7 +580,6 @@
         });
 
         document.addEventListener('DOMContentLoaded', function () {
-            // Select all images with the class 'sect1'
             const imageElements = document.querySelectorAll('img.sect1');
 
             imageElements.forEach(image => {
@@ -530,40 +621,5 @@
             });
         });
     </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <!-- Initialize Swiper -->
-
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 3,
-            spaceBetween: 30,
-            freeMode: true,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            navigation: {
-                nextEl: false,
-                prevEl: false,
-            },
-            breakpoints: {
-                // When the window width is >= 640px
-                640: {
-                    slidesPerView: 3,
-                    spaceBetween: 30,
-                },
-                // When the window width is < 640px (mobile view)
-                0: {
-                    slidesPerView: 1,
-                    spaceBetween: 10,
-                },
-            },
-        });
-
-    </script>
-
-
 </body>
 </html>

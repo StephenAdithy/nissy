@@ -58,6 +58,7 @@ function removeFromCart(productId, weight) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     cart = cart.filter(item => !(item.id === productId && item.weight === weight));
     localStorage.setItem('cart', JSON.stringify(cart));
+    showToast('Cart Removed Successfully','success');
     loadCartItems();
     updateCartCount();
 }

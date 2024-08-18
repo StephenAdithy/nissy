@@ -3016,7 +3016,7 @@ span[id^=quantity-] {
 }
 .footer__about ul li {
   font-size: 16px;
-  color: #1c1c1c;
+  color: white;
   line-height: 36px;
   list-style: none;
 }
@@ -3045,7 +3045,7 @@ span[id^=quantity-] {
   list-style: none;
 }
 .footer__widget ul li a {
-  color: #1c1c1c;
+  color: white;
   font-size: 14px;
   line-height: 32px;
 }
