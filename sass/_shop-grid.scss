@@ -4,6 +4,7 @@
 .product {
     padding-top: 0px;
     padding-bottom: 80px;
+    margin-top: 116px;
 }
 
 .product-sidebar{
@@ -64,10 +65,8 @@
 
 .product__item__pic__hover {
     position: absolute;
-    left: 0;
-    bottom: -50px;
-    width: 100%;
-    text-align: center;
+    right: 10px;
+    top: 10px;
     @include transition(all, .5s);
 
     li {
@@ -82,7 +81,7 @@
         &:hover {
 
             a {
-                background: $primary-color;
+                background: #6da96d;
                 border-color: $primary-color;
 
                 i {
@@ -283,6 +282,7 @@
 
 .product__item {
     margin-bottom: 50px;
+    position: relative;
 
     &:hover {
 
@@ -301,57 +301,6 @@
     overflow: hidden;
 }
 
-.product__item__pic__hover {
-    position: absolute;
-    left: 0;
-    bottom: -50px;
-    width: 100%;
-    text-align: center;
-    @include transition(all, .5s);
-
-    li {
-        list-style: none;
-        display: inline-block;
-        margin-right: 6px;
-
-        &:last-child {
-            margin-right: 0;
-        }
-
-        &:hover {
-
-            a {
-                background: $primary-color;
-                border-color: $primary-color;
-
-                i {
-                    color: $white-color;
-                    transform: rotate(360deg);
-                }
-            }
-        }
-
-        a {
-            font-size: 16px;
-            color: $normal-color;
-            height: 40px;
-            width: 40px;
-            line-height: 40px;
-            text-align: center;
-            border: 1px solid $border;
-            background: $white-color;
-            display: block;
-            border-radius: 50%;
-            @include transition(all, .5s);
-
-            i {
-                position: relative;
-                transform: rotate(0);
-                @include transition(all, .3s);
-            }
-        }
-    }
-}
 
 .product__item__text {
     text-align: center;

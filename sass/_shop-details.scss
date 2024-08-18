@@ -3,6 +3,7 @@
 -----------------------*/
 .product-details {
     padding-top: 80px;
+    margin-top: 46px;
 }
 
 .product__details__pic__item {
@@ -20,7 +21,8 @@
     }
 
     &.owl-carousel .owl-item img {
-        width: auto;
+        max-width: 140px;
+        max-height: 140px;
     }
 }
 

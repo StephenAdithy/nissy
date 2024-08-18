@@ -172,7 +172,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 function highlightCategory(activeElement) {
-    debugger
     const categoryLinks = document.querySelectorAll('ul li a[data-category]');
     categoryLinks.forEach(link => {
         link.classList.remove('active-category');
@@ -181,7 +180,6 @@ function highlightCategory(activeElement) {
 }
 
 function filterProductsByCategory(category) {
-    debugger
     let filteredProducts;
     // Load all products if "All" is selected
     if (category === ".") {
@@ -193,7 +191,6 @@ function filterProductsByCategory(category) {
 }
 
 function loadProducts(productsToLoad) {
-    debugger
     const productContainer = document.getElementById('product-container');
 
     productContainer.classList.add('fade-out'); 
@@ -212,13 +209,14 @@ function loadProducts(productsToLoad) {
                 `<img src="${img}" alt="image">`).join('');
 
             const productItem = `
-                <div class="col-lg-4 col-md-6 col-6">
+                <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" style="background-image: url(${product.image});" onclick="location.href='shop-details.html?id=${product.id}'">
-                            <ul class="product__item__pic__hover">
-                                <li><a href="#" onclick="toggleFavorite(${product.id})"><i class="fa fa-heart"></i></a></li>
-                            </ul>
+                        <div class="product__item__pic set-bg" onclick="location.href='shop-details.html?id=${product.id}'">
+                         <img src=${product.image} alt="product">   
                         </div>
+                        <ul class="product__item__pic__hover">
+                                <li><a href="#" onclick="toggleFavorite(${product.id})"><i class="fa fa-heart"></i></a></li>
+                        </ul>
                         <div class="product__item__text">
                             <h6><a href="#">${product.name}</a></h6>
                             <h5>${product.price}</h5>
