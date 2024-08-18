@@ -1,32 +1,29 @@
 const products = [
     {
         id: 0,
-        name: 'Crab ddd Security',
-        price: '₹ 400.00',
-        image: 'img/Nissy/Newimages/2.jpg',
-        backimage: 'img/Nissy/Newimages/9.jpg',
-        category: 'naturalprotienpowder',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam odio quidem aliquid voluptatem veritatis maxime eaque voluptatum expedita illo excepturi atque at assumenda quod, delectus ipsa aliquam cupiditate cum tempora.',
+        name: 'ABC Malt',
+        price: '₹ 400.00 - ₹ 1200.00',
+        image: 'img/products/abc1.jpg',
+        category: 'Malt',
+        description: 'Its increases hemoglobin very suitable for pregnant women and children Boosts immunity and stamina Helps keep the skin glowing keeps blood pressure and sugar levels under control ',
         weightOptions: ['1L', '250ml', '500ml'],
-        images: ['img/Nissy/Newimages/1.jpg', 'img/Nissy/Newimages/2.jpg', 'img/Nissy/Newimages/5.jpg'],
+        images: ['img/products/abc1.jpg', 'img/products/abc 2.jpg', 'img/products/abc 3.jpg'],
         availability: "asas of Stock",
         shipping: "01 day shipping. <samp>Free pickup today</samp>",
         weightDetail: "0.5 kg",
-        rate: " ₹ 400.00",
-        productdescription: "dfssssssssssssssssssssssssssssssssss",
-        information: "fffffffffffffffffffffffffffffffffffffff",
-        selfLife: '6 months',
+        rate: " ₹400.00-₹1200.00",
+        productdescription: "Ingredients\n\napple, beetroot, carrot, Jaggery powder, Cashew, Almond, and Elachi\n\nTo make a delicious NISSY ABC MALT\n\nTake 1-2 teaspoons of NISSY ABC malt mix to your mug\npour 200 ml of milk either hot or cold\nstir well and enjoy it.\n\n• Don’t boil it along with milk.\n\nHealth benefits:\n\nEncourage healthy brain growth\nEnhances your memory power.\nHelps maintain the glow of the skin.\nBeneficial for both skin and hair\nPromises to heal the gut well\nregulating your blood pressure\n\nShelf Life:\n\n6 months",
+        information: "பீட்ரூட், நாட்டுச்சர்க்கரை,  பாதாம், முந்திரி ,ஏலக்காய்",
         productImage: [
-            "img/product/details/product-details-1.jpg",
-            "img/product/details/thumb-1.jpg",
-            "img/product/details/thumb-2.jpg",
-            "img/product/details/thumb-3.jpg",
-            "img/product/details/thumb-4.jpg"
+            "img/products/abc1.jpg",
+            "img/products/abc 2.jpg",
+            "img/products/abc 3.jpg",
+            "img/products/Untitled design.png",
         ],
         weights: [
-            { id: "weight1", value: "1KG", label: "1KG", price: 200 },
-            { id: "weight2", value: "250GM", label: "250GM", price: 100 },
-            { id: "weight3", value: "500GM", label: "500GM", price: 101 }
+            { id: "weight1", value: "1KG", label: "1KG", price: 800 },
+            { id: "weight2", value: "250GM", label: "250GM", price: 400 },
+            { id: "weight3", value: "500GM", label: "500GM", price: 1200 }
         ],
     },
     {
