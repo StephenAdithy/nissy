@@ -4,13 +4,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const allCategoryElement = document.querySelector(`ul li a[data-category="${selectedCategory}"]`) || document.querySelector('ul li a[data-category="."]');
     
-    // Highlight and filter products for the selected category or "All" category by default
     if (allCategoryElement) {
         highlightCategory(allCategoryElement);
         filterProductsByCategory(selectedCategory);
     }
 
-    // Attach click event listeners to category links in shop-grid.html
     const categoryLinks = document.querySelectorAll('ul li a[data-category]');
     categoryLinks.forEach(link => {
         link.addEventListener('click', function(event) {
@@ -33,9 +31,8 @@ function highlightCategory(activeElement) {
 
 function filterProductsByCategory(category) {
     let filteredProducts;
-    // Load all products if "All" is selected
     if (category === ".") {
-        filteredProducts = products; // Show all products
+        filteredProducts = products; 
     } else {
         filteredProducts = products.filter(product => product.category.toLowerCase() === category.toLowerCase());
     }

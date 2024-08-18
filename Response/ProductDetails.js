@@ -127,8 +127,8 @@ function loadProduct(productId) {
 
                 </div>
             </div>                            
-            <a class="primary-btn" onclick="handleAddToCart(${productId}); return false;">ADD TO CART</a>
-            <a class="primary-btn" onclick="buyNow1(${productId})">BUY NOW</a>
+            <a class="primary-btn cartbtn" onclick="handleAddToCart(${productId}); return false;">ADD TO CART</a>
+            <a class="primary-btn cartbtn" onclick="buyNow1(${productId})">BUY NOW</a>
         </div>
     `;
 

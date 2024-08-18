@@ -59,7 +59,114 @@
     from { bottom: 30px; opacity: 1; }
     to { bottom: 0; opacity: 0; }
 }
+    /* The side navbar */
+    .sidenav-wish {
+        height: 100%;
+        /* 100% Full-height */
+        width: 0;
+        /* 0 width - change this with JavaScript */
+        position: fixed;
+        /* Stay in place */
+        z-index: 2;
+        /* Stay on top */
+        top: 0;
+        right: 0;
+        /* Slide in from the right */
+        background-color: #efeaea;
+        /* Black*/
+        overflow-x: hidden;
+        /* Disable horizontal scroll */
+        transition: 0.5s;
+        /* 0.5 second transition effect to slide in the sidenav */
+        padding-top: 60px;
+        /* Place content 60px from the top */
+    }
 
+    /* The navigation menu links */
+    .sidenav-wish a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+
+    /* When you mouse over the navigation links, change their color */
+    .sidenav-wish a:hover {
+        color: #f1f1f1;
+    }
+
+    /* Position and style the close button (top right corner) */
+    .sidenav-wish .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+
+    .wish-list {
+        font-size: 24px;
+        text-align: center;
+        font-weight: 700;
+        padding-bottom: 20px;
+    }
+
+    .Wish-list-main {
+        display: grid;
+        grid-template-columns: 30% 60% 10%;
+        padding: 10px 30px;
+    }
+
+    .Wish-list-img img {
+        width: 100%;
+    }
+
+    .Wish-list-content {
+        padding-left: 20px;
+    }
+
+    .Wish-list-content-header {
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .Wish-list-content-rate {
+        padding: 20px 0px;
+
+        span {
+            text-decoration: line-through;
+        }
+    }
+
+    .Wish-list-content-viewpro {
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+
+    #overlaywl {
+        position: fixed;
+        /* Stay in place */
+        z-index: 1;
+        /* Below the sidenav */
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        /* Black with opacity */
+        display: none;
+        /* Hidden by default */
+    }
+
+    @media screen and (max-width: 768px) {
+        .sidenav-wish {
+            width: 0px;
+            right: 0;
+        }
+    }
 </style>
 <head>
     <meta charset="UTF-8">
@@ -120,7 +227,7 @@
                         <div class="header__cart">
                             <ul>
                                 <li>
-                                    <button class="btn_nav" onclick="showFavoritesPopup()">Wishlist <a href="#"><i
+                                    <button class="btn_nav" id="heartIcon">Wishlist <a href="#"><i
                                                 class="fa fa-heart"></i>
                                             <span id="favorite-count"></span></a></button>
                                 </li>
@@ -421,7 +528,32 @@
         </div>
     </footer>
 
+    <div>
+        <!-- Side Navbar -->
+        <div id="sideNavbarwl" class="sidenav-wish">
+            <a href="javascript:void(0)" class="closebtn" id="closeNavwl">&times;</a>
+            <!-- Add your navbar content here -->
 
+            <div>
+                <div class="wish-list">Wishlist</div>
+                <div class="Wish-list-main">
+                    <div class="Wish-list-img">
+                        <img src="./image/1.jpg" alt="image">
+                    </div>
+                    <div class="Wish-list-content">
+                        <div class="Wish-list-content-header">Hair Growth Oil</div>
+                        <div class="Wish-list-content-rate"><span>₹1500</span> ₹800</div>
+                        <div class="Wish-list-content-viewpro">View Product</div>
+                    </div>
+                    <div class="Wish-list-close">&times;</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Overlay -->
+        <div id="overlaywl"></div>
+
+    </div>
     <!-- Modal -->
     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
         aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -462,6 +594,41 @@
     <script src="Response/Option.js"></script>
     <script src="Response/index.js"></script>
     <script src="Response/UpdateCount.js"></script>
+    <script>
+        document.getElementById("heartIcon").onclick = function () {
+            openNavwl();
+        };
+
+        document.getElementById("closeNavwl").onclick = function () {
+            closeNavwl();
+        };
+
+        document.getElementById("overlaywl").onclick = function () {
+            closeNavwl();
+        };
+
+        function openNavwl() {
+            if (window.innerWidth <= 768) {
+                document.getElementById("sideNavbarwl").style.width = "100%";
+            } else {
+                document.getElementById("sideNavbarwl").style.width = "450px";
+            }
+            document.getElementById("overlaywl").style.display = "block";
+        }
+
+        function closeNavwl() {
+            document.getElementById("sideNavbarwl").style.width = "0";
+            document.getElementById("overlaywl").style.display = "none";
+        }
+
+        window.onresize = function () {
+            if (window.innerWidth > 768) {
+                document.getElementById("sideNavbarwl").style.width = "0";
+                document.getElementById("overlaywl").style.display = "none";
+            }
+        };
+
+    </script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const categoryImages = document.querySelectorAll('.sect1');
