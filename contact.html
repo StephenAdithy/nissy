@@ -52,69 +52,51 @@
     <!-- Header Section Begin -->
     <header class="header">
 
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="header__logo">
-                        <a href="./index.html"><img src="img/Nissy/Logo.png" alt="" class="logoimg"></a>
-                    </div>
-                </div>
-                <div class="col-lg-6 headalign">
-                    <nav class="header__menu">
-                        <ul>
-                            <li><a href="./index.html">Home</a></li>
-                            <li><a href="./shop-grid.html">Products</a></li>
-                            <li class="active"><a href="./contact.html">Contact Us</a></li>
-                            <li><a href="./shop-grid.html">About</a></li>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top navbar-fixed">
+            <div class="header__logo">
+                <a href="./index.html"><img src="img/Nissy/Logo.png" alt="" class="logoimg"></a>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                        </ul>
-                    </nav>
-                </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="col-lg-12">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./shop-grid.html">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./AboutUs.html">About Us</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link active" href="./contact.html">Contact</a>
+                        </li>
 
-                <div class="col-lg-2">
-                    <div class="header__cart">
-                        <ul>
-                            <button type="button" class="btn btn-lg" data-toggle="modal" data-target="#myModal">
-                                <i class="fa fa-search"></i>
-                            </button>
-                            <li><a href="#" onclick="showFavoritesPopup()"><i class="fa fa-heart"></i> <span
-                                        id="favorite-count"></span></a></li>
-                            <li><a href="shoping-cart.html"><i class="fa fa-shopping-bag"></i> <span
-                                        id="cart-count"></span></a></li>
-                        </ul>
-                    </div>
+                        <div class="header__cart">
+                            <ul>
+                                <li>
+                                    <button class="btn_nav">Wishlist <a href="#" onclick="showFavoritesPopup()"><i
+                                                class="fa fa-heart"></i>
+                                            <span id="favorite-count"></span></a></button>
+                                </li>
+                                <li>
+                                    <button class="btn_nav"><a href="shoping-cart.html">Cart <i
+                                                class="fa fa-shopping-bag"></i> <span
+                                                id="cart-count"></span></a></button>
+                                </li>
+                            </ul>
+                        </div>
+                    </ul>
                 </div>
             </div>
-
-            <div class="humberger__open">
-                <i class="fa fa-bars"></i>
-            </div>
-        </div>
+        </nav>
     </header>
     <!-- Header Section End -->
-
-    <!-- Hero Section Begin -->
-    <section class="hero">
-        <div class="modal fade" id="myModal" role="dialog">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="hero__search">
-                        <div class="hero__search__form">
-                            <form action="#">
-                                <div class="hero__search__categories">
-                                    All Categories
-                                    <span class="arrow_carrot-down"></span>
-                                </div>
-                                <input type="text" placeholder="I'm shopping for ...">
-                                <button type="submit" class="site-btn">SEARCH</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Hero Section End -->
 
     <!-- Breadcrumb Section Begin -->
     <section class="breadcrumb-section">
@@ -201,46 +183,49 @@
                 <div class="col-lg-6 ordertwo">
                     <div class="row">
                         <div class="contact-main">
-                        <div class="contact-main-getin">Get In Touch</div>
-                        <div class="contact-main-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, veniam. Tenetur illo, quos accusantium mollitia provident incidunt deserunt eius molestiae suscipit et pariatur corporis consequatur laborum numquam. Laboriosam, fuga itaque!</div>
-                        <div class="contact-main-details">
-                            <div class="contact-details">
-                                <img src="img/icons/phone.png" alt="">
-                                <div class="contact-details_info">
-                                    <div class="contact-details_info-header">Call us</div>
-                                    <div class="contact-details_info-content">91+ 9994226651</div>
+                            <div class="contact-main-getin">Get In Touch</div>
+                            <div class="contact-main-content">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Ipsum, veniam. Tenetur illo, quos accusantium mollitia provident incidunt deserunt eius
+                                molestiae suscipit et pariatur corporis consequatur laborum numquam. Laboriosam, fuga
+                                itaque!</div>
+                            <div class="contact-main-details">
+                                <div class="contact-details">
+                                    <img src="img/icons/phone.png" alt="">
+                                    <div class="contact-details_info">
+                                        <div class="contact-details_info-header">Call us</div>
+                                        <div class="contact-details_info-content">91+ 9994226651</div>
+                                    </div>
+                                </div>
+                                <div class="contact-details">
+                                    <img src="img/icons/Email.png" alt="">
+                                    <div class="contact-details_info">
+                                        <div class="contact-details_info-header">Email</div>
+                                        <div class="contact-details_info-content">steveadhi200@gmail.com</div>
+                                    </div>
+                                </div>
+                                <div class="contact-details">
+                                    <img src="img/icons/Clock.png" alt="">
+                                    <div class="contact-details_info">
+                                        <div class="contact-details_info-header">Office Timing</div>
+                                        <div class="contact-details_info-content">8 Am to 8PM</div>
+                                    </div>
+                                </div>
+                                <div class="contact-details">
+                                    <img src="img/icons/Location.png" alt="">
+                                    <div class="contact-main-details_info">
+                                        <div class="contact-details_info-header">Location</div>
+                                        <div class="contact-details_info-content">enga oru coimbatore</div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="contact-details">
-                                <img src="img/icons/Email.png" alt="">
-                                <div class="contact-details_info">
-                                    <div class="contact-details_info-header">Email</div>
-                                    <div class="contact-details_info-content">steveadhi200@gmail.com</div>
-                                </div>
-                            </div>
-                            <div class="contact-details">
-                                <img src="img/icons/Clock.png" alt="">
-                                <div class="contact-details_info">
-                                    <div class="contact-details_info-header">Office Timing</div>
-                                    <div class="contact-details_info-content">8 Am to 8PM</div>
-                                </div>
-                            </div>
-                            <div class="contact-details">
-                                <img src="img/icons/Location.png" alt="">
-                                <div class="contact-main-details_info">
-                                    <div class="contact-details_info-header">Location</div>
-                                    <div class="contact-details_info-content">enga oru coimbatore</div>
-                                </div>
+                            <div class="contact-main-follow">Follow Us On</div>
+                            <div class="contact-main-social">
+                                <img src="img/icons/Facebook.png" alt="facebook">
+                                <img src="img/icons/Instagram.png" alt="Instagram">
+                                <img src="img/icons/X.png" alt="x">
+                                <img src="img/icons/youtube.png" alt="youtube">
                             </div>
                         </div>
-                        <div class="contact-main-follow">Follow Us On</div>
-                        <div class="contact-main-social">
-                            <img src="img/icons/Facebook.png" alt="facebook">
-                            <img src="img/icons/Instagram.png" alt="Instagram">
-                            <img src="img/icons/X.png" alt="x">
-                            <img src="img/icons/youtube.png" alt="youtube">
-                        </div>
-                    </div>
                     </div>
 
                     <!-- Map Begin -->

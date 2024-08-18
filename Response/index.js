@@ -297,9 +297,10 @@ function generateProductHTML(product) {
         `<img src="${img}" alt="image">`).join('');
 
     return `
-                <div class="featured__filter-items col-lg-3 col-md-4 col-sm-6 mix ${product.category}">
+                <div class="featured__filter-items col-lg-3 col-md-6 col-sm-6 mix ${product.category}">
                     <div class="featured__item">
-                        <div class="featured__item__pic set-bg" onclick="location.href='shop-details.html?id=${product.id}'" style="background-image: url(${product.image});"> 
+                        <div class="featured__item__pic set-bg" onclick="location.href='shop-details.html?id=${product.id}'"> 
+                        <img src=${product.image} alt="product"> 
                        </div>
                         <div class="featured__item__text">
                             <h6><a href="#">${product.name}</a></h6>

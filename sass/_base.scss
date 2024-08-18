@@ -112,6 +112,11 @@ ol {
   margin-bottom: 50px;
   text-align: center;
 
+  @media (max-width: 770px) {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
   h2 {
     color: $normal-color;
     font-weight: 700;
@@ -163,8 +168,22 @@ ol {
   color: $white-color;
   text-transform: uppercase;
   font-weight: 700;
-  background: $primary-color;
+  background: #6da96d;
   letter-spacing: 2px;
+  border-radius: 10px;
+}
+
+@media(max-width:540px) {
+  .primary-btn {
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+  }
+}
+
+.price-display{
+  font-size: 24px;
+  padding-top: 20px;
 }
 
 .site-btn {
