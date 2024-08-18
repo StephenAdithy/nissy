@@ -980,12 +980,14 @@ ol {
 
 .sidenav {
   width: 0;
+  height: 100%;
   position: fixed;
   z-index: 1050;
   top: 0;
   right: 0;
   background-color: white;
   overflow-x: hidden;
+  overflow-y: auto;
   transition: 0.5s;
   padding-top: 40px;
 }
@@ -1124,7 +1126,8 @@ ol {
 }
 
 .add-to-cart {
-  background-color: #28a745; /* Green color */
+  background-color: #28a745;
+  /* Green color */
   border: none;
   border-radius: 4px;
   color: white;
@@ -1140,7 +1143,8 @@ ol {
 }
 
 .buy-now {
-  background-color: #ffc107; /* Yellow color */
+  background-color: #ffc107;
+  /* Yellow color */
   border: none;
   border-radius: 4px;
   color: black;
