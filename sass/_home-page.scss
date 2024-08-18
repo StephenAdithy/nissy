@@ -1,7 +1,7 @@
 /*---------------------
   Categories
 -----------------------*/
-.products{
+.products {
     padding-top: 60px;
 }
 
@@ -116,6 +116,7 @@
 
     &:hover {
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
         .featured__item__pic {
 
             .featured__item__pic__hover {
@@ -301,7 +302,7 @@
     margin-bottom: 70px;
 }
 
-.bannerht{
+.bannerht {
     height: 600px;
 }
 
@@ -311,7 +312,7 @@
 .container {
     padding: 10px;
 
-    .row{
+    .row {
         margin: 0;
     }
 }
@@ -319,12 +320,14 @@
 
 .sidenav {
     width: 0;
+    height: 100%;
     position: fixed;
     z-index: 1050;
     top: 0;
     right: 0;
     background-color: white;
     overflow-x: hidden;
+    overflow-y: auto;
     transition: 0.5s;
     padding-top: 40px;
 }
@@ -355,9 +358,9 @@
     color: white;
     font-weight: 700;
     cursor: pointer;
-  }
+}
 
-  .overlay {
+.overlay {
     display: none;
     position: fixed;
     top: 0;
@@ -420,15 +423,15 @@
 .main-content {
     margin-top: 20px;
 
-    &-heading{
+    &-heading {
         font-size: 30px;
-    font-weight: 600;
-    line-height: 35px;
-    padding-bottom: 10px;
+        font-weight: 600;
+        line-height: 35px;
+        padding-bottom: 10px;
     }
 }
 
-.weight-display{
+.weight-display {
     display: flex;
     gap: 10px;
     padding-top: 10px;
@@ -440,11 +443,11 @@
     gap: 10px;
     margin-top: 10px;
 
-    &-countbutton{
+    &-countbutton {
         width: 50px;
-    border-radius: 30px;
-    padding: 5px;
-    font-size: 25px;
+        border-radius: 30px;
+        padding: 5px;
+        font-size: 25px;
     }
 }
 
@@ -465,7 +468,8 @@
 }
 
 .add-to-cart {
-    background-color: #28a745; /* Green color */
+    background-color: #28a745;
+    /* Green color */
     border: none;
     border-radius: 4px;
     color: white;
@@ -481,7 +485,8 @@
 }
 
 .buy-now {
-    background-color: #ffc107; /* Yellow color */
+    background-color: #ffc107;
+    /* Yellow color */
     border: none;
     border-radius: 4px;
     color: black;
@@ -507,53 +512,53 @@ span[id^="quantity-"] {
 .grid-header {
     text-align: center;
     padding: 32px;
-  }
-  
-  .grid-row {
+}
+
+.grid-row {
     display: -ms-flexbox; // IE10
     display: flex;
     -ms-flex-wrap: wrap; // IE10
     flex-wrap: wrap;
     padding: 0 4px;
-  }
-  
-  // Create four equal columns that sits next to each other
-  .grid-column {
+}
+
+// Create four equal columns that sits next to each other
+.grid-column {
     -ms-flex: 25%; // IE10
     flex: 25%;
     max-width: 25%;
     padding: 0 4px;
-  
+
     img {
-      margin-top: 8px;
-      vertical-align: middle;
-      width: 100%;
+        margin-top: 8px;
+        vertical-align: middle;
+        width: 100%;
     }
-  }
-  
-  // Responsive layout - makes a two column-layout instead of four columns
-  @media screen and (max-width: 800px) {
-    .grid-column {
-      -ms-flex: 50%;
-      flex: 50%;
-      max-width: 50%;
-    }
-  }
-  
-  // Responsive layout - makes the two columns stack on top of each other instead of next to each other
-  @media screen and (max-width: 600px) {
-    .grid-column {
-      -ms-flex: 100%;
-      flex: 100%;
-      max-width: 100%;
-    }
-  }
+}
 
-  .aboutus{
+// Responsive layout - makes a two column-layout instead of four columns
+@media screen and (max-width: 800px) {
+    .grid-column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+// Responsive layout - makes the two columns stack on top of each other instead of next to each other
+@media screen and (max-width: 600px) {
+    .grid-column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
+.aboutus {
     margin-top: 86px;
-  }
+}
 
-  .featured__controls ul li a.active {
+.featured__controls ul li a.active {
     color: #6da96d;
     font-weight: bold;
 }
@@ -932,4 +937,3 @@ span[id^="quantity-"] {
 .client-happy {
     padding-top: 30px;
 }
-  
