@@ -1,6 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+<style>
+.toast {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 10000; 
+    left: 50%;
+    bottom: 30px;
+    font-size: 15px;
+}
+.toast.success {
+    background-color: #28a745; 
+}
+.toast.success .toast-icon::before {
+    content: '\f058'; 
+    font-family: "FontAwesome";
+    font-weight: 900;
+}
 
+.toast.error {
+    background-color: #dc3545; 
+}
+.toast.error .toast-icon::before {
+    content: '\f071'; 
+    font-family: "FontAwesome";
+    font-weight: 900;
+}
+.toast.show {
+    visibility: visible;
+    display: flex !important; 
+    gap: 10px !important;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+.toast-close{
+    right: 20px;
+    top: 12px;
+    font-size: 20px;
+    position: absolute;
+    cursor: pointer;
+}
+.toast-close::before {
+    content: '\f057';
+    font-family: "FontAwesome"; 
+    font-weight: 700;
+}
+@keyframes fadein {
+    from { bottom: 0; opacity: 0; }
+    to { bottom: 30px; opacity: 1; }
+}
+
+@keyframes fadeout {
+    from { bottom: 30px; opacity: 1; }
+    to { bottom: 0; opacity: 0; }
+}
+
+</style>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +69,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
@@ -22,6 +83,11 @@
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
+<div id="toast" class="toast">
+    <span class="toast-icon"></span>
+    <div class="toast-message"></div>
+    <div class="toast-close" onclick="closeToast()"></div>
+</div>
 
 <body>
     <!-- Navbar -->
@@ -65,53 +131,7 @@
           </ul></div>
         </div>
       </nav>
-    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <div class="header__logo">
-                <a href="./index.html"><img src="img/Nissy/Logo.png" alt="" class="logoimg"></a>
-            </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <div class="container">
-                    <div class="col-lg-12">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./shop-grid.html">Products</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./contact.html">Contact</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./AboutUs.html">About Us</a>
-                            </li>
-                            <div class="header__cart">
-                                <ul>
-                                    <li>
-                                        <button class="btn_nav">Wishlist <a href="#" onclick="showFavoritesPopup()"><i
-                                                    class="fa fa-heart"></i>
-                                                <span id="favorite-count"></span></a></button>
-                                    </li>
-                                    <li>
-                                        <button class="btn_nav">Cart <a href="shoping-cart.html"><i
-                                                    class="fa fa-shopping-bag"></i> <span
-                                                    id="cart-count"></span></a></button>
-                                    </li>
-                                </ul>
-                            </div>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav> -->
-
-
+  
     <div id="favoritesPopup" class="popup">
         <div class="popup-content">
             <span class="close" onclick="closeFavoritesPopup()">&times;</span>
@@ -421,6 +441,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.nice-select.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
@@ -803,7 +824,6 @@ $(document).ready(function () {
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
         color: #9e9e9e;
         display: inline-block;
-        font-family: 'Roboto', Arial, sans-serif;
         font-size: 16px;
         margin: 35px 5px 10px;
         max-width: 310px;

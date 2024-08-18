@@ -1,5 +1,5 @@
 // document.addEventListener('DOMContentLoaded', function() {
-//     debugger
+//     
 //     // Select the "All" category element
 //     const allCategoryElement = document.querySelector('ul li a[data-category="."]');
     
@@ -22,7 +22,7 @@
 // });
 
 // function highlightCategory(activeElement) {
-//     debugger
+//     
 //     // Remove the active class from all category links
 //     const categoryLinks = document.querySelectorAll('ul li a[data-category]');
 //     categoryLinks.forEach(link => {
@@ -34,7 +34,7 @@
 // }
 
 // function filterProductsByCategory(category) {
-//     debugger
+//     
 //     let filteredProducts;
 
 //     // If the "All" category is selected, load all products
@@ -50,7 +50,7 @@
 // }
 
 // function loadProducts(productsToLoad) {
-//     debugger
+//     
 //     const productContainer = document.getElementById('product-container');
 
 //     productContainer.classList.add('fade-out'); 
@@ -126,7 +126,7 @@
 // }
 
 // document.addEventListener('DOMContentLoaded', function() {
-//     debugger
+//     
 //     const allCategoryElement = document.querySelector('ul li a[data-category="."]');
     
 //     // Highlight and filter products for "All" category by default
@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 function highlightCategory(activeElement) {
-    debugger
+    
     const categoryLinks = document.querySelectorAll('ul li a[data-category]');
     categoryLinks.forEach(link => {
         link.classList.remove('active-category');
@@ -181,7 +181,7 @@ function highlightCategory(activeElement) {
 }
 
 function filterProductsByCategory(category) {
-    debugger
+    
     let filteredProducts;
     // Load all products if "All" is selected
     if (category === ".") {
@@ -193,7 +193,7 @@ function filterProductsByCategory(category) {
 }
 
 function loadProducts(productsToLoad) {
-    debugger
+    
     const productContainer = document.getElementById('product-container');
 
     productContainer.classList.add('fade-out'); 

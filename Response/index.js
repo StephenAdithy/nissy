@@ -281,7 +281,7 @@ const products = [
         weights: [
             { id: "weight1", value: "1KG", label: "1KG", price: 200 },
             { id: "weight2", value: "250GM", label: "250GM", price: 100 },
-            { id: "weight3", value: "500GM", label: "500GM", price: 101 }
+            { id: "weight3", value: "500GM", label: "500GM", price: 90 }
         ],
     },
     // Add more products as needed
@@ -348,25 +348,23 @@ function generateProductHTML(product) {
 function addToCartWithSelectedWeight(productId) {
     const selectedWeightElement = document.querySelector(`input[name='weight-${productId}']:checked`);
     if (!selectedWeightElement) {
-        console.error(`No weight selected for product ID: ${productId}`);
+        showToast(`Please select any weight`,'error')
         return;
     }
 
     const selectedWeight = selectedWeightElement.value;
     const pricePerUnit = parseFloat(selectedWeightElement.getAttribute('data-price'));
 
-    console.log("Quantity:", selectedWeight);
-
     const quantityElement = document.getElementById(`quantity-${productId}`);
     if (!quantityElement) {
-        console.error(`Quantity element with ID quantity-${productId} not found`);
+        showToast('Please select the Quantity','error');
         return;
     }
 
     const quantity = parseInt(quantityElement.textContent);
 
     if (isNaN(quantity)) {
-        console.error('Invalid quantity value');
+        showToast('Invalid quantity value','error');
         return;
     }
 
@@ -382,7 +380,7 @@ function buyNow(productId) {
     const selectedWeightElement = document.querySelector(`input[name="weight-${productId}"]:checked`);
     
     if (!selectedWeightElement) {
-        alert("Please select a weight option.");
+        showToast('Please select a weight option.','success');
         return;
     }
     
@@ -422,41 +420,56 @@ function updatePrice(productId) {
         priceDisplay.textContent = totalPrice.toFixed(2);
     }
 }
-function updatePrice1(productId) {
-    const selectedWeight = document.querySelector(`input[name='weight']:checked`);
-    const quantity = parseInt(document.getElementById(`quantity-${productId}`).value);
-    const priceDisplay = document.getElementById(`calculated-price-${productId}`);
 
-    if (selectedWeight && priceDisplay) {
-        const pricePerUnit = parseFloat(selectedWeight.getAttribute('data-price'));
+function updatePrice1(productId) {
+    const selectedWeightElement = document.querySelector("input[name='weight']:checked");
+    const quantityElement = document.getElementById(`quantity-${productId}`);
+    
+    if (selectedWeightElement && quantityElement) {
+        const pricePerUnit = parseFloat(selectedWeightElement.getAttribute('data-price'));
+        const quantity = parseInt(quantityElement.value);
+
         const totalPrice = pricePerUnit * quantity;
-        priceDisplay.textContent = totalPrice.toFixed(2);
+
+        document.querySelector(".product__details__price").innerText = `₹${totalPrice}`;
     }
 }
 
-function showToast(message) {
+function showToast(message, type = 'success') {
     const toast = document.getElementById('toast');
     const toastMessage = toast.querySelector('.toast-message');
+
+    toast.classList.remove('success', 'error');
+    
+    if (type === 'success') {
+        toast.classList.add('success');
+    } else if (type === 'error') {
+        toast.classList.add('error');
+    }
 
     toastMessage.textContent = message; 
     toast.classList.add('show'); 
 
     setTimeout(() => {
         toast.classList.remove('show');
-    }, 3000);
+    }, 300000);
 }
 
+function closeToast() {
+    const toast = document.getElementById('toast');
+    toast.classList.remove('show');
+}
 
 function addToCart(productId, selectedWeight, quantity, pricePerUnit) {
     const product = products.find(p => p.id === productId);
 
     if (!selectedWeight) {
-        alert('Please select a weight option.');
+        showToast('Please select a weight option','error');
         return;
     }
 
     if (isNaN(quantity) || quantity < 1) {
-        alert('Please select a valid quantity.');
+        showToast('Please select a valid quantity.','error');
         return;
     }
 
@@ -475,7 +488,7 @@ function addToCart(productId, selectedWeight, quantity, pricePerUnit) {
     updateCartCount();
     closeNav(productId);
 
-    showToast('Item added to cart!');
+    showToast('Item added to cart!','success');
 }
 
 
@@ -545,13 +558,19 @@ function changeQuantity(amount, productId) {
     if (quantityElement) {
         let oldValue = parseInt(quantityElement.value);
         let newValue = oldValue + amount;
+
+        // Ensure the quantity doesn't go below 1
         if (newValue < 1) {
             newValue = 1;
         }
+
         quantityElement.value = newValue;
+
+        // Now update the price based on the new quantity
         updatePrice1(productId);
     }
 }
+
 
 let currentIndex = {};
 
