@@ -15,6 +15,7 @@ const products = [
         rate: " ₹ 400.00",
         productdescription: "dfssssssssssssssssssssssssssssssssss",
         information: "fffffffffffffffffffffffffffffffffffffff",
+        selfLife: '6 months',
         productImage: [
             "img/product/details/product-details-1.jpg",
             "img/product/details/thumb-1.jpg",
@@ -42,6 +43,7 @@ const products = [
         shipping: "01 day shipping. <samp>Free pickup today</samp>",
         weightDetail: "0.5 kg",
         rate: " ₹ 400.00",
+        selfLife: '2 months',
         productImage: [
             "img/product/details/product-details-1.jpg",
             "img/product/details/thumb-1.jpg",
@@ -67,6 +69,7 @@ const products = [
         shipping: "01 day shipping. <samp>Free pickup today</samp>",
         weightDetail: "0.5 kg",
         rate: " ₹ 400.00",
+        selfLife: '1 months',
         productImage: [
             "img/product/details/product-details-1.jpg",
             "img/product/details/thumb-1.jpg",
@@ -88,11 +91,12 @@ const products = [
         category: 'Malt',
         description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam odio quidem aliquid voluptatem veritatis maxime eaque voluptatum expedita illo excepturi atque at assumenda quod, delectus ipsa aliquam cupiditate cum tempora.',
         weightOptions: ['1L', '250ml', '500ml'],
-        images: ['img/Nissy/Newimages/3.jpg', 'img/Nissy/Newimages/6.jpg'],
+        images: ['img/Nissy/Newimages/3.jpg', 'img/Nissy/Newimages/6.jpg','img/Nissy/Newimages/4.jpg'],
         availability: "out od Stock",
         shipping: "01 day shipping. <samp>Free pickup today</samp>",
         weightDetail: "0.5 kg",
         rate: " ₹ 400.00",
+        selfLife: '7 months',
         productImage: [
             "img/product/details/product-details-1.jpg",
             "img/product/details/thumb-1.jpg",
@@ -113,11 +117,12 @@ const products = [
         category: 'Malt',
         description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam odio quidem aliquid voluptatem veritatis maxime eaque voluptatum expedita illo excepturi atque at assumenda quod, delectus ipsa aliquam cupiditate cum tempora.',
         weightOptions: ['1L', '250ml', '500ml'],
-        images: ['img/Nissy/Newimages/3.jpg', 'img/Nissy/Newimages/6.jpg'],
+        images: ['img/Nissy/Newimages/3.jpg', 'img/Nissy/Newimages/6.jpg','img/Nissy/Newimages/2.jpg'],
         availability: "In of Stock",
         shipping: "01 day shipping. <samp>Free pickup today</samp>",
         weightDetail: "0.5 kg",
         rate: " ₹ 400.00",
+        selfLife: '4 months',
         productImage: [
             "img/product/details/product-details-1.jpg",
             "img/product/details/thumb-1.jpg",
@@ -142,6 +147,7 @@ const products = [
         availability: "In Stock",
         shipping: "01 day shipping. <samp>Free pickup today</samp>",
         weightDetail: "0.5 kg",
+        selfLife: '12 months',
         rate: " ₹ 400.00",
         productImage: [
             "img/product/details/product-details-1.jpg",
@@ -168,6 +174,7 @@ const products = [
         shipping: "01 day shipping. <samp>Free pickup today</samp>",
         weightDetail: "0.5 kg",
         rate: " ₹ 400.00",
+        selfLife: '4 months',
         productImage: [
             "img/product/details/product-details-1.jpg",
             "img/product/details/thumb-1.jpg",
@@ -193,6 +200,7 @@ const products = [
         shipping: "01 day shipping. <samp>Free pickup today</samp>",
         weightDetail: "0.5 kg",
         rate: " ₹ 400.00",
+        selfLife: '6 months',
         productImage: [
             "img/product/details/product-details-1.jpg",
             "img/product/details/thumb-1.jpg",
@@ -218,6 +226,7 @@ const products = [
         shipping: "01 day shipping. <samp>Free pickup today</samp>",
         weightDetail: "0.5 kg",
         rate: " ₹ 400.00",
+        selfLife: '12 months',
         productImage: [
             "img/product/details/product-details-1.jpg",
             "img/product/details/thumb-4.jpg",
@@ -244,6 +253,7 @@ const products = [
         shipping: "01 day shipping. <samp>Free pickup today</samp>",
         weightDetail: "0.5 kg",
         rate: " ₹ 400.00",
+        selfLife: '6 months',
         productImage: [
             "img/product/details/product-details-1.jpg",
             "img/product/details/thumb-4.jpg",
@@ -266,11 +276,12 @@ const products = [
         category: 'Malt',
         description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam odio quidem aliquid voluptatem veritatis maxime eaque voluptatum expedita illo excepturi atque at assumenda quod, delectus ipsa aliquam cupiditate cum tempora.',
         weightOptions: ['1L', '250ml', '500ml'],
-        images: ['img/Nissy/Newimages/3.jpg', 'img/Nissy/Newimages/6.jpg'],
+        images: ['img/Nissy/Newimages/3.jpg', 'img/Nissy/Newimages/6.jpg','img/Nissy/Newimages/1.jpg'],
         availability: "out od Stock",
         shipping: "01 day shipping. <samp>Free pickup today</samp>",
         weightDetail: "0.5 kg",
         rate: " ₹ 400.00",
+        selfLife: '2 months',
         productImage: [
             "img/product/details/product-details-1.jpg",
             "img/product/details/thumb-4.jpg",
@@ -381,7 +392,7 @@ function buyNow(productId) {
     const selectedWeightElement = document.querySelector(`input[name="weight-${productId}"]:checked`);
     
     if (!selectedWeightElement) {
-        showToast('Please select a weight option.','success');
+        showToast('Please select a weight option.','error');
         return;
     }
     
@@ -432,7 +443,7 @@ function updatePrice1(productId) {
 
         const totalPrice = pricePerUnit * quantity;
 
-        document.querySelector(".product__details__price").innerText = `₹${totalPrice}`;
+        document.querySelector(".product-details-info li:nth-child(1) span").innerText = `₹${totalPrice}`;
     }
 }
 
@@ -453,7 +464,7 @@ function showToast(message, type = 'success') {
 
     setTimeout(() => {
         toast.classList.remove('show');
-    }, 300000);
+    }, 30000);
 }
 
 function closeToast() {
@@ -523,22 +534,18 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function openNav(id) {
-    // Detect the screen width
     const screenWidth = window.innerWidth;
 
-    // Set width based on screen size
     let width;
-    if (screenWidth <= 768) { // Tablet and mobile view
+    if (screenWidth <= 768) { 
         width = "100%";
     } else {
-        width = "500px"; // Desktop view
+        width = "500px"; 
     }
 
-    // Apply the width to the sidebar
     document.getElementById(`mySidenav-${id}`).style.width = width;
     document.getElementById(`overlay-${id}`).style.display = "block";
 
-    // Initialize the current index and show slides
     currentIndex[id] = 0;
     showSlides(id);
 }
@@ -551,11 +558,32 @@ function updateCartCount() {
     localStorage.setItem('cartCount', totalCount);
 }
 
+// function closeNav(id) {
+//     document.getElementById(`mySidenav-${id}`).style.width = "0";
+//     document.getElementById(`overlay-${id}`).style.display = "none";
+// }
+
+
 function closeNav(id) {
+    const sidebar = document.getElementById(`mySidenav-${id}`);
+    const radioButtons = sidebar.querySelectorAll('input[type="radio"]');
+    radioButtons.forEach(radio => {
+        radio.checked = false; 
+    });
+
+    const priceDisplay = document.getElementById(`calculated-price-${id}`);
+    const quantityDisplay = document.getElementById(`quantity-${id}`);
+    
+    if (priceDisplay) {
+        priceDisplay.textContent = "0"; 
+    }
+    
+    if (quantityDisplay) {
+        quantityDisplay.textContent = "1"; 
+    }
     document.getElementById(`mySidenav-${id}`).style.width = "0";
     document.getElementById(`overlay-${id}`).style.display = "none";
 }
-
 
 function changeQuantity1(amount, productId) {
     const quantityElement = document.getElementById(`quantity-${productId}`);
@@ -607,23 +635,137 @@ function showSlides(id) {
     });
 }
 
-function toggleFavorite(productId) {
-    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-    if (favorites.includes(productId)) {
-        favorites = favorites.filter(id => id !== productId);
-    } else {
-        favorites.push(productId);
-    }
-    localStorage.setItem('favorites', JSON.stringify(favorites));
-    updateFavoriteCount();
-    loadFavorites();
+// function toggleFavorite(productId) {
+//     let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+//     if (favorites.includes(productId)) {
+//         favorites = favorites.filter(id => id !== productId);
+//     } else {
+//         favorites.push(productId);
+//     }
+//     localStorage.setItem('favorites', JSON.stringify(favorites));
+//     updateFavoriteCount();
+//     loadFavorites();
+// }
+
+
+function updateFavoriteUI() {
+    
+    console.log('Updating favorite UI...');
+    
+    const favoriteLinks = document.querySelectorAll('.product__item__pic__hover li a');
+    const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    
+    favoriteLinks.forEach(link => {
+        const productId = parseInt(link.getAttribute('onclick').match(/(\d+)/)[0], 10);
+        
+        console.log(`Product ID: ${productId}, Is Favorite: ${favorites.includes(productId)}`);
+        
+        if (favorites.includes(productId)) {
+            link.classList.add('favorite');
+        } else {
+            link.classList.remove('favorite');
+        }
+    });
 }
+
+
+// function updateFavoriteCount() {
+//     const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+//     document.getElementById('favorite-count').textContent = favorites.length;
+// }
+
+
+// function loadFavorites() {
+//     const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+//     const favoritesList = document.getElementById('favoritesList');
+//     favoritesList.innerHTML = '';
+
+//     favorites.forEach(id => {
+//         const product = products.find(p => p.id === id);
+//         if (product) {
+//             favoritesList.innerHTML += `
+//                 <div class="favorite-item">
+//                     <h4>${product.name}</h4>
+//                     <p>${product.price}</p>
+//                     <p>${product.description}</p>
+//                     <button onclick="removeFavorite(${id})">Remove</button>
+//                 </div>
+//             `;
+//         }
+//     });
+// }
+
+// function loadFavorites() {
+//     const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+//     const favoritesList = document.getElementById('favoritesList');
+//     favoritesList.innerHTML = '';
+
+//     favorites.forEach(id => {
+//         const product = products.find(p => p.id === id);
+//         if (product) {
+//             favoritesList.innerHTML += `
+//                 <div class="favorite-item">
+//                     <h4>${product.name}</h4>
+//                     <p>₹${product.price}</p>
+//                     <p>${product.description}</p>
+//                     <button onclick="removeFavorite(${id})">Remove</button>
+//                 </div>
+//             `;
+//         }
+//     });
+// }
+
+
+// function removeFavorite(productId) {
+//     let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+//     favorites = favorites.filter(id => id !== productId);
+//     localStorage.setItem('favorites', JSON.stringify(favorites));
+//     updateFavoriteCount();
+//     loadFavorites();
+// }
+
+// function showFavoritesPopup() {
+//     const popup = document.getElementById('favoritesPopup');
+//     popup.style.display = 'block';
+//     loadFavorites();
+// }
+
+// function closeFavoritesPopup() {
+//     const popup = document.getElementById('favoritesPopup');
+//     popup.style.display = 'none';
+// }
+
 
 function updateFavoriteCount() {
     const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-    document.getElementById('favorite-count').textContent = favorites.length;
+    const countElement = document.getElementById('favorite-count');
+    if (countElement) {
+        countElement.textContent = favorites.length;
+    }
 }
 
+
+function toggleFavorite(productId) {
+    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    const productIndex = favorites.indexOf(productId);
+    const isFavorite = productIndex !== -1;
+
+    // Toggle favorite status
+    if (isFavorite) {
+        favorites.splice(productIndex, 1);
+        showToast('Removed from favorites', 'success'); 
+    } else {
+        favorites.push(productId);
+        showToast('Added to favorites', 'success'); 
+    }
+
+    // Save updated favorites to localStorage
+    localStorage.setItem('favorites', JSON.stringify(favorites));
+
+    // Update the UI
+    updateFavoriteCount();
+    updateFavoriteUI(productId);
+}
 
 function loadFavorites() {
     const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
@@ -634,11 +776,16 @@ function loadFavorites() {
         const product = products.find(p => p.id === id);
         if (product) {
             favoritesList.innerHTML += `
-                <div class="favorite-item">
-                    <h4>${product.name}</h4>
-                    <p>${product.price}</p>
-                    <p>${product.description}</p>
-                    <button onclick="removeFavorite(${id})">Remove</button>
+                <div class="Wish-list-main">
+                    <div class="Wish-list-img">
+                        <img src="${product.image}" alt="${product.name}">
+                    </div>
+                    <div class="Wish-list-content">
+                        <div class="Wish-list-content-header">${product.name}</div>
+                        <div class="Wish-list-content-rate"><span>${product.price}</span></div>
+                        <div class="Wish-list-content-viewpro">View Product</div>
+                    </div>
+                    <div class="Wish-list-close" onclick="removeFavorite(${id})">&times;</div>
                 </div>
             `;
         }
@@ -651,15 +798,42 @@ function removeFavorite(productId) {
     localStorage.setItem('favorites', JSON.stringify(favorites));
     updateFavoriteCount();
     loadFavorites();
+    updateFavoriteUI(productId);
 }
 
-function showFavoritesPopup() {
-    const popup = document.getElementById('favoritesPopup');
-    popup.style.display = 'block';
+function openNavwl() {
+    document.getElementById("sideNavbarwl").style.width = window.innerWidth <= 768 ? "100%" : "450px";
+    document.getElementById("overlaywl").style.display = "block";
     loadFavorites();
 }
 
-function closeFavoritesPopup() {
-    const popup = document.getElementById('favoritesPopup');
-    popup.style.display = 'none';
+// Function to close the sidebar
+function closeNavwl() {
+    document.getElementById("sideNavbarwl").style.width = "0";
+    document.getElementById("overlaywl").style.display = "none";
+}
+
+window.onload = function () {
+    updateFavoriteCount();
+    updateFavoriteUI();
+    document.getElementById("heartIcon").onclick = openNavwl;
+    document.getElementById("closeNavwl").onclick = closeNavwl;
+    document.getElementById("overlaywl").onclick = closeNavwl;
+};
+
+
+function updateFavoriteUI() {
+    const favoriteLinks = document.querySelectorAll('.product__item__pic__hover li a');
+    
+    const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    
+    favoriteLinks.forEach(link => {
+        const productId = parseInt(link.getAttribute('onclick').match(/(\d+)/)[0], 10);
+        
+        if (favorites.includes(productId)) {
+            link.classList.add('favorite'); 
+        } else {
+            link.classList.remove('favorite');
+        }
+    });
 }

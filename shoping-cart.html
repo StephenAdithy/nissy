@@ -3,11 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Ogani Template">
-    <meta name="keywords" content="Ogani, unica, creative, html">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ogani | Template</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Shopping Cart</title>
+	<link rel="shortcut icon" type="image/x-icon" href="img/Nissy/Logo.png">
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
@@ -18,7 +16,6 @@
     <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
     <link rel="stylesheet" href="css/nice-select.css" type="text/css">
     <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
@@ -28,26 +25,11 @@
     <div id="preloder">
         <div class="loader"></div>
     </div>
-
-    <!-- Humberger Begin -->
-    <div class="humberger__menu__overlay"></div>
-
-    <!-- Humberger Begin -->
-    <div class="humberger__menu__wrapper">
-        <div class="humberger__menu__logo">
-            <a href="#"><img src="img/Nissy/Logo.png" alt=""></a>
-        </div>
-        <nav class="humberger__menu__nav mobile-menu">
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./shop-grid.html">Products</a></li>
-                <li class="active"><a href="./shop-grid.html">Shopping Cart</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-            </ul>
-        </nav>
-        <div id="mobile-menu-wrap"></div>
+    <div id="toast" class="toast">
+        <span class="toast-icon"></span>
+        <div class="toast-message"></div>
+        <div class="toast-close" onclick="closeToast()"></div>
     </div>
-    <!-- Humberger End -->
 
     <!-- Header Section Begin -->
     <header class="header">
@@ -211,7 +193,6 @@
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/jquery.slicknav.js"></script>
     <script src="js/mixitup.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
     <script src="./Response/card.js"></script>
     <script src="./Response/index.js"></script>

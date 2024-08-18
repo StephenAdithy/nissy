@@ -83,17 +83,24 @@ function loadProductDetails(id) {
             });
         });
         let infoList = document.querySelector(".product-details-info");
-        infoList.querySelector("li:nth-child(1) span").innerText = product.availability;
-        infoList.querySelector("li:nth-child(2) span").innerHTML = product.shipping;
-        infoList.querySelector("li:nth-child(3) span").innerText = product.weightDetail;
-        infoList.querySelector("li:nth-child(4) span").innerText = product.rate;
+        infoList.querySelector("li:nth-child(1) span").innerText = 0;
+        infoList.querySelector("li:nth-child(2) span").innerText = product.availability;
+        infoList.querySelector("li:nth-child(3) span").innerHTML = product.shipping;
+        infoList.querySelector("li:nth-child(4) span").innerText = product.weightDetail;
+        infoList.querySelector("li:nth-child(5) span").innerText = product.selfLife;
     }
 }
 
 function updatePriceDisplay(price, quantity) {
-    debugger
     const totalPrice = price * quantity;
-    document.querySelector(".product__details__price").innerText = `₹${totalPrice.toFixed(2)}`;
+
+    const rateElement = document.querySelector(".product-details-info li:nth-child(1) span");
+
+    if (rateElement) {
+        rateElement.innerText = `₹${totalPrice.toFixed(2)}`;
+    } else {
+        console.error('Rate element not found.');
+    }
 }
 
 

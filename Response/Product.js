@@ -64,8 +64,9 @@ function loadProducts(productsToLoad) {
                          <img src=${product.image} alt="product">   
                         </div>
                         <ul class="product__item__pic__hover">
-                                <li><a href="#" onclick="toggleFavorite(${product.id})"><i class="fa fa-heart"></i></a></li>
-                        </ul>
+    <li><a onclick="toggleFavorite(${product.id})"><i class="fa fa-heart"></i></a></li>
+</ul>
+
                         <div class="product__item__text">
                             <h6><a href="#">${product.name}</a></h6>
                             <h5>${product.price}</h5>
@@ -110,7 +111,7 @@ function loadProducts(productsToLoad) {
             `;
             productContainer.insertAdjacentHTML('beforeend', productItem);
         });
-
+        updateFavoriteUI();
         productContainer.classList.remove('fade-out'); 
     }, 500); 
 }
