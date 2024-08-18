@@ -297,9 +297,10 @@ function generateProductHTML(product) {
         `<img src="${img}" alt="image">`).join('');
 
     return `
-                <div class="featured__filter-items col-lg-3 col-md-4 col-sm-6 mix ${product.category}">
+                <div class="featured__filter-items col-lg-3 col-md-6 col-sm-6 mix ${product.category}">
                     <div class="featured__item">
-                        <div class="featured__item__pic set-bg" onclick="location.href='shop-details.html?id=${product.id}'" style="background-image: url(${product.image});"> 
+                        <div class="featured__item__pic set-bg" onclick="location.href='shop-details.html?id=${product.id}'"> 
+                        <img src=${product.image} alt="product"> 
                        </div>
                         <div class="featured__item__text">
                             <h6><a href="#">${product.name}</a></h6>
@@ -522,8 +523,22 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function openNav(id) {
-    document.getElementById(`mySidenav-${id}`).style.width = "400px";
+    // Detect the screen width
+    const screenWidth = window.innerWidth;
+
+    // Set width based on screen size
+    let width;
+    if (screenWidth <= 768) { // Tablet and mobile view
+        width = "100%";
+    } else {
+        width = "500px"; // Desktop view
+    }
+
+    // Apply the width to the sidebar
+    document.getElementById(`mySidenav-${id}`).style.width = width;
     document.getElementById(`overlay-${id}`).style.display = "block";
+
+    // Initialize the current index and show slides
     currentIndex[id] = 0;
     showSlides(id);
 }

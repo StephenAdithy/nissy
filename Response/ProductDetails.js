@@ -2,23 +2,6 @@ function getQueryParameter(name) {
     let urlParams = new URLSearchParams(window.location.search);
     return urlParams.get(name);
 }
-// $(document).ready(function () {
-//     $('.qtybtn').on('click', function () {
-//         var $button = $(this);
-//         var oldValue = $button.parent().find('input').val();
-//         if ($button.hasClass('inc')) {
-//             var newVal = parseFloat(oldValue) + 1;
-//         } else {
-//             if (oldValue > 1) {
-//                 var newVal = parseFloat(oldValue) - 1;
-//             } else {
-//                 newVal = 1;
-//             }
-//         }
-//         $button.parent().find('input').val(newVal);
-//     });
-// });
-
 function loadProductDetails(id) {
     if (typeof products === 'undefined') {
         console.error('Products data is not available.');
@@ -50,7 +33,21 @@ function loadProductDetails(id) {
             loop: true,
             margin: 10,
             nav: false,
-            items: 4
+            items: 4,
+            responsive: {
+                0: {
+                    items: 4
+                },
+                540: {
+                    items: 4
+                },
+                767: {
+                    items: 4
+                },
+                1024: {
+                    items: 4
+                }
+            },
         });
 
         let weightContainer = document.querySelector(".row.mt-3");

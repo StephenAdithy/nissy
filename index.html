@@ -90,48 +90,54 @@
 </div>
 
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="header__logo">
-            <a href="./index.html"><img src="img/Nissy/Logo.png" alt="" class="logoimg"></a>
-        </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <div class="col-lg-12">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="./shop-grid.html">Products</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="./contact.html">Contact</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="./AboutUs.html">About Us</a>
-            </li>
-            <div class="header__cart">
-                <ul>
-                    <li>
-                        <button class="btn_nav">Wishlist <a href="#" onclick="showFavoritesPopup()"><i
-                                    class="fa fa-heart"></i>
-                                <span id="favorite-count"></span></a></button>
-                    </li>
-                    <li>
-                        <button class="btn_nav">Cart <a href="shoping-cart.html"><i
-                                    class="fa fa-shopping-bag"></i> <span
-                                    id="cart-count"></span></a></button>
-                    </li>
-                </ul>
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top navbar-fixed">
+            <div class="header__logo">
+                <a href="./index.html"><img src="img/Nissy/Logo.png" alt="" class="logoimg"></a>
             </div>
-          </ul></div>
-        </div>
-      </nav>
-  
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="col-lg-12">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./shop-grid.html">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./AboutUs.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contact.html">Contact</a>
+                        </li>
+
+                        <div class="header__cart">
+                            <ul>
+                                <li>
+                                    <button class="btn_nav" onclick="showFavoritesPopup()">Wishlist <a href="#"><i
+                                                class="fa fa-heart"></i>
+                                            <span id="favorite-count"></span></a></button>
+                                </li>
+                                <li>
+                                    <button class="btn_nav"><a href="shoping-cart.html">Cart <i
+                                                class="fa fa-shopping-bag"></i> <span
+                                                id="cart-count"></span></a></button>
+                                </li>
+                            </ul>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+>>>>>>> e8f746ab7b3e95f7e300b57fe7b28ff0f31ec2ea
     <div id="favoritesPopup" class="popup">
         <div class="popup-content">
             <span class="close" onclick="closeFavoritesPopup()">&times;</span>
@@ -187,7 +193,7 @@
             <div class="row no-gutters">
                 <div class="owl-carousel owl-theme testimonial-slider">
                     <div class="item">
-                        <img class="sect1 mb-4" src="img/Category/3.jpg" data-category="Malt" alt="Alternate Text" >
+                        <img class="sect1 mb-4" src="img/Category/3.jpg" data-category="Malt" alt="Alternate Text">
                     </div>
                     <div class="item">
                         <img class="sect1 mb-4" src="img/Category/Me.jpg" data-category="babyfood" alt="Alternate Text">
@@ -215,7 +221,7 @@
                         <h2>Featured Product</h2>
                     </div>
                     <div class="featured__controls">
-                        <ul>
+                        <ul class="featured__list">
                             <li><a data-category="Malt">Malt</a></li>
                             <li><a data-category="babyfood">Baby Food</a></li>
                             <li><a data-category="naturalprotienpowder">Natural Protien Powder</a></li>
@@ -240,22 +246,22 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-md-4 col-6 gallerycol mb-3">
+                <div class="col-lg-3 col-md-6 col-sm-6 gallerycol mb-3">
                     <img src="img/Nissy/Newimages/1.jpg" class="w-100 gallery gallery1 mb-3" alt="Boat on Calm Water" />
                     <img src="img/Nissy/Newimages/2.jpg" class="w-100 gallery gallery2 mb-3"
                         alt="Wintry Mountain Landscape" />
                 </div>
-                <div class="col-lg-3 col-md-4 col-6 gallerycol mb-3">
+                <div class="col-lg-3 col-md-6 col-sm-6 gallerycol mb-3">
                     <img src="img/Nissy/Newimages/7.jpg" class="w-100 gallery gallery2 mb-3"
                         alt="Mountains in the Clouds" />
                     <img src="img/Nissy/Newimages/8.jpg" class="w-100 gallery gallery1 mb-3" alt="Boat on Calm Water" />
                 </div>
-                <div class="col-lg-3 col-md-4 col-6 gallerycol mb-3">
+                <div class="col-lg-3 col-md-6 col-sm-6 gallerycol mb-3">
                     <img src="img/Nissy/Newimages/10.jpg" class="w-100 gallery gallery2 mb-3" alt="Waves at Sea" />
                     <img src="img/Nissy/Newimages/6.jpg" class="w-100 gallery gallery1 mb-3"
                         alt="Yosemite National Park" />
                 </div>
-                <div class="col-lg-3 col-md-4 col-6 gallerycol mb-3">
+                <div class="col-lg-3 col-md-6 col-sm-6 gallerycol mb-3">
                     <img src="img/Nissy/Newimages/10.jpg" class="w-100 gallery gallery1 mb-3" alt="Waves at Sea" />
                     <img src="img/Nissy/Newimages/6.jpg" class="w-100 gallery gallery2 mb-3"
                         alt="Yosemite National Park" />
@@ -265,7 +271,7 @@
         </div>
     </div>
 
-    <div>
+    <div class="client-happy">
         <div class="section-title">
             <h2>Happy Clients</h2>
         </div>
@@ -285,61 +291,65 @@
                 </div>
             </div>
         </div> -->
-        <div class="owl-carousel owl-theme testimonial-slider">
-            <div class="testimonial-card">
-                <figure class="snip1533 col-md-4">
-                    <figcaption>
-                        <blockquote>
-                            <p>If you do the job badly enough, sometimes you don't get asked to do it again.</p>
-                        </blockquote>
-                        <h3>Wisteria Ravenclaw</h3>
-                        <h4>Google Inc.</h4>
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="testimonial-card">
-                <figure class="snip1533 col-md-4">
-                    <figcaption>
-                        <blockquote>
-                            <p>If you do the job badly enough, sometimes you don't get asked to do it again.</p>
-                        </blockquote>
-                        <h3>Ravenclaw</h3>
-                        <h4>Google Inc.</h4>
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="testimonial-card">
-                <figure class="snip1533 col-md-4">
-                    <figcaption>
-                        <blockquote>
-                            <p>If you do the job badly enough, sometimes you don't get asked to do it again.</p>
-                        </blockquote>
-                        <h3>santhiya</h3>
-                        <h4>Google Inc.</h4>
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="testimonial-card">
-                <figure class="snip1533 col-md-4">
-                    <figcaption>
-                        <blockquote>
-                            <p>If you do the job badly enough, sometimes you don't get asked to do it again.</p>
-                        </blockquote>
-                        <h3>Wisteria Ravenclaw</h3>
-                        <h4>Google Inc.</h4>
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="testimonial-card">
-                <figure class="snip1533 col-md-4">
-                    <figcaption>
-                        <blockquote>
-                            <p>If you do the job badly enough, sometimes you don't get asked to do it again.</p>
-                        </blockquote>
-                        <h3>Wisteria Ravenclaw</h3>
-                        <h4>Google Inc.</h4>
-                    </figcaption>
-                </figure>
+        <div class="container">
+            <div class="row">
+                <div class="owl-carousel owl-theme testimonial-slider">
+                    <div class="testimonial-card">
+                        <figure class="snip1533 col-md-4">
+                            <figcaption>
+                                <blockquote>
+                                    <p>If you do the job badly enough, sometimes you don't get asked to do it again.</p>
+                                </blockquote>
+                                <h3>Wisteria Ravenclaw</h3>
+                                <h4>Google Inc.</h4>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="testimonial-card">
+                        <figure class="snip1533 col-md-4">
+                            <figcaption>
+                                <blockquote>
+                                    <p>If you do the job badly enough, sometimes you don't get asked to do it again.</p>
+                                </blockquote>
+                                <h3>Ravenclaw</h3>
+                                <h4>Google Inc.</h4>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="testimonial-card">
+                        <figure class="snip1533 col-md-4">
+                            <figcaption>
+                                <blockquote>
+                                    <p>If you do the job badly enough, sometimes you don't get asked to do it again.</p>
+                                </blockquote>
+                                <h3>santhiya</h3>
+                                <h4>Google Inc.</h4>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="testimonial-card">
+                        <figure class="snip1533 col-md-4">
+                            <figcaption>
+                                <blockquote>
+                                    <p>If you do the job badly enough, sometimes you don't get asked to do it again.</p>
+                                </blockquote>
+                                <h3>Wisteria Ravenclaw</h3>
+                                <h4>Google Inc.</h4>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="testimonial-card">
+                        <figure class="snip1533 col-md-4">
+                            <figcaption>
+                                <blockquote>
+                                    <p>If you do the job badly enough, sometimes you don't get asked to do it again.</p>
+                                </blockquote>
+                                <h3>Wisteria Ravenclaw</h3>
+                                <h4>Google Inc.</h4>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -453,30 +463,30 @@
     <script src="Response/index.js"></script>
     <script src="Response/UpdateCount.js"></script>
     <script>
-         document.addEventListener('DOMContentLoaded', function() {
-        const categoryImages = document.querySelectorAll('.sect1');
+        document.addEventListener('DOMContentLoaded', function () {
+            const categoryImages = document.querySelectorAll('.sect1');
 
-        categoryImages.forEach(img => {
-            img.addEventListener('click', function() {
-                const category = this.getAttribute('data-category');
-                window.location.href = `shop-grid.html?category=${category}`;
+            categoryImages.forEach(img => {
+                img.addEventListener('click', function () {
+                    const category = this.getAttribute('data-category');
+                    window.location.href = `shop-grid.html?category=${category}`;
+                });
             });
         });
-    });
-// Document ready function
-$(document).ready(function () {
-    const defaultCategory = 'Malt'; 
-    setActiveCategory(defaultCategory);
-    updateFavoriteCount();
-    loadFavorites();
-    updateCartCount();
+        // Document ready function
+        $(document).ready(function () {
+            const defaultCategory = 'Malt';
+            setActiveCategory(defaultCategory);
+            updateFavoriteCount();
+            loadFavorites();
+            updateCartCount();
 
-    // Add click event listeners for category filters
-    $('.featured__controls a').on('click', function() {
-        const category = $(this).data('category');
-        setActiveCategory(category);
-    });
-});
+            // Add click event listeners for category filters
+            $('.featured__controls a').on('click', function () {
+                const category = $(this).data('category');
+                setActiveCategory(category);
+            });
+        });
 
         document.addEventListener('DOMContentLoaded', function () {
             // Select all images with the class 'sect1'
@@ -557,339 +567,4 @@ $(document).ready(function () {
 
 
 </body>
-
 </html>
-
-<style>
-    .featured__controls ul li a.active {
-    color: #ff9800; /* Change to your desired active color */
-    font-weight: bold;
-}
-
-    .swiper {
-        width: 100%;
-        height: 100%;
-    }
-
-    .swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 330px;
-    }
-
-
-    .swiper-slide img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .swiper-button-next,
-    .swiper-button-prev {
-        color: #000;
-        /* Change color as needed */
-    }
-
-    .modal-header {
-        background: #88e188;
-    }
-
-    .modal-title {
-        color: white;
-        font-weight: 900;
-    }
-
-    @media(max-width:540px) {
-        .gallerycol {
-            margin-bottom: -40px !important;
-        }
-    }
-
-    .closebtn {
-        background: transparent;
-        border: 1px solid transparent;
-    }
-
-    .gallerycol {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-
-    .gallery1 {
-        height: 30%;
-    }
-
-    .gallery2 {
-        height: 50%;
-    }
-
-    .gallery:hover {
-        scale: 1.1;
-        transition: all 1s ease 0s;
-    }
-
-    .testimonial-slider .sect1 {
-        padding: 35px;
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-    }
-
-    .heading {
-        font-weight: bold;
-        color: #333;
-    }
-
-    .mb-4 {
-        margin-bottom: 1.5rem;
-    }
-
-    .h-500 {
-        height: 600px;
-    }
-
-    @media (max-width: 640px) {
-        .h-500 {
-            height: 180px;
-        }
-    }
-
-    .mt-5 {
-        margin-top: 3rem;
-    }
-
-    .slider {
-        position: relative;
-        width: 100%;
-        overflow: hidden;
-    }
-
-    .slides {
-        display: flex;
-        transition: transform 0.5s ease-in-out;
-    }
-
-    .slides img {
-        width: 100%;
-        height: auto;
-    }
-
-
-    .set-bg {
-        background-size: cover;
-        background-position: center;
-    }
-
-    .sidenav {
-        width: 0;
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        right: 0;
-        background-color: white;
-        overflow-x: hidden;
-        transition: 0.5s;
-        padding-top: 60px;
-    }
-
-    .overlay {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        z-index: 1;
-    }
-
-    .fa-heart.favorited {
-        color: red;
-    }
-
-    .owl-nav button.owl-prev,
-    .owl-nav button.owl-next {
-        border-radius: 50%;
-        color: white;
-        font-size: 20px;
-        position: absolute;
-        z-index: 1000;
-        /* Ensure they are on top of other elements */
-        transform: translateY(-50%);
-    }
-
-    .owl-carousel .owl-nav {
-        top: -234px;
-    }
-
-    .fa .fa-chevron-left .fa .fa-chevron-right {
-        font-size: x-large;
-    }
-
-    .owl-nav button.owl-prev {
-        left: 0;
-        /* Adjust as needed */
-    }
-
-    .owl-nav button.owl-next {
-        right: 0;
-        /* Adjust as needed */
-    }
-
-    .owl-carousel .owl-nav {
-        position: relative;
-        /* Ensure positioning context */
-        width: 100%;
-    }
-
-    .owl-nav button {
-        opacity: 1;
-        /* Ensure buttons are visible */
-        display: block;
-    }
-
-
-    .owl-carousel .owl-dot.active {
-        color: green;
-    }
-
-    .owl-theme .owl-dots .owl-dot span {
-        background: gray;
-    }
-
-    .owl-theme .owl-dots .owl-dot.active span,
-    .owl-theme .owl-dots .owl-dot:hover span {
-        background: green;
-    }
-
-    .owl-theme .owl-nav [class*=owl-]:hover {
-        background: transparent;
-        color: black;
-    }
-
-    .popup {
-        display: none;
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: white;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        z-index: 10;
-        padding: 20px;
-        width: 300px;
-    }
-
-    .popup-content {
-        position: relative;
-    }
-
-    .close {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        cursor: pointer;
-    }
-
-    .user-img {
-        width: 100px;
-        height: 100px;
-        background-size: cover;
-        background-position: center;
-        border-radius: 50%;
-        margin-right: 15px;
-    }
-
-    .text {
-        flex: 1;
-    }
-
-    .quote {
-        font-size: 24px;
-        color: #333;
-    }
-
-    .name {
-        font-weight: bold;
-    }
-
-    .position {
-        font-style: italic;
-    }
-    .snip1533 {
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-        color: #9e9e9e;
-        display: inline-block;
-        font-size: 16px;
-        margin: 35px 5px 10px;
-        max-width: 310px;
-        min-width: 250px;
-        position: relative;
-        text-align: center;
-        width: 100%;
-        background-color: #ffffff;
-        border-radius: 5px;
-        border-top: 5px solid green;
-    }
-
-    .snip1533 figcaption {
-        padding: 13% 10% 12%;
-    }
-
-    .snip1533 figcaption:before {
-        transform: translateX(-50%);
-        background-color: #fff;
-        border-radius: 50%;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-        color: green;
-        content: "\f10e";
-        font-family: 'FontAwesome';
-        font-size: 32px;
-        font-style: normal;
-        left: 50%;
-        line-height: 60px;
-        position: absolute;
-        top: -30px;
-        width: 60px;
-    }
-
-    .snip1533 h3 {
-        color: #3c3c3c;
-        font-size: 20px;
-        font-weight: 300;
-        line-height: 24px;
-        margin: 10px 0 5px;
-    }
-
-    .snip1533 h4 {
-        font-weight: 400;
-        margin: 0;
-        opacity: 0.5;
-    }
-
-    .snip1533 blockquote {
-        font-style: italic;
-        font-weight: 300;
-        margin: 0 0 20px;
-    }
-
-    .testimonial-slider {
-        display: flex;
-        overflow: hidden;
-        width: 100%;
-        max-width: 100%;
-        margin: auto;
-        gap: 40px;
-        min-height: 250px;
-    }
-
-    .testimonial-card {
-        text-align-last:center;
-        padding: 20px;
-        transition: transform 0.5s ease-in-out;
-    }
-</style>
