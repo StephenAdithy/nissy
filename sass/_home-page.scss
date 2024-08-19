@@ -757,6 +757,13 @@ span[id^="quantity-"] {
     top: -234px;
 }
 
+@media (min-width: 540px) and (max-width: 1180px) {
+    .no-gutters .owl-carousel .owl-nav {
+        top: -164px;
+    }
+    
+}
+
 .client-happy .owl-carousel .owl-nav {
     top: -150px;
 }
@@ -937,3 +944,174 @@ span[id^="quantity-"] {
 .client-happy {
     padding-top: 30px;
 }
+
+.toast {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 10000; 
+    left: 50%;
+    bottom: 30px;
+    font-size: 15px;
+}
+.toast.success {
+    background-color: #28a745; 
+}
+.toast.success .toast-icon::before {
+    content: '\f058'; 
+    font-family: "FontAwesome";
+    font-weight: 900;
+}
+
+.toast.error {
+    background-color: #dc3545; 
+}
+.toast.error .toast-icon::before {
+    content: '\f071'; 
+    font-family: "FontAwesome";
+    font-weight: 900;
+}
+.toast.show {
+    visibility: visible;
+    display: flex !important; 
+    gap: 10px !important;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+.toast-close{
+    right: 20px;
+    top: 12px;
+    font-size: 20px;
+    position: absolute;
+    cursor: pointer;
+}
+.toast-close::before {
+    content: '\f057';
+    font-family: "FontAwesome"; 
+    font-weight: 700;
+}
+@keyframes fadein {
+    from { bottom: 0; opacity: 0; }
+    to { bottom: 30px; opacity: 1; }
+}
+
+@keyframes fadeout {
+    from { bottom: 30px; opacity: 1; }
+    to { bottom: 0; opacity: 0; }
+}
+
+.sidenav-wish {
+        height: 100%;
+        /* 100% Full-height */
+        width: 0;
+        /* 0 width - change this with JavaScript */
+        position: fixed;
+        /* Stay in place */
+        z-index: 1502;
+        /* Stay on top */
+        top: 0;
+        right: 0;
+        /* Slide in from the right */
+        background-color: #efeaea;
+        /* Black*/
+        overflow-x: hidden;
+        /* Disable horizontal scroll */
+        transition: 0.5s;
+        /* 0.5 second transition effect to slide in the sidenav */
+        padding-top: 60px;
+        /* Place content 60px from the top */
+        overflow-y: auto;
+    }
+
+    .sidenav-wish a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .sidenav-wish a:hover {
+        color: #f1f1f1;
+    }
+
+    .sidenav-wish .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+
+    .wish-list {
+        font-size: 24px;
+        text-align: center;
+        font-weight: 700;
+        padding-bottom: 20px;
+    }
+
+    .Wish-list-main {
+        display: grid;
+        grid-template-columns: 30% 60% 10%;
+        margin: 20px 30px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    }
+
+    .Wish-list-img img {
+        width: 100%;
+    }
+
+    .Wish-list-content {
+        padding-left: 20px;
+    }
+
+    .Wish-list-content-header {
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .Wish-list-content-rate {
+        padding: 10px 0px;
+
+    }
+
+    .Wish-list-content-viewpro {
+        font-size: 16px;
+        font-weight: 500;
+        color: #ffff;
+        background: #6da96d;
+        border: 1px solid grey;
+        width: fit-content;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .Wish-list-close{
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+
+    #overlaywl {
+        position: fixed;
+        z-index: 1500;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: none;
+    }
+
+    @media screen and (max-width: 768px) {
+        .sidenav-wish {
+            width: 0px;
+            right: 0;
+        }
+    }
