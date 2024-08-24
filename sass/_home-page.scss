@@ -352,9 +352,9 @@
     width: 80%;
     margin-top: 15px;
     margin-bottom: 20px;
-    background: #6da96d;
+    background: #409840;
     border: 1px solid;
-    border-radius: 10px;
+    border-radius: 5px;
     color: white;
     font-weight: 700;
     cursor: pointer;
@@ -559,7 +559,7 @@ span[id^="quantity-"] {
 }
 
 .featured__controls ul li a.active {
-    color: #6da96d;
+    color: #409840;
     font-weight: bold;
 }
 
@@ -592,7 +592,9 @@ span[id^="quantity-"] {
 }
 
 .modal-header {
-    background: #88e188;
+    background: #7fad39;
+    align-items: center;
+
 }
 
 .modal-title {
@@ -609,12 +611,9 @@ span[id^="quantity-"] {
 .closebtn {
     background: transparent;
     border: 1px solid transparent;
-    color: #6da96d;
+    color: white;
 }
 
-.closebtn:hover {
-    color: #7ba37b;
-}
 
 .gallerycol {
     padding-left: 10px;

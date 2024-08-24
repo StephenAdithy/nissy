@@ -298,6 +298,22 @@ const products = [
     // Add more products as needed
 ];
 
+
+const Bannerimages = [
+    { src: "img/banner/herobanner1.jpg", alt: "First slide",category: "Malt", },
+    { src: "img/banner/herobanner2.jpg", alt: "Second slide" , category: "babyfood",},
+    { src: "img/banner/herobanner3.jpg", alt: "Third slide" , category: "skincare",},
+    { src: "img/banner/herobanner4.jpg", alt: "Fourth slide", category: "naturalprotienpowder" },
+    { src: "img/banner/herobanner5.jpg", alt: "Fifth slide", category: "Malt" }
+];
+
+const categoryItems = [
+    { src: "img/Category/3.jpg", category: "Malt", alt: "Alternate Text" },
+    { src: "img/Category/Me.jpg", category: "babyfood", alt: "Alternate Text" },
+    { src: "img/Category/2.jpg", category: "skincare", alt: "Alternate Text" },
+    { src: "img/Category/1.jpg", category: "naturalprotienpowder", alt: "Alternate Text" }
+];
+
 function generateProductHTML(product) {
     const weightOptionsHTML = product.weights.map(weight =>
         `<label>
@@ -635,18 +651,6 @@ function showSlides(id) {
     });
 }
 
-// function toggleFavorite(productId) {
-//     let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-//     if (favorites.includes(productId)) {
-//         favorites = favorites.filter(id => id !== productId);
-//     } else {
-//         favorites.push(productId);
-//     }
-//     localStorage.setItem('favorites', JSON.stringify(favorites));
-//     updateFavoriteCount();
-//     loadFavorites();
-// }
-
 
 function updateFavoriteUI() {
     
@@ -669,71 +673,6 @@ function updateFavoriteUI() {
 }
 
 
-// function updateFavoriteCount() {
-//     const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-//     document.getElementById('favorite-count').textContent = favorites.length;
-// }
-
-
-// function loadFavorites() {
-//     const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-//     const favoritesList = document.getElementById('favoritesList');
-//     favoritesList.innerHTML = '';
-
-//     favorites.forEach(id => {
-//         const product = products.find(p => p.id === id);
-//         if (product) {
-//             favoritesList.innerHTML += `
-//                 <div class="favorite-item">
-//                     <h4>${product.name}</h4>
-//                     <p>${product.price}</p>
-//                     <p>${product.description}</p>
-//                     <button onclick="removeFavorite(${id})">Remove</button>
-//                 </div>
-//             `;
-//         }
-//     });
-// }
-
-// function loadFavorites() {
-//     const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-//     const favoritesList = document.getElementById('favoritesList');
-//     favoritesList.innerHTML = '';
-
-//     favorites.forEach(id => {
-//         const product = products.find(p => p.id === id);
-//         if (product) {
-//             favoritesList.innerHTML += `
-//                 <div class="favorite-item">
-//                     <h4>${product.name}</h4>
-//                     <p>₹${product.price}</p>
-//                     <p>${product.description}</p>
-//                     <button onclick="removeFavorite(${id})">Remove</button>
-//                 </div>
-//             `;
-//         }
-//     });
-// }
-
-
-// function removeFavorite(productId) {
-//     let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-//     favorites = favorites.filter(id => id !== productId);
-//     localStorage.setItem('favorites', JSON.stringify(favorites));
-//     updateFavoriteCount();
-//     loadFavorites();
-// }
-
-// function showFavoritesPopup() {
-//     const popup = document.getElementById('favoritesPopup');
-//     popup.style.display = 'block';
-//     loadFavorites();
-// }
-
-// function closeFavoritesPopup() {
-//     const popup = document.getElementById('favoritesPopup');
-//     popup.style.display = 'none';
-// }
 
 
 function updateFavoriteCount() {
@@ -783,7 +722,7 @@ function loadFavorites() {
                     <div class="Wish-list-content">
                         <div class="Wish-list-content-header">${product.name}</div>
                         <div class="Wish-list-content-rate"><span>${product.price}</span></div>
-                        <div class="Wish-list-content-viewpro">View Product</div>
+                        <div class="Wish-list-content-viewpro" onclick="location.href='shop-details.html?id=${product.id}'">View Product</div>
                     </div>
                     <div class="Wish-list-close" onclick="removeFavorite(${id})">&times;</div>
                 </div>
@@ -837,3 +776,89 @@ function updateFavoriteUI() {
         }
     });
 }
+
+
+$(document).ready(function() {
+    // Initialize Bootstrap Carousel
+    function createBootstrapCarousel(items) {
+        const carouselContainer = document.getElementById('carousel-items-bootstrap');
+        carouselContainer.innerHTML = ''; // Clear any existing items
+
+        items.forEach((item, index) => {
+            const carouselItem = document.createElement('div');
+            carouselItem.className = `carousel-item ${index === 0 ? 'active' : ''}`;
+            
+            const imgElement = document.createElement('img');
+            imgElement.addEventListener('click', () => {
+                window.location.href = `shop-grid.html?category=${item.category}`;
+            });
+            imgElement.className = 'd-block w-100 h-500';
+            imgElement.src = item.src;
+            imgElement.alt = item.alt;
+            
+            carouselItem.appendChild(imgElement);
+            carouselContainer.appendChild(carouselItem);
+        });
+    }
+
+    function createOwlCarousel(items) {
+        const carouselContainer = document.getElementById('owl-carousel-items');
+        carouselContainer.innerHTML = ''; 
+
+        items.forEach(item => {
+            const carouselItem = document.createElement('div');
+            carouselItem.className = 'item';
+            
+            const imgElement = document.createElement('img');
+            imgElement.className = 'sect1 mb-4';
+            imgElement.src = item.src;
+            imgElement.alt = item.alt;
+            imgElement.dataset.category = item.category;
+           
+            
+            carouselItem.appendChild(imgElement);
+            carouselContainer.appendChild(carouselItem);
+        });
+
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 20,
+            nav: true,
+            dots: true,
+            autoplay: false,
+            autoplayTimeout: 5000,
+            navText: [
+                '<i class="fa fa-chevron-left" aria-hidden="true"></i>',
+                '<i class="fa fa-chevron-right" aria-hidden="true"></i>'
+            ],
+            responsive: {
+                0: {
+                    items: 1
+                },
+                540: {
+                    items: 2
+                },
+                767: {
+                    items: 2
+                },
+                1024: {
+                    items: 3
+                }
+            }
+        });
+    }
+
+    createBootstrapCarousel(Bannerimages);
+    createOwlCarousel(categoryItems);
+});
+
+$(document).ready(function () {
+    $('a[data-toggle="modal"]').click(function () {
+        var title = $(this).data('title');
+        var content = $(this).data('content');
+
+        $('#exampleModalCenter .modal-title').text(title);
+        $('#exampleModalCenter .modal-body').text(content);
+    });
+});
+$('#exampleModalCenter .modal-body').html(content);

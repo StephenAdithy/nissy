@@ -23,7 +23,7 @@ function loadProductDetails(id) {
             });
             slider.appendChild(img);
         }
-        document.querySelector(".product__details__text h3").innerText = product.name;
+        document.querySelector(".product__details__text h2").innerText = product.name;
         document.querySelector(".product__details__price").innerText = product.price;
         document.querySelector(".description_details").innerText = product.description;
         document.querySelector(".description-tab").innerText = product.productdescription;
@@ -76,7 +76,7 @@ function loadProductDetails(id) {
             col.appendChild(formCheck);
             weightContainer.appendChild(col);
             input.addEventListener("change", function () {
-                debugger
+                
                 const selectedWeightPrice = parseFloat(this.getAttribute('data-price'));
                 const quantity = parseInt(document.querySelector(`#quantity-${product.id}`).value);
                 updatePriceDisplay(selectedWeightPrice, quantity);
