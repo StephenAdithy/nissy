@@ -58,9 +58,9 @@
                         <div class="header__cart">
                             <ul>
                                 <li>
-                                    <button class="btn_nav">Wishlist <a href="#" onclick="showFavoritesPopup()"><i
-                                                class="fa fa-heart"></i>
-                                            <span id="favorite-count"></span></a></button>
+                                    <button class="btn_nav" id="heartIcon">
+                                        Wishlist <a href="#"><i class="fa fa-heart"></i> <span id="favorite-count">0</span></a>
+                                    </button>
                                 </li>
                                 <li>
                                     <button class="btn_nav"><a href="shoping-cart.html">Cart <i
@@ -76,6 +76,15 @@
     </header>
     <!-- Header Section End -->
 
+    <div id="sideNavbarwl" class="sidenav-wish">
+        <a href="javascript:void(0)" class="closebtn" id="closeNavwl">&times;</a>
+        <div class="wish-list">Wishlist</div>
+        <div id="favoritesList"></div>
+    </div>
+
+    <!-- Overlay -->
+    <div id="overlaywl"></div>
+
     <!-- Breadcrumb Section Begin -->
     <section class="breadcrumb-section">
         <div class="container">
@@ -89,45 +98,6 @@
         </div>
     </section>
     <!-- Breadcrumb Section End -->
-
-    <!-- Contact Section Begin -->
-    <!-- <section class="contact spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-3 col-sm-6 text-center">
-                    <div class="contact__widget">
-                        <span class="icon_phone"></span>
-                        <h4>Phone</h4>
-                        <p>+01-3-8888-6868</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 text-center">
-                    <div class="contact__widget">
-                        <span class="icon_pin_alt"></span>
-                        <h4>Address</h4>
-                        <p>60-49 Road 11378 New York</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 text-center">
-                    <div class="contact__widget">
-                        <span class="icon_clock_alt"></span>
-                        <h4>Open time</h4>
-                        <p>10:00 am to 23:00 pm</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 text-center">
-                    <div class="contact__widget">
-                        <span class="icon_mail_alt"></span>
-                        <h4>Email</h4>
-                        <p>hello@colorlib.com</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-    <!-- Contact Section End -->
-
-
 
     <!-- Contact Form Begin -->
     <div class="contact-form spad">

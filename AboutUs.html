@@ -48,9 +48,9 @@
                         <div class="header__cart">
                             <ul>
                                 <li>
-                                    <button class="btn_nav">Wishlist <a href="#" onclick="showFavoritesPopup()"><i
-                                                class="fa fa-heart"></i>
-                                            <span id="favorite-count"></span></a></button>
+                                    <button class="btn_nav" id="heartIcon">
+                                        Wishlist <a href="#"><i class="fa fa-heart"></i> <span id="favorite-count">0</span></a>
+                                    </button>
                                 </li>
                                 <li>
                                     <button class="btn_nav"><a href="shoping-cart.html">Cart <i
@@ -64,6 +64,16 @@
             </div>
         </nav>
     </header>
+
+    <div id="sideNavbarwl" class="sidenav-wish">
+        <a href="javascript:void(0)" class="closebtn" id="closeNavwl">&times;</a>
+        <div class="wish-list">Wishlist</div>
+        <div id="favoritesList"></div>
+    </div>
+
+    <!-- Overlay -->
+    <div id="overlaywl"></div>
+
     <section>
         <div class="container aboutus">
             <div class="row vertical_content_manage mt-5">
