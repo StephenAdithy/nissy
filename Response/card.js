@@ -20,7 +20,7 @@ function loadCartItems() {
         total += item.pricePerUnit;
         return `
             <div class="cart-item">
-                <img class="cart-image" src="${item.image}" alt="${item.name}">
+                <img class="cart-image" src="${item.image}" alt="${item.name}" onclick="location.href='shop-details.html?id=${item.id}'">
                 <div class="shoping__cart__table-products-details">
                     <div class="shopping_cart-name">${item.name}</div>
                     <div class="shopping_cart-weigth"><span>${item.weight}</span></div>
@@ -36,7 +36,7 @@ function loadCartItems() {
                 </div>
             </div>`;
     }).join('');
-
+    
     updateCartSummary(total);
 }
 
