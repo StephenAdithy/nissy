@@ -104,44 +104,44 @@
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="checkout__input">
-                                        <p>First Name<span>*</span></p>
+                                        <b>First Name<span>*</span></b>
                                         <input type="text" id="first-name" name="First Name" required>
                                         <span class="error-message" id="first-name-error"></span>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="checkout__input">
-                                        <p>Last Name<span>*</span></p>
+                                        <b>Last Name<span>*</span></b>
                                         <input type="text" id="last-name" name="Last Name" required>
                                         <span class="error-message" id="last-name-error"></span>
                                     </div>
                                 </div>
                             </div>
                             <div class="checkout__input">
-                                <p>Address<span>*</span></p>
+                                <b>Address<span>*</span></b>
                                 <input type="text" id="address" name="Address" placeholder="Street Address" class="checkout__input__add" required>
                                 <input type="text" id="apartment" name="Apartment" placeholder="Apartment, suite, unit, etc. (optional)">
                                 <span class="error-message" id="address-error"></span>
                             </div>
                             <div class="checkout__input">
-                                <p>Town/City<span>*</span></p>
+                                <b>Town/City<span>*</span></b>
                                 <input type="text" id="city" name="City" required>
                                 <span class="error-message" id="city-error"></span>
                             </div>
                             <div class="checkout__input">
-                                <p>Country/State<span>*</span></p>
+                                <b>Country/State<span>*</span></b>
                                 <input type="text" id="state" name="State" required>
                                 <span class="error-message" id="state-error"></span>
                             </div>
                             <div class="checkout__input">
-                                <p>Postcode / ZIP<span>*</span></p>
+                                <b>Postcode / ZIP<span>*</span></b>
                                 <input type="text" id="postcode" name="Postcode" required>
                                 <span class="error-message" id="postcode-error"></span>
                             </div>
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="checkout__input">
-                                        <p>Phone<span>*</span></p>
+                                        <b>Phone<span>*</span></b>
                                         <input type="text" id="phone" name="Phone" required>
                                         <span class="error-message" id="phone-error"></span>
                                     </div>
@@ -157,12 +157,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Hidden fields for order details and total -->
-                    <input type="hidden" name="Order Details" id="order-details-hidden">
-                    <input type="hidden" name="Total Amount" id="total-hidden">
-                    <input type="hidden" name="_next" value="https://nissy.com/thank-you">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_subject" value="New Order Received!">
                 </form>
                 
                 
@@ -327,9 +321,16 @@
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/jquery.slicknav.js"></script>
     <script src="js/mixitup.min.js"></script>
-    <script src="js/main.js"></script>
     <script src="Response/index.js"></script>
+    <script src="js/main.js"></script>
     <script src="Response/Checkout.js"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript">
+  (function(){
+    emailjs.init("yzy1KsDoCiKf51XP7"); 
+  })();
+</script>
+
 </body>
 
 </html>
