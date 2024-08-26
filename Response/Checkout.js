@@ -130,7 +130,6 @@ document.addEventListener('DOMContentLoaded', () => {
             event.preventDefault();
         } else {
             const orderJSON = createOrderJSON();
-            
             console.log("Order JSON:", orderJSON); 
 
             document.getElementById('order-details-hidden').value = orderJSON;
