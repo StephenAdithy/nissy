@@ -12,8 +12,8 @@ const products = [
         shipping: "01 day shipping. <samp>Free pickup today</samp>",
         weightDetail: "0.5 kg",
         rate: " ₹400.00-₹1200.00",
-        productdescription: "Ingredients\n\napple, beetroot, carrot, Jaggery powder, Cashew, Almond, and Elachi\n\nTo make a delicious NISSY ABC MALT\n\nTake 1-2 teaspoons of NISSY ABC malt mix to your mug\npour 200 ml of milk either hot or cold\nstir well and enjoy it.\n\n• Don’t boil it along with milk.\n\nHealth benefits:\n\nEncourage healthy brain growth\nEnhances your memory power.\nHelps maintain the glow of the skin.\nBeneficial for both skin and hair\nPromises to heal the gut well\nregulating your blood pressure\n\nShelf Life:\n\n6 months",
-        information: "பீட்ரூட், நாட்டுச்சர்க்கரை,  பாதாம், முந்திரி ,ஏலக்காய்",
+        productdescription: "Ingredients\n\napple, beetroot, carrot, Jaggery powder, Cashew, Almond, and Elachi\n\nTo make a delicious NISSY ABC MALT\n\nTake 1-2 teaspoons of NISSY ABC malt mix to your mug\npour 200 ml of milk either hot or cold\nstir well and enjoy it.\n\n• Don’t boil it along with milk.\n\nHealth benefits:\n\nEncourage healthy brain growth\nEnhances your memory power.\nHelps maintain the glow of the skin.\nBeneficial for both skin and hair\nPromises to heal the gut well\nregulating your blood pressure\n\n <b>Shelf Life:</b>\n\n6 months",
+        information: "<b>பீட்ரூட்,</b> நாட்டுச்சர்க்கரை,  பாதாம், முந்திரி ,ஏலக்காய்",
         productImage: [
             "img/products/abc1.jpg",
             "img/products/abc 2.jpg",
@@ -686,7 +686,6 @@ function toggleFavorite(productId) {
     const productIndex = favorites.indexOf(productId);
     const isFavorite = productIndex !== -1;
 
-    // Toggle favorite status
     if (isFavorite) {
         favorites.splice(productIndex, 1);
         showToast('Removed from favorites', 'success'); 
@@ -695,7 +694,6 @@ function toggleFavorite(productId) {
         showToast('Added to favorites', 'success'); 
     }
 
-    // Save updated favorites to localStorage
     localStorage.setItem('favorites', JSON.stringify(favorites));
 
     // Update the UI
@@ -776,10 +774,9 @@ function updateFavoriteUI() {
 
 
 $(document).ready(function() {
-    // Initialize Bootstrap Carousel
     function createBootstrapCarousel(items) {
         const carouselContainer = document.getElementById('carousel-items-bootstrap');
-        carouselContainer.innerHTML = ''; // Clear any existing items
+        carouselContainer.innerHTML = ''; 
 
         items.forEach((item, index) => {
             const carouselItem = document.createElement('div');
@@ -812,7 +809,9 @@ $(document).ready(function() {
             imgElement.alt = item.alt;
             imgElement.dataset.category = item.category;
            
-            
+            imgElement.addEventListener('click', function() {
+                window.location.href = `shop-grid.html?category=${item.category}`;
+            });
             carouselItem.appendChild(imgElement);
             carouselContainer.appendChild(carouselItem);
         });
@@ -849,13 +848,16 @@ $(document).ready(function() {
     createOwlCarousel(categoryItems);
 });
 
+var content = '';
+
 $(document).ready(function () {
     $('a[data-toggle="modal"]').click(function () {
         var title = $(this).data('title');
-        var content = $(this).data('content');
+        content = $(this).data('content');
 
         $('#exampleModalCenter .modal-title').text(title);
-        $('#exampleModalCenter .modal-body').text(content);
+        $('#exampleModalCenter .modal-body').html(content);
     });
 });
-$('#exampleModalCenter .modal-body').html(content);
+
+$('#exampleModalCenter .modal-body').html(content); 
