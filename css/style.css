@@ -1088,6 +1088,7 @@ ol {
   font-weight: 600;
   line-height: 35px;
   padding-bottom: 10px;
+  padding-top: 10px;
 }
 
 .weight-display {
@@ -2884,8 +2885,11 @@ span[id^=quantity-] {
   color: #1c1c1c;
   font-weight: 700;
   border-bottom: 1px solid #e1e1e1;
+  border-top: 1px solid #e1e1e1;
   padding-bottom: 15px;
   margin-bottom: 25px;
+  margin-top: 10px;
+  padding-top: 10px;
 }
 .checkout__order .checkout__order__total span {
   float: right;
