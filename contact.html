@@ -113,9 +113,7 @@
                             </div>
                             <div class="col-lg-6 col-md-6">
                                 <label><b>Mobile Number</b></label>
-                                <input type="tel" name="mobile" required placeholder="Enter your mobile"
-                                    pattern="^\d{10}$" title="Please enter exactly 10 digits.">
-                                <input type="tel" name="mobile" required placeholder="Enter your mobile"
+                                <input type="tel" name="phoneNumber" required placeholder="Enter your mobile"
                                     pattern="^\d{10}$" title="Please enter exactly 10 digits.">
                             </div>
                             <div class="col-lg-12 col-md-12">
@@ -124,7 +122,6 @@
                             </div>
                             <div class="col-lg-12">
                                 <label><b>Message</b></label>
-                                <textarea name="message" required placeholder="Enter your Message"></textarea>
                                 <textarea name="message" required placeholder="Enter your Message"></textarea>
                             </div>
                             <div class="col-lg-12">
@@ -310,6 +307,34 @@
     <script src="js/mixitup.min.js"></script>
     <script src="Response/index.js"></script>
     <script src="js/main.js"></script>
+    <script>
+            document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const formData = new FormData(this);
+        const jsonData = {};
+
+        formData.forEach((value, key) => {
+            jsonData[key] = value;
+        });
+        console.log("hii",jsonData )
+
+        fetch('http://192.168.1.20:3000/contact-us/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(jsonData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Success:', data);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    });
+    </script>
 
 
 
