@@ -8,6 +8,7 @@
 	<link rel="shortcut icon" type="image/x-icon" href="img/Nissy/Logo.png">
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/solid.min.css"
@@ -69,6 +70,12 @@
         <a href="javascript:void(0)" class="closebtn" id="closeNavwl">&times;</a>
         <div class="wish-list">Wishlist</div>
         <div id="favoritesList"></div>
+    
+        <div id="emptyFavoritesMessage" style="display: none;">
+            <img src="img/Nissy/heartimage.png" alt="Empty Cart" class="empty-cart-image">
+            <h6 class="empty-cart-message">No items in your wishlist</h6>
+            <button class="return-to-shop-button" onclick="location.href='shop-grid.html'">Return to Shop</button>
+        </div>
     </div>
 
     <!-- Overlay -->
@@ -177,15 +184,16 @@
                 </div>
                 <div class="col-lg-4 col-md-12">
                     <div class="footer__widget">
-                        <div class="map">
+                        <div class="map" style="align-content: center;">
+                            <a href="./index.html"><img src="img/Nissy/Logo.png" alt=""></a>
                             <!-- <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49116.39176087041!2d-86.41867791216099!3d39.69977417971648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886ca48c841038a1%3A0x70cfba96bf847f0!2sPlainfield%2C%20IN%2C%20USA!5e0!3m2!1sen!2sbd!4v1586106673811!5m2!1sen!2sbd"
                                 style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> -->
                         </div>
                         <div class="footer__widget__social mt-3">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a>
+                            <a href="https://x.com/?mx=2" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
                         </div>
                     </div>
                 </div>
@@ -229,6 +237,7 @@ aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 <!-- Bootstrap JS and dependencies -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/brands.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.nice-select.min.js"></script>
 <script src="js/jquery-ui.min.js"></script>

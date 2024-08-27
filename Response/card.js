@@ -9,8 +9,30 @@ function loadCartItems() {
     console.log('Cart:', cart);
 
     const cartItemsContainer = document.getElementById('cart-items');
+    const cartTotalSection = document.querySelector('.shoping__checkout');
+    const cartColumn = document.querySelector('.col-lg-8');
+    const totalColumn = document.querySelector('.col-lg-4');
+
     if (!cartItemsContainer) {
         console.error('Cart items container not found');
+        return;
+    }
+
+    if (cart.length === 0) {
+        cartItemsContainer.innerHTML = `
+            <img src="img/Nissy/shooping-cart.png" alt="Empty Cart" class="empty-cart-image">
+            <h6 class="empty-cart-message">No items in your cart</h6>
+            <button class="return-to-shop-button" onclick="location.href='shop-grid.html'">Return to Shop</button>
+        `;
+        if (cartTotalSection) {
+            cartTotalSection.style.display = 'none';
+        }
+        if (cartColumn && totalColumn) {
+            cartColumn.classList.remove('col-lg-8');
+            cartColumn.classList.add('col-lg-12');
+            totalColumn.style.display = 'none'; 
+        }
+        updateCartSummary(0);
         return;
     }
 
@@ -25,7 +47,6 @@ function loadCartItems() {
                     <div class="shopping_cart-name">${item.name}</div>
                     <div class="shopping_cart-weigth"><span>${item.weight}</span></div>
                     <div class="shopping_cart-quantity">Quantity: <span id="quantity-${item.id}">${item.quantity}</span></div>
-
                     <div class="shoping__cart__table-products-details-amtcounter">
                         <div>₹ ${item.pricePerUnit}/-</div>
                     </div>
@@ -36,9 +57,56 @@ function loadCartItems() {
                 </div>
             </div>`;
     }).join('');
-    
+
     updateCartSummary(total);
+    if (cartTotalSection) {
+        cartTotalSection.style.display = 'block';
+    }
+    if (cartColumn && totalColumn) {
+        cartColumn.classList.remove('col-lg-12');
+        cartColumn.classList.add('col-lg-8');
+        totalColumn.style.display = 'block'; 
+    }
 }
+
+
+
+// function loadCartItems() {
+//     console.log('Loading cart items');
+//     const cart = JSON.parse(localStorage.getItem('cart')) || [];
+//     console.log('Cart:', cart);
+
+//     const cartItemsContainer = document.getElementById('cart-items');
+//     if (!cartItemsContainer) {
+//         console.error('Cart items container not found');
+//         return;
+//     }
+
+//     let total = 0;
+//     cartItemsContainer.innerHTML = cart.map(item => {
+//         console.log('Item:', item);
+//         total += item.pricePerUnit;
+//         return `
+//             <div class="cart-item">
+//                 <img class="cart-image" src="${item.image}" alt="${item.name}" onclick="location.href='shop-details.html?id=${item.id}'">
+//                 <div class="shoping__cart__table-products-details">
+//                     <div class="shopping_cart-name">${item.name}</div>
+//                     <div class="shopping_cart-weigth"><span>${item.weight}</span></div>
+//                     <div class="shopping_cart-quantity">Quantity: <span id="quantity-${item.id}">${item.quantity}</span></div>
+
+//                     <div class="shoping__cart__table-products-details-amtcounter">
+//                         <div>₹ ${item.pricePerUnit}/-</div>
+//                     </div>
+//                     <div class="shopping__cart-availability">${item.availability}</div>
+//                 </div>
+//                 <div class="counter">
+//                     <button class="shoping__cart__table-products-details-remove" onclick="removeFromCart(${item.id}, '${item.weight}')">Remove</button>
+//                 </div>
+//             </div>`;
+//     }).join('');
+    
+//     updateCartSummary(total);
+// }
 
 function updateCartSummary(total) {
     console.log('Updating cart summary. Total:', total);

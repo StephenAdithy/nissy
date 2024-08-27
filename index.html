@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Home</title>
     <link rel="shortcut icon" type="image/x-icon" href="img/Nissy/Logo.png">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" />
@@ -62,9 +62,6 @@
                                         Wishlist <a href="#"><i class="fa fa-heart"></i> <span
                                                 id="favorite-count">0</span></a>
                                     </button>
-                                    <!-- <button class="btn_nav" id="heartIcon">Wishlist <a href="#"><i
-                                                class="fa fa-heart"></i>
-                                            <span id="favorite-count"></span></a></button> -->
                                 </li>
                                 <li>
                                     <button class="btn_nav"><a href="shoping-cart.html">Cart <i
@@ -84,6 +81,13 @@
         <a href="javascript:void(0)" class="closebtn" id="closeNavwl">&times;</a>
         <div class="wish-list">Wishlist</div>
         <div id="favoritesList"></div>
+    
+        <!-- Empty favorites message -->
+        <div id="emptyFavoritesMessage" style="display: none;">
+            <img src="img/Nissy/heartimage.png" alt="Empty Cart" class="empty-cart-image">
+            <h6 class="empty-cart-message">No items in your wishlist</h6>
+            <button class="return-to-shop-button" onclick="location.href='shop-grid.html'">Return to Shop</button>
+        </div>
     </div>
 
     <!-- Overlay -->
@@ -160,22 +164,22 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-6 gallerycol mb-3">
+                <div class="col-lg-3 col-md-6 col-sm-60 gallerycol mb-3">
                     <img src="img/Nissy/Newimages/1.jpg" class="w-100 gallery gallery1 mb-3" alt="Boat on Calm Water" />
                     <img src="img/Nissy/Newimages/2.jpg" class="w-100 gallery gallery2 mb-3"
                         alt="Wintry Mountain Landscape" />
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 gallerycol mb-3">
+                <div class="col-lg-3 col-md-6 col-sm-60 gallerycol mb-3">
                     <img src="img/Nissy/Newimages/7.jpg" class="w-100 gallery gallery2 mb-3"
                         alt="Mountains in the Clouds" />
                     <img src="img/Nissy/Newimages/8.jpg" class="w-100 gallery gallery1 mb-3" alt="Boat on Calm Water" />
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 gallerycol mb-3">
+                <div class="col-lg-3 col-md-6 col-sm-60 gallerycol mb-3">
                     <img src="img/Nissy/Newimages/10.jpg" class="w-100 gallery gallery2 mb-3" alt="Waves at Sea" />
                     <img src="img/Nissy/Newimages/6.jpg" class="w-100 gallery gallery1 mb-3"
                         alt="Yosemite National Park" />
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 gallerycol mb-3">
+                <div class="col-lg-3 col-md-6 col-sm-60 gallerycol mb-3">
                     <img src="img/Nissy/Newimages/10.jpg" class="w-100 gallery gallery1 mb-3" alt="Waves at Sea" />
                     <img src="img/Nissy/Newimages/6.jpg" class="w-100 gallery gallery2 mb-3"
                         alt="Yosemite National Park" />
@@ -296,15 +300,16 @@
                 </div>
                 <div class="col-lg-4 col-md-12">
                     <div class="footer__widget">
-                        <div class="map">
+                        <div class="map" style="align-content: center;">
+                            <a href="./index.html"><img src="img/Nissy/Logo.png" alt=""></a>
                             <!-- <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49116.39176087041!2d-86.41867791216099!3d39.69977417971648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886ca48c841038a1%3A0x70cfba96bf847f0!2sPlainfield%2C%20IN%2C%20USA!5e0!3m2!1sen!2sbd!4v1586106673811!5m2!1sen!2sbd"
                                 style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> -->
                         </div>
                         <div class="footer__widget__social mt-3">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a>
+                            <a href="https://x.com/?mx=2" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
                         </div>
                     </div>
                 </div>
@@ -314,7 +319,7 @@
                 <div class="col-lg-12">
                     <div class="footer__copyright">
                         <div class="footer__copyright__text">
-                            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            <p>
                                 Copyright &copy;
                                 <script>document.write(new Date().getFullYear());</script> All rights reserved
                             </p>
@@ -346,6 +351,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/brands.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.nice-select.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
@@ -392,38 +398,32 @@
                 });
             });
         });
-        // $(document).ready(function () {
-        //     $('.owl-carousel').owlCarousel({
-        //         loop: true,
-        //         margin: 20,
-        //         nav: true,
-        //         dots: true,
-        //         autoplay: false,
-        //         autoplayTimeout: 5000,
-        //         navText: [
-        //             '<i class="fa fa-chevron-left" aria-hidden="true"></i>',
-        //             '<i class="fa fa-chevron-right" aria-hidden="true"></i>'
-        //         ],
-        //         responsive: {
-        //             0: {
-        //                 items: 1
-        //             },
-        //             540: {
-        //                 items: 2
-        //             },
-        //             767: {
-        //                 items: 2
-        //             },
-        //             1024: {
-        //                 items: 3
-        //             }
-        //         },
-
-        //     });
-        // });
-
-
     </script>
 </body>
 
 </html>
+
+<style>
+    .col-sm-60{
+        width: 50%;
+    }
+    .empty-cart-image{
+        max-width: 50%;
+    }
+    #emptyFavoritesMessage{
+        text-align-last: center;
+    }
+    .return-to-shop-button{
+    margin: 20px auto;
+    padding: 10px 40px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #409840;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    }
+</style>

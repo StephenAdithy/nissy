@@ -9,8 +9,10 @@
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
 
     <!-- Css Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
@@ -24,7 +26,11 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"> -->
 
 </head>
-
+<div id="toast" class="toast">
+    <span class="toast-icon"></span>
+    <div class="toast-message"></div>
+    <div class="toast-close" onclick="closeToast()"></div>
+</div>
 <body>
     <!-- Page Preloder -->
     <div id="preloder">
@@ -52,9 +58,6 @@
                         <li class="nav-item">
                             <a class="nav-link" href="./shop-grid.html">Products</a>
                         </li>
-                        <li class="nav-item active">
-                            <a class="nav-link active" href="./shop-details.html">Product Details</a>
-                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./AboutUs.html">About Us</a>
                         </li>
@@ -65,9 +68,9 @@
                         <div class="header__cart">
                             <ul>
                                 <li>
-                                    <button class="btn_nav" onclick="showFavoritesPopup()">Wishlist <a href="#"><i
-                                                class="fa fa-heart"></i>
-                                            <span id="favorite-count"></span></a></button>
+                                    <button class="btn_nav" id="heartIcon">
+                                        Wishlist <a href="#"><i class="fa fa-heart"></i> <span id="favorite-count">0</span></a>
+                                    </button>
                                 </li>
                                 <li>
                                     <button class="btn_nav"><a href="shoping-cart.html">Cart <i
@@ -82,7 +85,21 @@
         </nav>
     </header>
     <!-- Header Section End -->
+    <div id="sideNavbarwl" class="sidenav-wish">
+        <a href="javascript:void(0)" class="closebtn" id="closeNavwl">&times;</a>
+        <div class="wish-list">Wishlist</div>
+        <div id="favoritesList"></div>
+    
+        <!-- Empty favorites message -->
+        <div id="emptyFavoritesMessage" style="display: none;">
+            <img src="img/Nissy/heartimage.png" alt="Empty Cart" class="empty-cart-image">
+            <h6 class="empty-cart-message">No items in your wishlist</h6>
+            <button class="return-to-shop-button" onclick="location.href='shop-grid.html'">Return to Shop</button>
+        </div>
+    </div>
 
+    <!-- Overlay -->
+    <div id="overlaywl"></div>
 
     <!-- Product Details Section Begin -->
     <section class="product-details spad">
@@ -94,7 +111,9 @@
                 <div class="col-lg-6 col-md-12">
                     <div class="product__details__pic">
                         <div class="product__details__pic__item">
+                            <button class="prev">&#10094;</button> 
                             <img class="product__details__pic__item--large" src="" alt="">
+                            <button class="next">&#10095;</button>
                         </div>
                         <div class="product__details__pic__slider owl-carousel">
                         </div>
@@ -120,7 +139,6 @@
                             <li><b>Rate</b><span></span></li>
                             <li><b>Availability</b> <span></span></li>
                             <li><b>Shipping</b> <span></span></li>
-                            <li><b>Weight</b> <span></span></li>
                             <li><b>Self Life</b><span></span></li>
                         </ul>
                     </div>
@@ -199,15 +217,16 @@
                 </div>
                 <div class="col-lg-4 col-md-12">
                     <div class="footer__widget">
-                        <div class="map">
+                        <div class="map" style="align-content: center;">
+                            <a href="./index.html"><img src="img/Nissy/Logo.png" alt=""></a>
                             <!-- <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49116.39176087041!2d-86.41867791216099!3d39.69977417971648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886ca48c841038a1%3A0x70cfba96bf847f0!2sPlainfield%2C%20IN%2C%20USA!5e0!3m2!1sen!2sbd!4v1586106673811!5m2!1sen!2sbd"
                                 style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> -->
                         </div>
                         <div class="footer__widget__social mt-3">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a>
+                            <a href="https://x.com/?mx=2" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
                         </div>
                     </div>
                 </div>
@@ -247,7 +266,7 @@
 
     <!-- Js Plugins -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/brands.min.js"></script>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
