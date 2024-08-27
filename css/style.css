@@ -44,7 +44,7 @@ h6 {
   margin: 0;
   color: #111111;
   font-weight: 400;
-  font-family: "serif",auto;
+  font-family: "Cairo", sans-serif;
 }
 
 h1 {
@@ -73,7 +73,7 @@ h6 {
 
 p {
   font-size: 16px;
-  font-family: "serif",auto;
+  font-family: "Cairo", sans-serif;
   color: #6f6f6f;
   font-weight: 400;
   line-height: 26px;
@@ -1004,6 +1004,7 @@ ol {
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
+  color: black;
 }
 
 .featured__item__text-optionbtn {
@@ -1067,7 +1068,7 @@ ol {
   -webkit-user-select: none;
   -moz-user-select: none;
   /* user-select: none; */
-  /* background: transparent;*/
+  background: transparent;
 }
 
 .next {
@@ -1088,7 +1089,6 @@ ol {
   font-weight: 600;
   line-height: 35px;
   padding-bottom: 10px;
-  padding-top: 10px;
 }
 
 .weight-display {
@@ -1240,7 +1240,6 @@ span[id^=quantity-] {
 .modal-header {
   background: #7fad39;
   align-items: center;
-
 }
 
 .modal-title {
@@ -1388,7 +1387,7 @@ span[id^=quantity-] {
 }
 
 .owl-carousel .owl-nav {
-  top: -234px;
+  top: -210px;
 }
 
 @media (min-width: 540px) and (max-width: 1180px) {
@@ -1396,8 +1395,15 @@ span[id^=quantity-] {
     top: -164px;
   }
 }
+.carousel-control-next-icon, .carousel-control-prev-icon {
+  display: inline-block;
+  width: 12px;
+  height: 20px;
+  background: no-repeat 50%/100% 100%;
+}
+
 .client-happy .owl-carousel .owl-nav {
-  top: -150px;
+  top: -130px;
 }
 
 .fa .fa-chevron-left .fa .fa-chevron-right {
@@ -2653,7 +2659,7 @@ span[id^=quantity-] {
     margin-right: 10px;
   }
   .shoping__cart__table-products-details {
-    flex: 0 0 60%;
+    flex: 0 0 50%;
     /* 50% width */
   }
   .shoping__cart__table-products-details .shopping_cart-name {
@@ -2774,6 +2780,7 @@ span[id^=quantity-] {
   border: 1px solid #ebebeb;
   padding-left: 20px;
   font-size: 16px;
+  color: #b2b2b2;
   border-radius: 4px;
 }
 .checkout__input input.checkout__input__add {
@@ -2885,11 +2892,8 @@ span[id^=quantity-] {
   color: #1c1c1c;
   font-weight: 700;
   border-bottom: 1px solid #e1e1e1;
-  border-top: 1px solid #e1e1e1;
   padding-bottom: 15px;
   margin-bottom: 25px;
-  margin-top: 10px;
-  padding-top: 10px;
 }
 .checkout__order .checkout__order__total span {
   float: right;
