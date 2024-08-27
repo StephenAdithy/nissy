@@ -120,22 +120,35 @@ document.addEventListener('DOMContentLoaded', () => {
             totalAmount: total.toFixed(2)
         };
 
-        return JSON.stringify(orderJSON, null, 2);
+        return orderJSON;
     };
 
     renderCart();
 
     document.getElementById('checkout-form').addEventListener('submit', (event) => {
-        if (!validateForm()) {
-            event.preventDefault();
-        } else {
-            const orderJSON = createOrderJSON();
-            debugger
-            console.log("Order JSON:", orderJSON); 
+        event.preventDefault();
 
-            document.getElementById('order-details-hidden').value = orderJSON;
-            document.getElementById('total-hidden').value = total.toFixed(2);
-        }
+        if (!validateForm()) {
+            return; 
+        } 
+        
+        const orderJSON = createOrderJSON();
+        
+        fetch('http://192.168.1.20:3000/order-now/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(orderJSON)
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Success:', data);
+            alert('Order submitted successfully!');
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('There was an error submitting your order.');
+        });
     });
 });
-
