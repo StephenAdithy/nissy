@@ -10,6 +10,7 @@
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
 
     <!-- Css Styles -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
@@ -81,24 +82,17 @@
         <a href="javascript:void(0)" class="closebtn" id="closeNavwl">&times;</a>
         <div class="wish-list">Wishlist</div>
         <div id="favoritesList"></div>
+    
+        <!-- Empty favorites message -->
+        <div id="emptyFavoritesMessage" style="display: none;">
+            <img src="img/Nissy/heartimage.png" alt="Empty Cart" class="empty-cart-image">
+            <h6 class="empty-cart-message">No items in your wishlist</h6>
+            <button class="return-to-shop-button" onclick="location.href='shop-grid.html'">Return to Shop</button>
+        </div>
     </div>
 
     <!-- Overlay -->
     <div id="overlaywl"></div>
-
-    <!-- Breadcrumb Section Begin -->
-    <section class="breadcrumb-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="section-title">
-                        <h2>Contact</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Breadcrumb Section End -->
 
     <!-- Contact Form Begin -->
     <div class="contact-form spad">
@@ -143,14 +137,16 @@
                                     <img src="img/icons/phone.png" alt="">
                                     <div class="contact-details_info">
                                         <div class="contact-details_info-header">Call us</div>
-                                        <div class="contact-details_info-content">91+ 9994226651</div>
+                                        <div class="contact-details_info-content">    <a href="tel:+919994226650" class="tagcolor">
+                                            91+ 9994226650</a></div>
                                     </div>
                                 </div>
                                 <div class="contact-details">
                                     <img src="img/icons/Email.png" alt="">
                                     <div class="contact-details_info">
                                         <div class="contact-details_info-header">Email</div>
-                                        <div class="contact-details_info-content">steveadhi200@gmail.com</div>
+                                        <div class="contact-details_info-content">    <a href="mailto:steveadhi200@gmail.com" class="tagcolor">
+                                            steveadhi200@gmail.com</a></div>
                                     </div>
                                 </div>
                                 <div class="contact-details">
@@ -170,10 +166,21 @@
                             </div>
                             <div class="contact-main-follow">Follow Us On</div>
                             <div class="contact-main-social">
-                                <img src="img/icons/Facebook.png" alt="facebook">
-                                <img src="img/icons/Instagram.png" alt="Instagram">
-                                <img src="img/icons/X.png" alt="x">
-                                <img src="img/icons/youtube.png" alt="youtube">
+                                <a href="https://www.facebook.com/" target="_blank">
+                                    <img src="img/icons/Facebook.png" alt="facebook">
+                                </a>
+                                
+                                <a href="https://www.instagram.com/" target="_blank">
+                                    <img src="img/icons/Instagram.png" alt="Instagram">
+                                </a>
+                                
+                                <a href="https://x.com/" target="_blank">
+                                    <img src="img/icons/X.png" alt="x">
+                                </a>
+                                
+                                <a href="https://www.youtube.com/" target="_blank">
+                                    <img src="img/icons/youtube.png" alt="youtube">
+                                </a>                                
                             </div>
                         </div>
                     </div>
@@ -205,10 +212,12 @@
     <!-- Footer Section Begin -->
     <footer class="footer" style="background: #7fad39;">
         <svg class="footer-wave-svg" viewBox="0 0 1200 100" preserveAspectRatio="none">
-            <path class="footer-wave-path" d="M851.8,100c125,0,288.3-45,348.2-64V0H0v44c3.7-1,7.3-1.9,11-2.9C80.7,22,151.7,10.8,223.5,6.3C276.7,2.9,330,4,383,9.8 
-                     c52.2,5.7,103.3,16.2,153.4,32.8C623.9,71.3,726.8,100,851.8,100z" fill="#fff">
+            <path class="footer-wave-path"
+                  d="M851.8,100c125,0,288.3-45,348.2-64V0H0v44c3.7-1,7.3-1.9,11-2.9C80.7,22,151.7,10.8,223.5,6.3C276.7,2.9,330,4,383,9.8 
+                     c52.2,5.7,103.3,16.2,153.4,32.8C623.9,71.3,726.8,100,851.8,100z"
+                  fill="#fff"> 
             </path>
-        </svg>
+        </svg>        
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-6 col-sm-6">
@@ -228,55 +237,28 @@
                         <h6>Useful Links</h6>
                         <ul>
                             <li><a href="AboutUs.html">About Us</a></li>
-                            <li><a href="#" data-toggle="modal" data-target="#exampleModalCenter"
-                                    data-title="Delivery infomation"
-                                    data-content="area for dismissing shown modals when clicking outside the modal.">Delivery
-                                    infomation</a></li>
-                            <li><a href="#" data-toggle="modal" data-target="#exampleModalCenter"
-                                    data-title="Privacy Policy"
-                                    data-content="area for dismissing shown modals when clicking outside the modal.">Privacy
-                                    Policy</a></li>
-                            <li><a href="#" data-toggle="modal" data-target="#exampleModalCenter"
-                                    data-title="Delivery infomation"
-                                    data-content="area for dismissing shown modals when clicking outside the modal.">Delivery
-                                    infomation</a></li>
-                            <li><a href="#" data-toggle="modal" data-target="#exampleModalCenter"
-                                    data-title="Privacy Policy"
-                                    data-content="area for dismissing shown modals when clicking outside the modal.">Privacy
-                                    Policy</a></li>
+                            <li><a href="#" data-toggle="modal" data-target="#exampleModalCenter" data-title="Delivery infomation" data-content="area for dismissing shown modals when clicking outside the modal.">Delivery infomation</a></li>
+                            <li><a href="#" data-toggle="modal" data-target="#exampleModalCenter" data-title="Privacy Policy" data-content="area for dismissing shown modals when clicking outside the modal.">Privacy Policy</a></li>
                         </ul>
                         <ul>
-                            <li><a href="#" data-toggle="modal" data-target="#exampleModalCenter"
-                                    data-title="Who We Are"
-                                    data-content="area for dismissing shown modals when clicking outside the modal.">Who
-                                    We Are</a></li>
-                            <li><a href="#" data-toggle="modal" data-target="#exampleModalCenter"
-                                    data-title="Our Services"
-                                    data-content="area for dismissing shown modals when clicking outside the modal.">Our
-                                    Services</a></li>
-                            <li><a href="#" data-toggle="modal" data-target="#exampleModalCenter"
-                                    data-title="Who We Are"
-                                    data-content="area for dismissing shown modals when clicking outside the modal.">Who
-                                    We Are</a></li>
-                            <li><a href="#" data-toggle="modal" data-target="#exampleModalCenter"
-                                    data-title="Our Services"
-                                    data-content="area for dismissing shown modals when clicking outside the modal.">Our
-                                    Services</a></li>
+                            <li><a href="#" data-toggle="modal" data-target="#exampleModalCenter" data-title="Who We Are" data-content="area for dismissing shown modals when clicking outside the modal.">Who We Are</a></li>
+                            <li><a href="#" data-toggle="modal" data-target="#exampleModalCenter" data-title="Our Services" data-content="area for dismissing shown modals when clicking outside the modal.">Our Services</a></li>
                             <li><a href="index.html#Testimonial">Testimonials</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-12">
                     <div class="footer__widget">
-                        <div class="map">
-                            <!-- <iframe
+                        <div class="map" style="align-content: center;">
+                            <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49116.39176087041!2d-86.41867791216099!3d39.69977417971648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886ca48c841038a1%3A0x70cfba96bf847f0!2sPlainfield%2C%20IN%2C%20USA!5e0!3m2!1sen!2sbd!4v1586106673811!5m2!1sen!2sbd"
-                                style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> -->
+                                style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                         </div>
-                        <div class="footer__widget__social mt-3">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
+                        <div class="footer__widget__social mt-3" style="text-align: center;">
+                            <a href="https://www.facebook.com/" target="_blank" title="Follow us"><i class="fa fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/" target="_blank" title="Follow us"><i class="fa fa-instagram"></i></a>
+                            <a href="https://www.youtube.com/" target="_blank" title="Follow us"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="https://x.com/?mx=2" target="_blank" title="Follow us"><i class="fa-brands fa-x-twitter"></i></a>
                         </div>
                     </div>
                 </div>
@@ -286,10 +268,10 @@
                 <div class="col-lg-12">
                     <div class="footer__copyright">
                         <div class="footer__copyright__text">
-                            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                Copyright &copy;
-                                <script>document.write(new Date().getFullYear());</script> All rights reserved
-                            </p>
+                            <p>
+                                &copy;
+                               <script>document.write(new Date().getFullYear());</script> ,Nissy HomeMade
+                           </p>
                         </div>
                     </div>
                 </div>
@@ -302,6 +284,7 @@
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.nice-select.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/brands.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/jquery.slicknav.js"></script>
     <script src="js/mixitup.min.js"></script>
@@ -361,6 +344,10 @@
 </html>
 
 <style>
+    .tagcolor, .tagcolor:hover .tagcolor:focus{
+        color: black;
+        text-decoration: none;
+    }
     .contact__widget {
         padding: 20px;
     }
