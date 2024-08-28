@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         const orderJSON = createOrderJSON();
         
-        fetch('http://192.168.1.20:3000/order-now/', {
+        fetch('https://nissy-backend-gldxxko4lq-el.a.run.app/order-now/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

@@ -1395,7 +1395,8 @@ span[id^=quantity-] {
     top: -164px;
   }
 }
-.carousel-control-next-icon, .carousel-control-prev-icon {
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
   display: inline-block;
   width: 12px;
   height: 20px;
@@ -1692,7 +1693,7 @@ span[id^=quantity-] {
 }
 
 .sidenav-wish a:hover {
-  color: #f1f1f1;
+  color: #818181;
 }
 
 .sidenav-wish .closebtn {
@@ -1769,6 +1770,37 @@ span[id^=quantity-] {
     right: 0;
   }
 }
+.empty-cart-image {
+  max-width: 50%;
+}
+
+#emptyFavoritesMessage {
+  -moz-text-align-last: center;
+       text-align-last: center;
+}
+
+.return-to-shop-button {
+  margin: 20px auto;
+  padding: 10px 40px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #409840;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.category {
+  padding-top: 50px;
+}
+
+.aboutustitle {
+  padding-top: 50px;
+}
+
 /*---------------------
   Breadcrumb
 -----------------------*/
@@ -2021,12 +2053,8 @@ span[id^=quantity-] {
 .product__item__pic__hover li:last-child {
   margin-right: 0;
 }
-.product__item__pic__hover li:hover a {
-  background: #409840;
-  border-color: #7fad39;
-}
 .product__item__pic__hover li:hover a i {
-  color: #ffffff;
+  color: red;
   transform: rotate(360deg);
 }
 .product__item__pic__hover li a {
@@ -2189,6 +2217,8 @@ span[id^=quantity-] {
 .product__item {
   margin-bottom: 50px;
   position: relative;
+}
+.product__item:hover {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .product__item:hover .product__item__pic .product__item__pic__hover {
@@ -3213,7 +3243,7 @@ span[id^=quantity-] {
 }
 .footer__about ul li {
   font-size: 16px;
-  color: #1c1c1c;
+  color: white;
   line-height: 36px;
   list-style: none;
 }
@@ -3230,7 +3260,7 @@ span[id^=quantity-] {
   overflow: hidden;
 }
 .footer__widget h6 {
-  color: #1c1c1c;
+  color: white;
   font-weight: 700;
   margin-bottom: 10px;
 }
@@ -3242,7 +3272,7 @@ span[id^=quantity-] {
   list-style: none;
 }
 .footer__widget ul li a {
-  color: #1c1c1c;
+  color: white;
   font-size: 14px;
   line-height: 32px;
 }
