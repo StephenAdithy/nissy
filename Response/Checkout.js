@@ -87,8 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
             isValid = false;
         }
         if(total == 0){
-            alert('Please select any product');
-            window.location.href = 'shop-grid.html';
+            showToast(`Please select any product`,'error')
             return false;
         }
         return isValid;
@@ -143,12 +142,32 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .then(response => response.json())
         .then(data => {
-            console.log('Success:', data);
-            alert('Order submitted successfully!');
+            showToast('Order submitted successfully!','success');
+            clearForm();
+            if (localStorage.getItem('orderFromCart')) {
+                clearCart(); 
+                localStorage.removeItem('orderFromCart'); 
+            }
         })
         .catch(error => {
-            console.error('Error:', error);
-            alert('There was an error submitting your order.');
+            showToast(`There was an error submitting your order.`,'error')
         });
     });
 });
+
+function clearCart() {
+    localStorage.removeItem('cart');
+    updateCartCount();
+}
+function clearForm() {
+    const form = document.getElementById('checkout-form');
+    if (form) {
+        form.reset();
+        document.querySelectorAll('.error-message').forEach(errorElement => {
+            errorElement.textContent = '';
+        });
+        document.getElementById('order-items').innerHTML = '';
+        localStorage.removeItem('checkoutCart');
+        document.getElementById('total').textContent = "₹0.00";
+    }
+}

@@ -22,7 +22,15 @@
 </head>
 
 <body>
-
+    <div id="toast" class="toast">
+        <span class="toast-icon"></span>
+        <div class="toast-message"></div>
+        <div class="toast-close" onclick="closeToast()"></div>
+    </div>
+        <!-- Page Preloder -->
+        <div id="preloder">
+            <div class="loader"></div>
+        </div>
     <!-- Header Section Begin -->
     <header class="header">
         <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top navbar-fixed">
@@ -158,7 +166,7 @@
                         </div>
                         <div class="col-lg-5 col-md-12">
                             <div class="checkout__order">
-                                <h4>Your Order</h4>
+                                <h4 style="text-align: center;">Your Order</h4>
                                 <div id="order-items"></div>
                                 <div class="checkout__order__total">Total <span id="total"></span></div>
                                 <button type="submit" class="site-btn">PLACE ORDER</button>
