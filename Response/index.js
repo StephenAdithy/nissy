@@ -398,10 +398,8 @@ function addToCartWithSelectedWeight(productId) {
 
 
 function buyNow(productId) {
-    // Get selected product
     const product = products.find(p => p.id === productId);
     
-    // Get the selected weight value and price
     const selectedWeightElement = document.querySelector(`input[name="weight-${productId}"]:checked`);
     
     if (!selectedWeightElement) {
@@ -414,7 +412,6 @@ function buyNow(productId) {
     
     const quantity = parseInt(document.getElementById(`quantity-${productId}`).textContent);
 
-    // Prepare product data
     const productToCheckout = {
         id: product.id,
         name: product.name,
@@ -424,10 +421,8 @@ function buyNow(productId) {
         weight: selectedWeight
     };
 
-    // Save to localStorage
     localStorage.setItem('checkoutCart', JSON.stringify([productToCheckout]));
 
-    // Redirect to checkout page
     window.location.href = 'checkout.html';
 }
 
@@ -477,7 +472,7 @@ function showToast(message, type = 'success') {
 
     setTimeout(() => {
         toast.classList.remove('show');
-    }, 30000);
+    }, 3000);
 }
 
 function closeToast() {
@@ -571,10 +566,6 @@ function updateCartCount() {
     localStorage.setItem('cartCount', totalCount);
 }
 
-// function closeNav(id) {
-//     document.getElementById(`mySidenav-${id}`).style.width = "0";
-//     document.getElementById(`overlay-${id}`).style.display = "none";
-// }
 
 
 function closeNav(id) {
@@ -615,14 +606,12 @@ function changeQuantity(amount, productId) {
         let oldValue = parseInt(quantityElement.value);
         let newValue = oldValue + amount;
 
-        // Ensure the quantity doesn't go below 1
         if (newValue < 1) {
             newValue = 1;
         }
 
         quantityElement.value = newValue;
 
-        // Now update the price based on the new quantity
         updatePrice1(productId);
     }
 }
@@ -696,7 +685,6 @@ function toggleFavorite(productId) {
 
     localStorage.setItem('favorites', JSON.stringify(favorites));
 
-    // Update the UI
     updateFavoriteCount();
     updateFavoriteUI(productId);
 }
@@ -704,6 +692,15 @@ function toggleFavorite(productId) {
 function loadFavorites() {
     const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
     const favoritesList = document.getElementById('favoritesList');
+    const emptyFavoritesMessage = document.getElementById('emptyFavoritesMessage');
+
+    if (favorites.length === 0) {
+        favoritesList.innerHTML = '';  
+        if (emptyFavoritesMessage) {
+            emptyFavoritesMessage.style.display = 'block';  
+        }
+    } else {
+        emptyFavoritesMessage.style.display = 'none'; 
     favoritesList.innerHTML = '';
 
     favorites.forEach(id => {
@@ -725,11 +722,12 @@ function loadFavorites() {
         }
     });
 }
-
+}
 function removeFavorite(productId) {
     let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
     favorites = favorites.filter(id => id !== productId);
     localStorage.setItem('favorites', JSON.stringify(favorites));
+    showToast(`WishList Removed Successfully`,'success');
     updateFavoriteCount();
     loadFavorites();
     updateFavoriteUI(productId);
@@ -741,7 +739,6 @@ function openNavwl() {
     loadFavorites();
 }
 
-// Function to close the sidebar
 function closeNavwl() {
     document.getElementById("sideNavbarwl").style.width = "0";
     document.getElementById("overlaywl").style.display = "none";
@@ -755,22 +752,6 @@ window.onload = function () {
     document.getElementById("overlaywl").onclick = closeNavwl;
 };
 
-
-function updateFavoriteUI() {
-    const favoriteLinks = document.querySelectorAll('.product__item__pic__hover li a');
-    
-    const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-    
-    favoriteLinks.forEach(link => {
-        const productId = parseInt(link.getAttribute('onclick').match(/(\d+)/)[0], 10);
-        
-        if (favorites.includes(productId)) {
-            link.classList.add('favorite'); 
-        } else {
-            link.classList.remove('favorite');
-        }
-    });
-}
 
 
 $(document).ready(function() {

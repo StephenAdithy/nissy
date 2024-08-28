@@ -86,8 +86,7 @@ function loadProductDetails(id) {
         infoList.querySelector("li:nth-child(1) span").innerText = 0;
         infoList.querySelector("li:nth-child(2) span").innerText = product.availability;
         infoList.querySelector("li:nth-child(3) span").innerHTML = product.shipping;
-        infoList.querySelector("li:nth-child(4) span").innerText = product.weightDetail;
-        infoList.querySelector("li:nth-child(5) span").innerText = product.selfLife;
+        infoList.querySelector("li:nth-child(4) span").innerText = product.selfLife;
     }
 }
 
@@ -189,7 +188,7 @@ function buyNow1(productId) {
 function handleAddToCart(productId) {
     let selectedWeightElement = document.querySelector("input[name='weight']:checked");
     if (!selectedWeightElement) {
-        console.error('No weight selected');
+        showToast(`Please select any weight`,'error')
         return;
     }
 
@@ -197,10 +196,14 @@ function handleAddToCart(productId) {
     let pricePerUnit = parseFloat(selectedWeightElement.getAttribute('data-price'));
 
     let quantityElement = document.getElementById(`quantity-${productId}`);
+    if (!quantityElement) {
+        showToast('Please select the Quantity','error');
+        return;
+    }
     let quantity = quantityElement ? parseInt(quantityElement.value) : 1;
 
     if (isNaN(quantity) || quantity < 1) {
-        console.error('Invalid quantity');
+        showToast('Invalid quantity value','error');
         return;
     }
 

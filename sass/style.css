@@ -1271,10 +1271,6 @@ span[id^=quantity-] {
   height: 50%;
 }
 
-.gallery:hover {
-  scale: 1.1;
-  transition: all 1s ease 0s;
-}
 
 .testimonial-slider .sect1 {
   padding: 35px;
@@ -1739,7 +1735,7 @@ span[id^=quantity-] {
   font-size: 16px;
   font-weight: 500;
   color: white;
-  background: #6da96d;
+  background: #409840;
   border: 1px solid grey;
   width: -moz-fit-content;
   width: fit-content;
@@ -2479,7 +2475,7 @@ span[id^=quantity-] {
   display: flex;
   padding-bottom: 20px;
   padding-top: 20px;
-  gap: 20px;
+  gap: 5px;
 }
 .shoping__cart__table-products img {
   width: 150px;
