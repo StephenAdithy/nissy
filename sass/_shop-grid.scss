@@ -81,11 +81,9 @@
         &:hover {
 
             a {
-                background: #409840;
-                border-color: $primary-color;
 
                 i {
-                    color: $white-color;
+                    color: red;
                     transform: rotate(360deg);
                 }
             }
@@ -283,10 +281,10 @@
 .product__item {
     margin-bottom: 50px;
     position: relative;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
 
     &:hover {
-
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         .product__item__pic {
 
             .product__item__pic__hover {
