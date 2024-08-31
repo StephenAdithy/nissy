@@ -70,44 +70,6 @@ function loadCartItems() {
 }
 
 
-
-// function loadCartItems() {
-//     console.log('Loading cart items');
-//     const cart = JSON.parse(localStorage.getItem('cart')) || [];
-//     console.log('Cart:', cart);
-
-//     const cartItemsContainer = document.getElementById('cart-items');
-//     if (!cartItemsContainer) {
-//         console.error('Cart items container not found');
-//         return;
-//     }
-
-//     let total = 0;
-//     cartItemsContainer.innerHTML = cart.map(item => {
-//         console.log('Item:', item);
-//         total += item.pricePerUnit;
-//         return `
-//             <div class="cart-item">
-//                 <img class="cart-image" src="${item.image}" alt="${item.name}" onclick="location.href='shop-details.html?id=${item.id}'">
-//                 <div class="shoping__cart__table-products-details">
-//                     <div class="shopping_cart-name">${item.name}</div>
-//                     <div class="shopping_cart-weigth"><span>${item.weight}</span></div>
-//                     <div class="shopping_cart-quantity">Quantity: <span id="quantity-${item.id}">${item.quantity}</span></div>
-
-//                     <div class="shoping__cart__table-products-details-amtcounter">
-//                         <div>₹ ${item.pricePerUnit}/-</div>
-//                     </div>
-//                     <div class="shopping__cart-availability">${item.availability}</div>
-//                 </div>
-//                 <div class="counter">
-//                     <button class="shoping__cart__table-products-details-remove" onclick="removeFromCart(${item.id}, '${item.weight}')">Remove</button>
-//                 </div>
-//             </div>`;
-//     }).join('');
-    
-//     updateCartSummary(total);
-// }
-
 function updateCartSummary(total) {
     console.log('Updating cart summary. Total:', total);
     const totalElement = document.getElementById('total');
@@ -140,4 +102,5 @@ function updateCartCount() {
 function saveCartForCheckout() {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
     localStorage.setItem('checkoutCart', JSON.stringify(cart));
+    localStorage.setItem('orderFromCart', 'true'); 
 }

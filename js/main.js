@@ -98,40 +98,67 @@
 	--------------------*/
 
 
-    $(document).ready(function(){
-        var images = $('.product__details__pic__slider img');
-        var currentIndex = 0;
-    
-        // Initialize the large image with the first thumbnail
-        if (images.length > 0) {
-            $('.product__details__pic__item--large').attr('src', images.eq(0).data('imgbigurl'));
+    $(document).ready(function() {
+        function initializeImageSlider() {
+            var images = $('.product__details__pic__slider img');
+            var currentIndex = 0;
+            if (images.length > 0) {
+                var firstImgUrl = images.eq(0).data('imgbigurl');
+                if (firstImgUrl) {
+                    $('.product__details__pic__item--large').attr('src', firstImgUrl);
+                } else {
+                    console.error("First image does not have data-imgbigurl attribute");
+                }
+            } else {
+                return;
+            }
+
+            function updateLargeImage(index) {
+                var imgurl = images.eq(index).data('imgbigurl');
+                if (imgurl) {
+                    $('.product__details__pic__item--large').attr('src', imgurl);
+                } else {
+                    console.error("Image URL not found for index:", index);
+                }
+            }
+
+            images.on('click', function() {
+                currentIndex = images.index($(this));
+                updateLargeImage(currentIndex);
+            });
+
+            $('.next').on('click', function() {
+                if (images.length > 0) {
+                    currentIndex = (currentIndex + 1) % images.length;
+                    updateLargeImage(currentIndex);
+                    console.log("Next button clicked, currentIndex:", currentIndex);
+                }
+            });
+
+            $('.prev').on('click', function() {
+                if (images.length > 0) {
+                    currentIndex = (currentIndex - 1 + images.length) % images.length;
+                    updateLargeImage(currentIndex);
+                    console.log("Previous button clicked, currentIndex:", currentIndex);
+                }
+            });
         }
-    
-        // Function to update the large image
-        function updateLargeImage(index) {
-            var imgurl = images.eq(index).data('imgbigurl');
-            $('.product__details__pic__item--large').attr('src', imgurl);
-        }
-    
-        // Thumbnail click event
-        images.on('click', function () {
-            // Update currentIndex to the clicked image's index relative to all thumbnails
-            currentIndex = images.index($(this));
-            updateLargeImage(currentIndex);
+
+        initializeImageSlider();
+
+        var targetNode = document.querySelector('.product__details__pic__slider');
+        var observer = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
+                if (mutation.addedNodes.length > 0) {
+                    initializeImageSlider(); 
+                }
+            });
         });
-    
-        // Next button click event
-        $('.next').on('click', function() {
-            currentIndex = (currentIndex + 1) % images.length; // Loop back to the first image
-            updateLargeImage(currentIndex);
-        });
-    
-        // Previous button click event
-        $('.prev').on('click', function() {
-            currentIndex = (currentIndex - 1 + images.length) % images.length; // Loop back to the last image
-            updateLargeImage(currentIndex);
-        });
+
+        var config = { childList: true };
+        observer.observe(targetNode, config);
     });
+    
     
     
     // $('.product__details__pic__slider img').on('click', function () {
@@ -148,23 +175,23 @@
     /*-------------------
 		Quantity change
 	--------------------- */
-    var proQty = $('.pro-qty');
-    proQty.prepend('<span class="dec qtybtn">-</span>');
-    proQty.append('<span class="inc qtybtn">+</span>');
-    proQty.on('click', '.qtybtn', function () {
-        var $button = $(this);
-        var oldValue = $button.parent().find('input').val();
-        if ($button.hasClass('inc')) {
-            var newVal = parseFloat(oldValue) + 1;
-        } else {
-            // Don't allow decrementing below zero
-            if (oldValue > 0) {
-                var newVal = parseFloat(oldValue) - 1;
-            } else {
-                newVal = 0;
-            }
-        }
-        $button.parent().find('input').val(newVal);
-    });
+    // var proQty = $('.pro-qty');
+    // proQty.prepend('<span class="dec qtybtn">-</span>');
+    // proQty.append('<span class="inc qtybtn">+</span>');
+    // proQty.on('click', '.qtybtn', function () {
+    //     var $button = $(this);
+    //     var oldValue = $button.parent().find('input').val();
+    //     if ($button.hasClass('inc')) {
+    //         var newVal = parseFloat(oldValue) + 1;
+    //     } else {
+    //         // Don't allow decrementing below zero
+    //         if (oldValue > 0) {
+    //             var newVal = parseFloat(oldValue) - 1;
+    //         } else {
+    //             newVal = 0;
+    //         }
+    //     }
+    //     $button.parent().find('input').val(newVal);
+    // });
 
 })(jQuery);

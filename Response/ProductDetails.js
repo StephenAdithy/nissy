@@ -156,7 +156,7 @@ function buyNow1(productId) {
     const selectedWeightElement = document.querySelector("input[name='weight']:checked");
 
     if (!selectedWeightElement) {
-        alert("Please select a weight option.");
+        showToast(`Please select any weight`,'error')
         return;
     }
 
