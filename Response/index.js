@@ -534,11 +534,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const cartCount = localStorage.getItem('cartCount') || 0;
     document.querySelector('.fa-shopping-bag + span').textContent = cartCount;
 
-    const favoriteCount = localStorage.getItem('favoriteCount') || 0;
-    document.querySelector('.fa-heart + span').textContent = favoriteCount;
+    // const favoriteCount = localStorage.getItem('favoriteCount') || 0;
+    // document.querySelector('.fa-heart + span').textContent = favoriteCount;
 
     updateCartCount();
-    updateFavoriteCount();
+    // updateFavoriteCount();
 });
 
 function openNav(id) {
