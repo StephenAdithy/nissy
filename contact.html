@@ -87,7 +87,7 @@
         <a href="javascript:void(0)" class="closebtn" id="closeNavwl">&times;</a>
         <div class="wish-list">Wishlist</div>
         <div id="favoritesList"></div>
-    
+
         <!-- Empty favorites message -->
         <div id="emptyFavoritesMessage" style="display: none;">
             <img src="img/Nissy/heartimage.png" alt="Empty Cart" class="empty-cart-image">
@@ -98,13 +98,41 @@
 
     <!-- Overlay -->
     <div id="overlaywl"></div>
-
-    <!-- Contact Form Begin -->
-    <div class="contact-form spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 orderone">
-                    <form id="contactForm">
+    <section class="contactus">
+        <div class="section-title">
+            <h2>Contact Us</h2>
+        </div>
+        <!-- Contact Form Begin -->
+        <div class="contact-form spad">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 orderone">
+                        <form id="contactForm">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6">
+                                    <label><b>Name</b></label>
+                                    <input type="text" name="name" required placeholder="Enter your name">
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <label><b>Mobile Number</b></label>
+                                    <input type="tel" name="phoneNumber" required placeholder="Enter your mobile"
+                                        pattern="^\d{10}$" title="Please enter exactly 10 digits.">
+                                </div>
+                                <div class="col-lg-12 col-md-12">
+                                    <label><b>Subject</b></label>
+                                    <input type="text" name="subject" required placeholder="Enter your Subject">
+                                </div>
+                                <div class="col-lg-12">
+                                    <label><b>Message</b></label>
+                                    <textarea name="message" required placeholder="Enter your Message"></textarea>
+                                </div>
+                                <div class="col-lg-12">
+                                    <button type="submit" class="site-btn">SEND MESSAGE</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-lg-6 ordertwo">
                         <div class="row">
                             <div class="col-lg-6 col-md-6">
                                 <label><b>Name<span style="color: red;padding: 3px;">*</span></b></label>
@@ -189,19 +217,17 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- Contact Form End -->
 
     <!-- Footer Section Begin -->
     <footer class="footer" style="background: #7fad39;">
         <svg class="footer-wave-svg" viewBox="0 0 1200 100" preserveAspectRatio="none">
-            <path class="footer-wave-path"
-                  d="M851.8,100c125,0,288.3-45,348.2-64V0H0v44c3.7-1,7.3-1.9,11-2.9C80.7,22,151.7,10.8,223.5,6.3C276.7,2.9,330,4,383,9.8 
-                     c52.2,5.7,103.3,16.2,153.4,32.8C623.9,71.3,726.8,100,851.8,100z"
-                  fill="#fff"> 
+            <path class="footer-wave-path" d="M851.8,100c125,0,288.3-45,348.2-64V0H0v44c3.7-1,7.3-1.9,11-2.9C80.7,22,151.7,10.8,223.5,6.3C276.7,2.9,330,4,383,9.8 
+                     c52.2,5.7,103.3,16.2,153.4,32.8C623.9,71.3,726.8,100,851.8,100z" fill="#fff">
             </path>
-        </svg>        
+        </svg>
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-6 col-sm-6">
@@ -221,12 +247,24 @@
                         <h6>Useful Links</h6>
                         <ul>
                             <li><a href="AboutUs.html">About Us</a></li>
-                            <li><a href="#" data-toggle="modal" data-target="#exampleModalCenter" data-title="Delivery infomation" data-content="area for dismissing shown modals when clicking outside the modal.">Delivery infomation</a></li>
-                            <li><a href="#" data-toggle="modal" data-target="#exampleModalCenter" data-title="Privacy Policy" data-content="area for dismissing shown modals when clicking outside the modal.">Privacy Policy</a></li>
+                            <li><a href="#" data-toggle="modal" data-target="#exampleModalCenter"
+                                    data-title="Delivery infomation"
+                                    data-content="area for dismissing shown modals when clicking outside the modal.">Delivery
+                                    infomation</a></li>
+                            <li><a href="#" data-toggle="modal" data-target="#exampleModalCenter"
+                                    data-title="Privacy Policy"
+                                    data-content="area for dismissing shown modals when clicking outside the modal.">Privacy
+                                    Policy</a></li>
                         </ul>
                         <ul>
-                            <li><a href="#" data-toggle="modal" data-target="#exampleModalCenter" data-title="Who We Are" data-content="area for dismissing shown modals when clicking outside the modal.">Who We Are</a></li>
-                            <li><a href="#" data-toggle="modal" data-target="#exampleModalCenter" data-title="Our Services" data-content="area for dismissing shown modals when clicking outside the modal.">Our Services</a></li>
+                            <li><a href="#" data-toggle="modal" data-target="#exampleModalCenter"
+                                    data-title="Who We Are"
+                                    data-content="area for dismissing shown modals when clicking outside the modal.">Who
+                                    We Are</a></li>
+                            <li><a href="#" data-toggle="modal" data-target="#exampleModalCenter"
+                                    data-title="Our Services"
+                                    data-content="area for dismissing shown modals when clicking outside the modal.">Our
+                                    Services</a></li>
                             <li><a href="index.html#Testimonial">Testimonials</a></li>
                         </ul>
                     </div>
@@ -239,10 +277,14 @@
                                 style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                         </div>
                         <div class="footer__widget__social mt-3" style="text-align: center;">
-                            <a href="https://www.facebook.com/" target="_blank" title="Follow us"><i class="fa fa-facebook"></i></a>
-                            <a href="https://www.instagram.com/" target="_blank" title="Follow us"><i class="fa fa-instagram"></i></a>
-                            <a href="https://www.youtube.com/" target="_blank" title="Follow us"><i class="fa-brands fa-youtube"></i></a>
-                            <a href="https://x.com/?mx=2" target="_blank" title="Follow us"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="https://www.facebook.com/" target="_blank" title="Follow us"><i
+                                    class="fa fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/" target="_blank" title="Follow us"><i
+                                    class="fa fa-instagram"></i></a>
+                            <a href="https://www.youtube.com/" target="_blank" title="Follow us"><i
+                                    class="fa-brands fa-youtube"></i></a>
+                            <a href="https://x.com/?mx=2" target="_blank" title="Follow us"><i
+                                    class="fa-brands fa-x-twitter"></i></a>
                         </div>
                     </div>
                 </div>
@@ -254,8 +296,8 @@
                         <div class="footer__copyright__text">
                             <p>
                                 &copy;
-                               <script>document.write(new Date().getFullYear());</script> ,Nissy HomeMade
-                           </p>
+                                <script>document.write(new Date().getFullYear());</script> ,Nissy HomeMade
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -275,34 +317,32 @@
     <script src="Response/index.js"></script>
     <script src="js/main.js"></script>
     <script>
-            document.getElementById('contactForm').addEventListener('submit', function(event) {
-        event.preventDefault();
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+            event.preventDefault();
 
-        const formData = new FormData(this);
-        const jsonData = {};
+            const formData = new FormData(this);
+            const jsonData = {};
 
-        formData.forEach((value, key) => {
-            jsonData[key] = value;
+            formData.forEach((value, key) => {
+                jsonData[key] = value;
+            });
+            console.log("hii", jsonData)
+
+            fetch('https://nissy-backend-gldxxko4lq-el.a.run.app/contact-us/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(jsonData)
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Success:', data);
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
         });
-        console.log("hii",jsonData )
-
-        fetch('https://nissy-backend-gldxxko4lq-el.a.run.app/contact-us/', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(jsonData)
-        })
-        .then(response => response.json())
-        .then(data => {
-            const form = document.getElementById('contactForm');
-            form.reset();
-            showToast('Contact successfully!','success');
-        })
-        .catch(error => {
-            showToast('Failed to contact Us','error');
-        });
-    });
     </script>
 
 
@@ -330,10 +370,12 @@
 </html>
 
 <style>
-    .tagcolor, .tagcolor:hover .tagcolor:focus{
+    .tagcolor,
+    .tagcolor:hover .tagcolor:focus {
         color: black;
         text-decoration: none;
     }
+
     .contact__widget {
         padding: 20px;
     }

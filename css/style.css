@@ -1209,6 +1209,11 @@ span[id^=quantity-] {
   font-weight: bold;
 }
 
+.featured__controls ul li a:hover {
+  color: #409840;
+  font-weight: 500;
+}
+
 .swiper {
   width: 100%;
   height: 100%;
@@ -1270,7 +1275,6 @@ span[id^=quantity-] {
 .gallery2 {
   height: 50%;
 }
-
 
 .testimonial-slider .sect1 {
   padding: 35px;
@@ -1726,7 +1730,7 @@ span[id^=quantity-] {
   font-size: 16px;
   font-weight: 500;
   color: white;
-  background: #409840;
+  background: #6da96d;
   border: 1px solid grey;
   width: -moz-fit-content;
   width: fit-content;
@@ -1755,6 +1759,75 @@ span[id^=quantity-] {
   .sidenav-wish {
     width: 0px;
     right: 0;
+    /* Slide in from the right */
+    background-color: #efeaea;
+    /* Black*/
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidenav */
+    padding-top: 60px;
+    /* Place content 60px from the top */
+    overflow-y: auto;
+  }
+  .sidenav-wish a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  .sidenav-wish a:hover {
+    color: #f1f1f1;
+  }
+  .sidenav-wish .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  .wish-list {
+    font-size: 24px;
+    text-align: center;
+    font-weight: 700;
+    padding-bottom: 20px;
+  }
+  .Wish-list-main {
+    display: grid;
+    grid-template-columns: 30% 60% 10%;
+    margin: 20px 30px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  }
+  .Wish-list-img img {
+    width: 100%;
+  }
+  .Wish-list-content {
+    padding-left: 20px;
+  }
+  .Wish-list-content-header {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .Wish-list-content-rate {
+    padding: 10px 0px;
+  }
+  .Wish-list-content-viewpro {
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    background: #409840;
+    border: 1px solid grey;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .Wish-list-close {
+    font-size: 30px;
+    cursor: pointer;
   }
 }
 .empty-cart-image {
@@ -1786,6 +1859,10 @@ span[id^=quantity-] {
 
 .aboutustitle {
   padding-top: 50px;
+}
+
+.contactus {
+  padding-top: 130px;
 }
 
 /*---------------------
@@ -2467,7 +2544,7 @@ span[id^=quantity-] {
   display: flex;
   padding-bottom: 20px;
   padding-top: 20px;
-  gap: 5px;
+  gap: 20px;
 }
 .shoping__cart__table-products img {
   width: 150px;
