@@ -64,9 +64,6 @@ function loadProductDetails(id) {
             input.id = weight.id;
             input.value = weight.value;
             input.setAttribute("data-price", weight.price);
-            // if (index === 0) {
-            //     input.checked = true;
-            // }
             let label = document.createElement("label");
             label.className = "form-check-label";
             label.setAttribute("for", weight.id);

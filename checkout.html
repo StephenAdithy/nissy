@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Checkout</title>
-	<link rel="shortcut icon" type="image/x-icon" href="img/Nissy/Logo.png">
+    <link rel="shortcut icon" type="image/x-icon" href="img/Nissy/Logo.png">
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
@@ -27,10 +27,10 @@
         <div class="toast-message"></div>
         <div class="toast-close" onclick="closeToast()"></div>
     </div>
-        <!-- Page Preloder -->
-        <div id="preloder">
-            <div class="loader"></div>
-        </div>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
     <!-- Header Section Begin -->
     <header class="header">
         <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top navbar-fixed">
@@ -62,7 +62,8 @@
                             <ul>
                                 <li>
                                     <button class="btn_nav" id="heartIcon">
-                                        Wishlist <a href="#"><i class="fa fa-heart"></i> <span id="favorite-count">0</span></a>
+                                        Wishlist <a href="#"><i class="fa fa-heart"></i> <span
+                                                id="favorite-count">0</span></a>
                                     </button>
                                 </li>
                                 <li>
@@ -83,7 +84,7 @@
         <a href="javascript:void(0)" class="closebtn" id="closeNavwl">&times;</a>
         <div class="wish-list">Wishlist</div>
         <div id="favoritesList"></div>
-    
+
         <!-- Empty favorites message -->
         <div id="emptyFavoritesMessage" style="display: none;">
             <img src="img/Nissy/heartimage.png" alt="Empty Cart" class="empty-cart-image">
@@ -120,51 +121,52 @@
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="checkout__input">
-                                        <b>First Name<span>*</span></b>
-                                        <input type="text" id="first-name" name="First Name" required>
-                                        <span class="error-message" id="first-name-error"></span>
+                                        <b>First Name<span style="color: red;">*</span></b>
+                                        <input type="text" id="first-name" name="First Name" required title="Please Fill your First name" placeholder="Enter your First Name">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="checkout__input">
-                                        <b>Last Name<span>*</span></b>
-                                        <input type="text" id="last-name" name="Last Name" required>
-                                        <span class="error-message" id="last-name-error"></span>
+                                        <b>Last Name<span style="color: red;">*</span></b>
+                                        <input type="text" id="last-name" name="Last Name" required title="Please Fill your Last name" placeholder="Enter your Last Name">
                                     </div>
                                 </div>
-                            </div>
-                            <div class="checkout__input">
-                                <b>Address<span>*</span></b>
-                                <input type="text" id="address" name="Address" placeholder="Street Address" class="checkout__input__add" required>
-                                <input type="text" id="apartment" name="Apartment" placeholder="Apartment, suite, unit, etc. (optional)">
-                                <span class="error-message" id="address-error"></span>
-                            </div>
-                            <div class="checkout__input">
-                                <b>Town/City<span>*</span></b>
-                                <input type="text" id="city" name="City" required>
-                                <span class="error-message" id="city-error"></span>
-                            </div>
-                            <div class="checkout__input">
-                                <b>Country/State<span>*</span></b>
-                                <input type="text" id="state" name="State" required>
-                                <span class="error-message" id="state-error"></span>
-                            </div>
-                            <div class="checkout__input">
-                                <b>Postcode / ZIP<span>*</span></b>
-                                <input type="text" id="postcode" name="Postcode" required>
-                                <span class="error-message" id="postcode-error"></span>
-                            </div>
-                            <div class="row">
                                 <div class="col-lg-6">
                                     <div class="checkout__input">
-                                        <b>Phone<span>*</span></b>
-                                        <input type="text" id="phone" name="Phone" required>
-                                        <span class="error-message" id="phone-error"></span>
+                                        <b>Mobile Number<span style="color: red;">*</span></b>
+                                        <input type="tel" id="phone" name="Phone" required placeholder="Enter your mobile number" pattern="^\d{10}$" title="Please enter exactly 10 digits.">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="checkout__input">
+                                        <b>Town/City<span style="color: red;">*</span></b>
+                                        <input type="text" id="city" name="City" required title="Please Fill your City name" placeholder="Enter your City">
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="checkout__input">
+                                        <b>Address<span style="color: red;">*</span></b>
+                                        <input type="text" id="address" name="Address" placeholder="Street Address"
+                                            class="checkout__input__add" required title="Please fill the Address">
+                                        <input type="text" id="apartment" name="Apartment"
+                                            placeholder="Apartment, Landmark etc. (optional)">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="checkout__input">
+                                        <b>Country/State<span style="color: red;">*</span></b>
+                                        <input type="text" id="state" name="State" placeholder="Enter your Country/state" required title="Please Fill your State">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="checkout__input">
+                                        <b>Postcode / ZIP<span style="color: red;">*</span></b>
+                                        <input type="text" id="postcode" name="Postcode" placeholder="Enter your Pincode" required title="Please Fill your pincode">
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-5 col-md-12">
+                        <div class="col-lg-5 col-md-12 col-sm-12">
                             <div class="checkout__order">
                                 <h4 style="text-align: center;">Your Order</h4>
                                 <div id="order-items"></div>
@@ -178,57 +180,64 @@
         </div>
     </section>
     <!-- Checkout Section End -->
-
+    <a href="https://wa.me/919994226651/" target="_blank">
+        <img src="img/products/whatsapp.gif" alt="WhatsApp GIF" class="whatsappGif" id="whatsappGif" />
+    </a>
+    <button class="scroll-to-top" id="scrollToTopBtn">&uarr;</button>
     <!-- Footer Section Begin -->
     <footer class="footer" style="background: #7fad39;">
         <svg class="footer-wave-svg" viewBox="0 0 1200 100" preserveAspectRatio="none">
-            <path class="footer-wave-path"
-                  d="M851.8,100c125,0,288.3-45,348.2-64V0H0v44c3.7-1,7.3-1.9,11-2.9C80.7,22,151.7,10.8,223.5,6.3C276.7,2.9,330,4,383,9.8 
-                     c52.2,5.7,103.3,16.2,153.4,32.8C623.9,71.3,726.8,100,851.8,100z"
-                  fill="#fff"> 
+            <path class="footer-wave-path" d="M851.8,100c125,0,288.3-45,348.2-64V0H0v44c3.7-1,7.3-1.9,11-2.9C80.7,22,151.7,10.8,223.5,6.3C276.7,2.9,330,4,383,9.8 
+                     c52.2,5.7,103.3,16.2,153.4,32.8C623.9,71.3,726.8,100,851.8,100z" fill="#fff">
             </path>
-        </svg>        
+        </svg>
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="footer__about">
                         <div class="footer__about__logo">
                             <a href="./index.html"><img src="img/Nissy/Logo.png" alt=""></a>
                         </div>
                         <ul>
-                            <li>Address: 60-49 Road 11378 New York</li>
-                            <li>Phone: +65 11.188.888</li>
-                            <li>Email: hello@colorlib.com</li>
+                            <li>155 ZYON COTTAGE,KOTTAKULAM - 627805.TENKASI DIST</li>
+                            <li>+91 8610846675</li>
+                            <li>nissyhomemade@gmail.com</li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-1">
+                <div class="col-lg-4 col-md-6 col-sm-6" style="align-content: center;">
                     <div class="footer__widget">
                         <h6>Useful Links</h6>
-                        <ul>
+                        <ul id="footerdynamiclinks">
                             <li><a href="AboutUs.html">About Us</a></li>
-                            <li><a href="#" data-toggle="modal" data-target="#exampleModalCenter" data-title="Delivery infomation" data-content="area for dismissing shown modals when clicking outside the modal.">Delivery infomation</a></li>
-                            <li><a href="#" data-toggle="modal" data-target="#exampleModalCenter" data-title="Privacy Policy" data-content="area for dismissing shown modals when clicking outside the modal.">Privacy Policy</a></li>
+                            <li><a href="#" data-toggle="modal" data-target="#exampleModalCenter"
+                                    data-title="Delivery Information">Delivery Information</a></li>
+                            <li><a href="#" data-toggle="modal" data-target="#exampleModalCenter"
+                                    data-title="Privacy Policy">Privacy Policy</a></li>
                         </ul>
-                        <ul>
-                            <li><a href="#" data-toggle="modal" data-target="#exampleModalCenter" data-title="Who We Are" data-content="area for dismissing shown modals when clicking outside the modal.">Who We Are</a></li>
-                            <li><a href="#" data-toggle="modal" data-target="#exampleModalCenter" data-title="Our Services" data-content="area for dismissing shown modals when clicking outside the modal.">Our Services</a></li>
-                            <li><a href="index.html#Testimonial">Testimonials</a></li>
-                        </ul>
+                        <ul id="footerdynamiclinks">
+                            <li><a href="#" data-toggle="modal" data-target="#exampleModalCenter"
+                                    data-title="Who We Are">Who We Are</a></li>
+                            <li><a href="#" data-toggle="modal" data-target="#exampleModalCenter"
+                                    data-title="Terms and Conditions">Terms and Conditions</a></li>
+                                    <li><a href="index.html#Testimonial">Testimonial</a></li>
+                                </ul>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-12">
+                <div class="col-lg-3 col-md-12">
                     <div class="footer__widget">
                         <div class="map" style="align-content: center;">
                             <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49116.39176087041!2d-86.41867791216099!3d39.69977417971648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886ca48c841038a1%3A0x70cfba96bf847f0!2sPlainfield%2C%20IN%2C%20USA!5e0!3m2!1sen!2sbd!4v1586106673811!5m2!1sen!2sbd"
+                                src="https://www.google.com/maps/place/Nadar+St/data=!4m2!3m1!1s0x3b042a082a337731:0x8169535aa8fb43f6?utm_source=mstt_1&entry=gps&coh=192189&g_ep=CAESCjExLjE0MS4xMDIYACCenQoqbCw5NDIyMzI5OSw5NDIxNjQxMyw5NDIxMjQ5Niw5NDIwNzM5NCw5NDIwNzUwNiw5NDIwODUwNiw5NDIxNzUyMyw5NDIxODY1Myw5NDIyOTgzOSw0NzA4NzExOCw0NzA4NDM5Myw5NDIxMzIwMEICSU4%3D"
                                 style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                         </div>
                         <div class="footer__widget__social mt-3" style="text-align: center;">
-                            <a href="https://www.facebook.com/" target="_blank" title="Follow us"><i class="fa fa-facebook"></i></a>
-                            <a href="https://www.instagram.com/" target="_blank" title="Follow us"><i class="fa fa-instagram"></i></a>
-                            <a href="https://www.youtube.com/" target="_blank" title="Follow us"><i class="fa-brands fa-youtube"></i></a>
-                            <a href="https://x.com/?mx=2" target="_blank" title="Follow us"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=100089648725854" target="_blank"
+                                title="Follow us"><i class="fa fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/nissy_homemade/" target="_blank" title="Follow us"><i
+                                    class="fa fa-instagram"></i></a>
+                            <a href="https://youtube.com/@nissyhomemade?si=Z7TdP2klo0JAGuuz" target="_blank"
+                                title="Follow us"><i class="fa-brands fa-youtube"></i></a>
                         </div>
                     </div>
                 </div>
@@ -238,10 +247,10 @@
                 <div class="col-lg-12">
                     <div class="footer__copyright">
                         <div class="footer__copyright__text">
-                            <p>
+                            <h6>
                                 &copy;
-                               <script>document.write(new Date().getFullYear());</script> ,Nissy HomeMade
-                           </p>
+                                <script>document.write(new Date().getFullYear());</script> ,Nissy HomeMade
+                            </h6>
                         </div>
                     </div>
                 </div>
@@ -251,21 +260,21 @@
     <!-- Footer Section End -->
 
     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Modal Title</h5>
-                <button type="button" class="closebtn" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true" style="font-size: xx-large;">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                Modal content goes here.
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Modal Title</h5>
+                    <button type="button" class="closebtn" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" style="font-size: xx-large;">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Modal content goes here.
+                </div>
             </div>
         </div>
     </div>
-</div>
 
 
     <!-- Js Plugins -->
@@ -283,11 +292,12 @@
 
 </html>
 
-<style>
-    .remove-item{
+<style>   
+    .remove-item {
         background: none;
         border: none;
     }
+
     .error-message {
         color: red;
         font-size: 0.875em;
