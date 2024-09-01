@@ -6581,7 +6581,7 @@ a.close.disabled {
     background-clip: padding-box;
     border: 1px solid rgba(0, 0, 0, .2);
     border-radius: .3rem;
-    outline: 0
+    outline: 0;
 }
 
 .modal-backdrop {
@@ -6629,7 +6629,9 @@ a.close.disabled {
     position: relative;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
-    padding: 1rem
+    padding: 1rem;
+    max-height: 400px;
+    overflow-y: scroll;
 }
 
 .modal-footer {
@@ -6661,7 +6663,7 @@ a.close.disabled {
 
 @media (min-width:576px) {
     .modal-dialog {
-        max-width: 500px;
+        max-width: 800px;
         margin: 1.75rem auto
     }
 
