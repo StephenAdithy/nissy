@@ -210,3 +210,15 @@
         margin-top: 10px;
     }
 }
+
+.checkoutproduct{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.checkoutitems{
+    width: 60%;
+    padding: 10px;
+    font-size: 14px;
+}

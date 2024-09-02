@@ -12,17 +12,17 @@ document.addEventListener('DOMContentLoaded', () => {
             total += item.pricePerUnit;
 
             const itemHTML = `
-                <div class="row" data-index="${index}">
-                    <div class="col-lg-4 col-md-4 col-sm-4">
+                <div class="row checkoutproduct" data-index="${index}">
+                    <div>
                         <img src="${item.image}" class="prodimg" alt="${item.name}">
                     </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6 contentalign">
+                    <div class="checkoutitems">
                         <strong>${item.name}</strong><br>
                         <strong>₹${(item.pricePerUnit).toFixed(2)}</strong><br> 
                         <strong>Qty: ${item.quantity}</strong><br>
                         <strong>Weight: ${item.weight}</strong>
                     </div>
-                    <div class="col-lg-2 col-md-2 col-sm-2 contentalign">
+                    <div>
                         <button class="remove-item" data-index="${index}">
                             <i class="fa fa-window-close closebtn" aria-hidden="true"></i>
                         </button>                                     
