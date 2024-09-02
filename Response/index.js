@@ -2,18 +2,18 @@ const products = [
     {
         id: 0,
         name: 'ABC Malt',
-        price: '₹320.00 - ₹1200.00',
+        price: '₹320.00 - ₹1130.00',
         image: 'img/products/abc1.jpg',
         category: 'Malt',
-        description: 'Its increases hemoglobin very suitable for pregnant women and children Boosts immunity and stamina Helps keep the skin glowing keeps blood pressure and sugar levels under control ',
+        description: 'ABC Malt—a delicious and nutritious blend made from Apple, Beetroot, Carrot, Almonds, and Cashews. Crafted with care, our malt is 100% natural and homemade, with no preservatives, chemicals, or white sugar. Enjoy the wholesome goodness of pure ingredients in every spoonful, perfect for those who value health and taste.',
         weightOptions: ['1L', '250ml', '500ml'],
         images: ['img/products/abc1.jpg', 'img/products/abc 2.jpg', 'img/products/abc 3.jpg'],
-        availability: "asas of Stock",
-        shipping: "01 day shipping. <samp>Free pickup today</samp>",
+        availability: "In Stock",
+        shipping: "2 - 3 days shipping (Free Shipping).",
         weightDetail: "0.5 kg",
         rate: " ₹400.00-₹1200.00",
-        productdescription: "Ingredients\n\napple, beetroot, carrot, Jaggery powder, Cashew, Almond, and Elachi\n\nTo make a delicious NISSY ABC MALT\n\nTake 1-2 teaspoons of NISSY ABC malt mix to your mug\npour 200 ml of milk either hot or cold\nstir well and enjoy it.\n\n• Don’t boil it along with milk.\n\nHealth benefits:\n\nEncourage healthy brain growth\nEnhances your memory power.\nHelps maintain the glow of the skin.\nBeneficial for both skin and hair\nPromises to heal the gut well\nregulating your blood pressure\n\n <b>Shelf Life:</b>\n\n6 months",
-        information: "<b>பீட்ரூட்,</b> நாட்டுச்சர்க்கரை,  பாதாம், முந்திரி ,ஏலக்காய்",
+        productdescription: "INGREDIENTS:\n\nApple, Beetroot, Carrot, Jaggery powder, Cashews, Almonds, and Elachi.\n\n SHELF LIFE:\n\n6 months",
+        information: "TO MAKE A DELICIOUS NISSY ABC MALT:\n\n• Take 1-2 teaspoons of NISSY ABC malt mix to your mug.\n• Pour 200 ml of milk either hot or cold.\n• Stir well and enjoy it.\n(Don’t boil it along with milk.)\n\nHEALTH BENEFITS:\n\n• Encourage healthy brain growth\n• Enhances your memory power.\n• Promises to heal the gut well\n• Helps maintain the glow of the skin.\n• Beneficial for both skin and hair\n• Regulating your blood pressure",
         productImage: [
             "img/products/abc1.jpg",
             "img/products/abc 2.jpg",
@@ -21,18 +21,18 @@ const products = [
             "img/products/Untitled design.png",
         ],
         weights: [
-            { id: "weight1", value: "1KG", label: "1KG", price: 800 },
-            { id: "weight2", value: "250GM", label: "250GM", price: 400 },
-            { id: "weight3", value: "500GM", label: "500GM", price: 1200 }
+            { id: "weight1", value: "1KG", label: "1KG", price: 1130 },
+            { id: "weight2", value: "250GM", label: "250GM", price: 320 },
+            { id: "weight3", value: "500GM", label: "500GM", price: 590 }
         ],
     },
     {
         id: 1,
         name: 'Beetroot Malt',
-        price: '₹ 270.00-₹ 1000.00',
+        price: '₹ 300.00- ₹1050.00',
         image: 'img/products/beetroot1.jpg',
         category: 'Malt',
-        description: 'It increases hemoglobin. very suitable for pregnant women and children  Boosts immunity and stamina Helps keep the skin glowing keeps blood pressure and sugar levels under control',
+        description: 'Experience the natural goodness of our Beetroot Malt, a wholesome blend crafted from Beetroot, Jaggery powder, Cashew, Almond, and Elachi. Made with care, this malt is 100% natural and homemade, with no preservatives, chemicals, or white sugar. Enjoy a delicious and nutritious treat that’s pure, healthy, and packed with the goodness of nature.',
         weightOptions: ['1L', '250ml', '500ml'],
         images: ['img/products/beetroot1.jpg', 'img/products/beetroot2.jpg', 'img/products/beetroot3.jpg'],
         availability: "In Stock",
@@ -40,8 +40,8 @@ const products = [
         weightDetail: "0.5 kg",
         rate: " ₹ 270.00-₹ 1000.00",
         selfLife: '2 months',
-        productdescription: "Ingredients\n\napple, beetroot, carrot, Jaggery powder, Cashew, Almond, and Elachi\n\nTo make a delicious NISSY ABC MALT\n\nTake 1-2 teaspoons of NISSY ABC malt mix to your mug\npour 200 ml of milk either hot or cold\nstir well and enjoy it.\n\n• Don’t boil it along with milk.\n\nHealth benefits:\n\nEncourage healthy brain growth\nEnhances your memory power.\nHelps maintain the glow of the skin.\nBeneficial for both skin and hair\nPromises to heal the gut well\nregulating your blood pressure\n\nShelf Life:\n\n6 months",
-        information: "பீட்ரூட், நாட்டுச்சர்க்கரை,  பாதாம், முந்திரி ,ஏலக்காய்",
+        productdescription: "INGREDIENTS:\n\nBeetroot, Jaggery powder, Cashew, Almond and Elachi\n\nSHELF LIFE: 6 months",
+        information: "TO MAKE A DELICIOUS NISSY BEETROOT MALT:\n\n• Take 1-2 teaspoons of NISSY Beetroot malt mix to your mug\n• Pour 200 ml of milk either hot or cold\n• Stir well and enjoy it.\n• Don’t boil it along with milk.\n\nHEALTH BENEFITS:\n\n• It increases hemoglobin.\n• Very suitable for pregnant women and children\n• Boosts immunity and stamina\n• Helps keep the skin glowing\n• Keeps blood pressure and sugar levels under control",
         productImage: [
             "img/products/beetroot1.jpg",
             "img/products/beetroot2.jpg",
@@ -49,18 +49,18 @@ const products = [
             "img/products/beetroot4.jpg",
         ],
         weights: [
-            { id: "weight1", value: "1KG", label: "1KG", price: 1200 },
-            { id: "weight2", value: "250GM", label: "250GM", price: 270 },
-            { id: "weight3", value: "500GM", label: "500GM", price: 520 }
+            { id: "weight1", value: "1KG", label: "1KG", price: 1050 },
+            { id: "weight2", value: "250GM", label: "250GM", price: 300 },
+            { id: "weight3", value: "500GM", label: "500GM", price: 550 }
         ],
     },
     {
         id: 2,
         name: 'Carrot Malt',
-        price: '₹ 320.00 - ₹ 1200', 
+        price: '₹ 320.00 - ₹ 11300', 
         image: 'img/products/Carrot1.jpg',
         category: 'Malt',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam odio quidem aliquid voluptatem veritatis maxime eaque voluptatum expedita illo excepturi atque at assumenda quod, delectus ipsa aliquam cupiditate cum tempora.',
+        description: 'Discover the vibrant flavors of our Carrot Malt, a nourishing blend made from Carrot, Jaggery powder, Cashew, Almond, and Elachi. Our malt is 100% natural and homemade, free from preservatives, chemicals, and white sugar. Indulge in a wholesome, delicious treat that brings together the pure goodness of nature in every sip.',
         weightOptions: ['1L', '250ml', '500ml'],
         images: ['img/products/Carrot1.jpg', 'img/products/Carrot2.jpg', 'img/products/Carrot3.jpg'],
         availability: "In Stock",
@@ -68,6 +68,8 @@ const products = [
         weightDetail: "0.5 kg",
         rate: '₹ 320.00 - ₹ 1200',
         selfLife: '1 months',
+        productdescription: "INGREDIENTS:\n\nCarrot, Jaggery powder, Cashew, Almond and Elachi\n\nSHELF LIFE: 6 months",
+        information: "TO MAKE A DELICIOUS NISSY CARROT MALT:\n\n• Take 1-2 teaspoons of NISSY CARROT malt mix to your mug\n• Pour 200 ml of milk either hot or cold\n• Stir well and enjoy it.\n• Don’t boil it along with milk.\n\nHEALTH BENEFITS:\n\n• Enhances the EyeSight.\n• Promotes Hair Growth.\n• Manages Blood Pressure.\n• Helps to attain Glowing Skin.\n• Naturally Detoxifies the body.",
         productImage: [
             "img/products/Carrot1.jpg",
             "img/products/Carrot2.jpg",
@@ -75,210 +77,344 @@ const products = [
             "img/products/Carrot1.jpg",
         ],
         weights: [
-            { id: "weight1", value: "1KG", label: "1KG", price: 200 },
-            { id: "weight2", value: "250GM", label: "250GM", price: 100 },
-            { id: "weight3", value: "500GM", label: "500GM", price: 101 }
+            { id: "weight1", value: "1KG", label: "1KG", price: 1130 },
+            { id: "weight2", value: "250GM", label: "250GM", price: 320 },
+            { id: "weight3", value: "500GM", label: "500GM", price: 590 }
         ],
     },
     {
         id: 3,
-        name: 'Crab Pool Security',
-        price: '₹ 400.00',
-        image: 'img/Nissy/Newimages/4.jpg',
-        category: 'Malt',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam odio quidem aliquid voluptatem veritatis maxime eaque voluptatum expedita illo excepturi atque at assumenda quod, delectus ipsa aliquam cupiditate cum tempora.',
+        name: 'Baby Cereal',
+        price: '₹ 250.00 - ₹ 1050',
+        image: 'img/products/cereal.jpg',
+        category: 'Baby Food',
+        description: 'Our Baby Cereal is a nourishing blend made from Rice, Almonds, Yellow Moong dhal, Bengal gram dhal, Split gram dhal, and Urad dhal. Carefully crafted at home, this cereal is 100% natural and free from preservatives, chemicals, and white sugar. It’s the perfect first food for your 6-month-old, providing wholesome nutrition that you can trust.',
         weightOptions: ['1L', '250ml', '500ml'],
-        images: ['img/Nissy/Newimages/3.jpg', 'img/Nissy/Newimages/6.jpg','img/Nissy/Newimages/4.jpg'],
-        availability: "out od Stock",
-        shipping: "01 day shipping. <samp>Free pickup today</samp>",
+        images: ['img/products/cereal1.jpg', 'img/products/cereal2.jpg','img/products/cereal3.jpg'],
+        availability: "In Stock",
+        shipping: "2 - 3 days shipping (Free Shipping).",
         weightDetail: "0.5 kg",
         rate: " ₹ 400.00",
-        selfLife: '7 months',
+        selfLife: '6 months',
+        productdescription: "INGREDIENTS:\n\nRice, Almonds, Yellow Moong dhal, Bengal gram dhal, Split gram dhal, Urad dhal\n\nSHELF LIFE - 6 months",
+        information: "TO MAKE A DELICIOUS BABY CEREAL:\n\n• Take about 100ml of water into the bowl.\n• Add 1 or 2 scoops of NISSY Baby Cereal as needed and mix it well.\n• Place it on the stove and heat it till it becomes a paste.\n• Stir and feed the baby using a clean spoon.\n\nBENEFITS:\n\n• Rich in fiber, carbohydrates, protein, calcium, and magnesium.\n• Improves the growth of the brain and bones.\n• Boosts immunity and helps to gain weight.",
         productImage: [
-            "img/product/details/product-details-1.jpg",
-            "img/product/details/thumb-1.jpg",
-            "img/product/details/thumb-2.jpg",
-            "img/product/details/thumb-3.jpg",
-            "img/product/details/thumb-4.jpg"
+            "img/products/cereal.jpg",
+            "img/products/cereal1.jpg",
+            "img/products/cereal2.jpg",
+            "img/products/cereal3.jpg",
+            "img/products/cereal.jpg"
         ],
         weights: [
-            { id: "weight1", value: "1KG", label: "1KG", price: 200 },
-            { id: "weight2", value: "250GM", label: "250GM", price: 100 },
-            { id: "weight3", value: "500GM", label: "500GM", price: 101 }
+            { id: "weight1", value: "1KG", label: "1KG", price: 1050 },
+            { id: "weight2", value: "200GM", label: "200GM", price: 250 },
+            { id: "weight3", value: "400GM", label: "400GM", price: 450 }
         ],
     },
     {
         id: 4,
-        name: 'Crab Pool Security',
-        price: '₹ 400.00', image: 'img/Nissy/Newimages/5.jpg',
-        category: 'Malt',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam odio quidem aliquid voluptatem veritatis maxime eaque voluptatum expedita illo excepturi atque at assumenda quod, delectus ipsa aliquam cupiditate cum tempora.',
+        name: 'NUTRITIONAL ENERGY DRINK MIX',
+        price: '₹ 250.00 - ₹ 850', image: 'img/products/nutrimix0.jpg',
+        category: 'NATURAL PROTEIN POWDER',
+        description: 'Boost your daily protein intake with our Nutritional Energy Drink Mix, a natural protein powder crafted from Almonds, Cashew, Pistachio, Bengal gram, Green gram, Soybeans, Black gram, Barley, and Country Sugar.Homemade and 100% natural, this mix contains no preservatives, chemicals, or white sugar. It is designed to fulfill your daily protein needs and is suitable for anyone over the age of 1. Enjoy the wholesome benefits of this nutrient-rich blend, crafted to support a healthy and active lifestyle for all age groups.',
         weightOptions: ['1L', '250ml', '500ml'],
-        images: ['img/Nissy/Newimages/3.jpg', 'img/Nissy/Newimages/6.jpg','img/Nissy/Newimages/2.jpg'],
-        availability: "In of Stock",
-        shipping: "01 day shipping. <samp>Free pickup today</samp>",
+        images: ['img/products/nutrimix1.jpg', 'img/products/Nutrimix2.jpg','img/products/Nutrimix3.jpg'],
+        availability: "In Stock",
+        shipping: "2 - 3 days shipping (Free Shipping).",
         weightDetail: "0.5 kg",
         rate: " ₹ 400.00",
         selfLife: '4 months',
+        productdescription: "INGREDIENTS:\n\nAlmonds, Cashew, Pistachio, Bengal gram, Green gram, Soybeans, Peanut, Black gram, Barley, Elaichi, Country Sugar.\n\nSHELF LIFE: 6 MONTHS",
+        information: "TO MAKE A DELICIOUS NUTRITIONAL ENERGY DRINK MIX:\n\n• Add 1-2 teaspoons of NISSY ENERGY DRINK MIX to your mug\n• Pour 200ml of hot milk\n• Stir well and enjoy it\n\nHEALTH BENEFITS:\n\n• Rich in protein\n• Boosts energy and strength\n• Strengthens the bones and nerves\n• Relieves joint and knee pains\n• Promotes heart health\n• Increases metabolism level\n• Improves stamina & endurance\n• Strengthens muscle fibers\n• Enriches the immune system\n• Ensures healthy brain function\n• Blood sugar control",
         productImage: [
-            "img/product/details/product-details-1.jpg",
-            "img/product/details/thumb-1.jpg",
-            "img/product/details/thumb-2.jpg",
-            "img/product/details/thumb-3.jpg",
-            "img/product/details/thumb-4.jpg"
+            "img/products/nutrimix0.jpg",
+            "img/products/nutrimix1.jpg",
+            "img/products/Nutrimix2.jpg",
+            "img/products/Nutrimix3.jpg",
+            "img/products/nutrimix0.jpg"
         ],
         weights: [
-            { id: "weight1", value: "1KG", label: "1KG", price: 200 },
-            { id: "weight2", value: "250GM", label: "250GM", price: 100 },
-            { id: "weight3", value: "500GM", label: "500GM", price: 101 }
+            { id: "weight1", value: "1KG", label: "1KG", price: 850 },
+            { id: "weight2", value: "250GM", label: "250GM", price: 250 },
+            { id: "weight3", value: "500GM", label: "500GM", price: 450 }
         ],
     },
     {
         id: 5,
-        name: 'Crab Pool Security',
-        price: '₹ 400.00', image: 'img/Nissy/Newimages/6.jpg',
-        category: 'babyfood',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam odio quidem aliquid voluptatem veritatis maxime eaque voluptatum expedita illo excepturi atque at assumenda quod, delectus ipsa aliquam cupiditate cum tempora.',
+        name: 'NUTRITIONAL ENERGY DRINK MIX FOR DIABETES',
+        price: '₹ 250.00 - ₹ 1000', image: 'img/products/diabetes1.jpg',
+        category: 'NATURAL PROTEIN POWDER',
+        description: 'Elevate your health with our Nutritional Energy Drink Mix for Diabetes. This nutrient-rich mix is designed to meet your daily protein needs, helping to prevent weight loss, boost energy, strengthen bones, and enrich the immune system. Crafted with care, it contains no preservatives, chemicals, or white sugar. Homemade and 100% natural, our mix is suitable for individuals of all ages, offering a natural and effective way to support overall health and vitality. Enjoy the benefits of pure, wholesome nutrition with every serving.',
         weightOptions: ['1L', '250ml', '500ml'],
-        images: ['img/Nissy/Newimages/3.jpg', 'img/Nissy/Newimages/6.jpg'],
+        images: ['img/products/diabetes2.jpg', 'img/products/diabetes3.jpg', 'img/products/diabetes4.jpg'],
         availability: "In Stock",
-        shipping: "01 day shipping. <samp>Free pickup today</samp>",
+        shipping: "2 - 3 days shipping (Free Shipping).",
         weightDetail: "0.5 kg",
-        selfLife: '12 months',
+        selfLife: '6 months',
         rate: " ₹ 400.00",
+        productdescription: "INGREDIENTS:\n\nAlmonds, Cashew, Pistachio, Bengal gram, Green gram, Soybeans, Peanut, Black gram, Barley, Elaichi\n\nSHELF LIFE: 6 MONTHS",
+        information: "TO MAKE A DELICIOUS NUTRITIONAL ENERGY DRINK MIX:\n\n• Add 1-2 teaspoons of NISSY ENERGY DRINK MIX to your mug\n• Pour 200ml of hot milk\n• Stir well and enjoy it\n\nHEALTH BENEFITS:\n\n• Rich in protein\n• Boosts energy and strength\n• Strengthens the bones and nerves\n• Relieves joint and knee pains\n• Promotes heart health\n• Increases metabolism level\n• Improves stamina & endurance\n• Strengthens muscle fibers\n• Enriches the immune system\n• Ensures healthy brain function\n• Aids in blood sugar control.",
         productImage: [
-            "img/product/details/product-details-1.jpg",
-            "img/product/details/thumb-1.jpg",
-            "img/product/details/thumb-2.jpg",
-            "img/product/details/thumb-3.jpg",
-            "img/product/details/thumb-4.jpg"
+            "img/products/diabetes1.jpg",
+            "img/products/diabetes2.jpg",
+            "img/products/diabetes3.jpg",
+            "img/products/diabetes4.jpg",
+            "img/products/diabetes1.jpg"
         ],
         weights: [
-            { id: "weight1", value: "1KG", label: "1KG", price: 200 },
-            { id: "weight2", value: "250GM", label: "250GM", price: 100 },
-            { id: "weight3", value: "500GM", label: "500GM", price: 101 }
+            { id: "weight1", value: "1KG", label: "1KG", price: 1050 },
+            { id: "weight2", value: "200GM", label: "200GM", price: 250 },
+            { id: "weight3", value: "400GM", label: "400GM", price: 450 }
         ],
     },
     {
         id: 6,
-        name: 'Crab Pool Security',
-        price: '₹ 400.00', image: 'img/Nissy/Newimages/7.jpg',
-        category: 'babyfood',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam odio quidem aliquid voluptatem veritatis maxime eaque voluptatum expedita illo excepturi atque at assumenda quod, delectus ipsa aliquam cupiditate cum tempora.',
+        name: 'BODY GLOW FOR BOYS',
+        price: '₹ 150.00 - ₹ 550', image: 'img/products/bodyglow5.jpg',
+        category: 'SKIN CARE',
+        description: 'Revitalize and enhance your skin with our Body Glow for Girls, crafted from natural ingredients. This homemade, 100% natural formula is designed to Increase skin tone for a healthier appearance, Make the skin glow with a radiant shine, Prevent acne and skin problems for clear, smooth skin, Enjoy the benefits of a product made with care,this product is ideal for babes and provides a nurturing touch to their skincare routine. free from artificial additives, to keep your skin looking its best.',
         weightOptions: ['1L', '250ml', '500ml'],
-        images: ['img/Nissy/Newimages/3.jpg', 'img/Nissy/Newimages/6.jpg'],
+        images: ['img/products/bodyglow1.jpg', 'img/products/bodyglow2.jpg', 'img/products/bodyglow3.jpg'],
         availability: "In Stock",
-        shipping: "01 day shipping. <samp>Free pickup today</samp>",
+        shipping: "2 - 3 days shipping (Free Shipping).",
         weightDetail: "0.5 kg",
         rate: " ₹ 400.00",
         selfLife: '4 months',
+        productdescription: "INGREDIENTS:\n\n• Green Mung\n• Split Chick Peas\n• Vetiver\n• Neem Leaves\n• Nut Grass Dried\n• White Turmeric\n• Avaram\n• Babchi Seeds\n• Saffron\n• Rose Edouard Petals\n\nSHELF LIFE: 6 months",
+        information: "DIRECTION FOR USE:\n\n• Mix the required amount of Nissy™ BodyGlow powder with water.\n• Smoothly apply the mixture to your baby's body.\n• Rinse off thoroughly with water after a while.\n\nBENEFITS:\n\n• Increases skin tone.\n• Makes the skin glow.\n• Prevents acne and skin problems.\n• Eliminates sweat odor.\n• Suitable for children's delicate skin.\n\nYou can use it as a face pack and bathing powder.",
         productImage: [
-            "img/product/details/product-details-1.jpg",
-            "img/product/details/thumb-1.jpg",
-            "img/product/details/thumb-2.jpg",
-            "img/product/details/thumb-3.jpg",
-            "img/product/details/thumb-4.jpg"
+            "img/products/bodyglow1.jpg",
+            "img/products/bodyglow2.jpg",
+            "img/products/bodyglow3.jpg",
+            "img/products/bodyglow4.jpg",
+            "img/products/bodyglow5.jpg"
         ],
         weights: [
-            { id: "weight1", value: "1KG", label: "1KG", price: 200 },
-            { id: "weight2", value: "250GM", label: "250GM", price: 100 },
-            { id: "weight3", value: "500GM", label: "500GM", price: 101 }
+            { id: "weight1", value: "500GM", label: "500GM", price: 550 },
+            { id: "weight2", value: "100GM", label: "100GM", price: 150 },
+            { id: "weight3", value: "300GM", label: "300GM", price: 350 }
         ],
     },
     {
         id: 7,
-        name: 'skin care',
-        price: '₹ 400.00', image: 'img/Nissy/Newimages/8.jpg',
-        category: 'skincare',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam odio quidem aliquid voluptatem veritatis maxime eaque voluptatum expedita illo excepturi atque at assumenda quod, delectus ipsa aliquam cupiditate cum tempora.',
+        name: 'BODY GLOW FOR GIRLS',
+        price: '₹ 150.00 - ₹ 550', image: 'img/products/bodyglow4.jpg',
+        category: 'SKIN CARE',
+        description: 'Enhance your natural beauty with our Body Glow for Girls, made from pure, natural ingredients. This homemade, 100% natural formula is perfect for Increasing skin tone for a more even complexion, Making the skin glow with a healthy radiance, Preventing acne and skin problems for clear, smooth skin, Gentle enough for young skin, this product is ideal for babes and provides a nurturing touch to their skincare routine. Enjoy the benefits of a product crafted with care, free from artificial additives.',
         weightOptions: ['1L', '250ml', '500ml'],
-        images: ['img/Nissy/Newimages/3.jpg', 'img/Nissy/Newimages/6.jpg'],
-        availability: "Out of Stock",
-        shipping: "01 day shipping. <samp>Free pickup today</samp>",
+        images: ['img/products/bodyglow1.jpg', 'img/products/bodyglow2.jpg', 'img/products/bodyglow3.jpg'],
+        availability: "In Stock",
+        shipping: "2 - 3 days shipping (Free Shipping).",
         weightDetail: "0.5 kg",
         rate: " ₹ 400.00",
         selfLife: '6 months',
+        productdescription: "INGREDIENTS:\n\n• Green Mung\n• Split Chick Peas\n• Vetiver\n• Neem Leaves\n• Nut Grass Dried\n• Turmeric\n• White Turmeric\n• Avaram\n• Babchi Seeds\n• Saffron\n• Rose Edouard Petals\n\nSHELF LIFE: 6 months",
+        information: "DIRECTION FOR USE:\n\n• Mix the required amount of Nissy™ BodyGlow powder with water.\n• Smoothly apply the mixture to your baby's body.\n• Rinse off thoroughly with water after a while.\n\nBENEFITS:\n\n• Increases skin tone.\n• Makes the skin glow.\n• Prevents acne and skin problems.\n• Eliminates sweat odor.\n• Suitable for children's delicate skin.\n\nYou can use it as a face pack and bathing powder.",
         productImage: [
-            "img/product/details/product-details-1.jpg",
-            "img/product/details/thumb-1.jpg",
-            "img/product/details/thumb-2.jpg",
-            "img/product/details/thumb-3.jpg",
-            "img/product/details/thumb-4.jpg"
+            "img/products/bodyglow1.jpg",
+            "img/products/bodyglow2.jpg",
+            "img/products/bodyglow3.jpg",
+            "img/products/bodyglow4.jpg",
+            "img/products/bodyglow5.jpg"
         ],
         weights: [
-            { id: "weight1", value: "1KG", label: "1KG", price: 200 },
-            { id: "weight2", value: "250GM", label: "250GM", price: 100 },
-            { id: "weight3", value: "500GM", label: "500GM", price: 101 }
+            { id: "weight1", value: "500GM", label: "500GM", price: 550 },
+            { id: "weight2", value: "100GM", label: "100GM", price: 150 },
+            { id: "weight3", value: "300GM", label: "300GM", price: 350 }
         ],
     },
     {
         id: 8,
-        name: 'Crab Pool Security',
-        price: '₹ 400.00', image: 'img/Nissy/Newimages/9.jpg',
-        category: 'skincare',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam odio quidem aliquid voluptatem veritatis maxime eaque voluptatum expedita illo excepturi atque at assumenda quod, delectus ipsa aliquam cupiditate cum tempora.',
+        name: 'HERBAL HAIR OIL',
+        price: '₹ 300.00 - ₹ 1300', image: 'img/products/hairoil3.jpg',
+        category: 'Haircare',
+        description: 'Experience the power of nature with our Herbal Hair Oil, crafted from 36 natural ingredients. Free from preservatives and chemicals, this nourishing oil is designed to:\n\n- Combat dandruff and dry scalp for a healthier scalp\n- Protect against fungal and bacterial infections\n- Promote visible hair growth and strengthen hair roots\n- Prevent premature graying and enhance overall hair health\n\nGive your hair the natural care it deserves with a blend that supports strong, vibrant, and healthy hair. Ideal for those seeking a pure and effective solution for their hair care needs.',
         weightOptions: ['1L', '250ml', '500ml'],
-        images: ['img/Nissy/Newimages/3.jpg', 'img/Nissy/Newimages/6.jpg'],
+        images: ['img/products/hairoil1.jpg', 'img/products/hairoil2.jpg', 'img/products/hairoil4.jpg'],
         availability: "In Stock",
-        shipping: "01 day shipping. <samp>Free pickup today</samp>",
+        shipping: "2 - 3 days shipping (Free Shipping).",
         weightDetail: "0.5 kg",
         rate: " ₹ 400.00",
         selfLife: '12 months',
+        productdescription: "INGREDIENTS:\n\n• Indian Acalypha\n• Gale of the Wind\n• Spade Flower\n• Hibiscus Leaves\n• Hibiscus Flower\n• Bishops Weed Creeper\n• White Castle Tree\n• Moringa Leaves\n• Lawsonia Inermis\n• Curry Leaves\n• Holy Basil\n• Neem Leaves\n• Betal Leaves\n• Bermuda Grass\n• Amla\n• Davana Plant\n• Tanners Cassia\n• Perennial Grass\n• Bhringraj White\n• Lemon\n• Black Cumin\n• Spanish Cherry Flower\n• Almond\n• Spikenard\n• Indigo\n• Fenugreek\n• Aloe Vera\n• Alkanet Root\n• Small Onion\n• Skunk Vine\n• Leppia Nod Flora\n• False Water Willow\n• Damask Rose\n\n• Virgin Coconut Oil\n• Gingelly Oil\n• Castor Oil\n\nSHELF LIFE: 1 YEAR",
+        information: "DIRECTION FOR USE:\n\nStep 1: Split your hair into sections and pour a few drops of the oil on your scalp in each section.\nStep 2: Gently massage your scalp with your fingertips for about 10-12 minutes.\nStep 3: Apply the oil to the lengths of your hair.\nStep 4: Rinse your hair with NISSY Hair Beauty.\n\nBENEFITS:\n\n• Promotes Visible Hair Growth\n• Strengthens Hair Roots & Prevents Premature Graying\n• Combats Dandruff and Dry Scalp\n• Reduces Hair Loss\n• Protects Against Fungal & Bacterial Infections\n• Provides Stress Relief\n• Nourishes the Scalp.",
         productImage: [
-            "img/product/details/product-details-1.jpg",
-            "img/product/details/thumb-4.jpg",
-            "img/product/details/thumb-2.jpg",
-            "img/product/details/thumb-3.jpg",
-            "img/product/details/thumb-4.jpg"
+            "img/products/hairoil1.jpg",
+            "img/products/hairoil2.jpg",
+            "img/products/hairoil3.jpg",
+            "img/products/hairoil4.jpg",
+            "img/products/hairoil5.jpg"
         ],
         weights: [
-            { id: "weight1", value: "1KG", label: "1KG", price: 200 },
-            { id: "weight2", value: "250GM", label: "250GM", price: 100 },
-            { id: "weight3", value: "500GM", label: "500GM", price: 101 }
+            { id: "weight1", value: "200ML", label: "200ML", price: 300 },
+            { id: "weight2", value: "400ML", label: "400ML", price: 550 },
+            { id: "weight3", value: "1LTR", label: "1LTR", price: 1300 }
         ],
     },
     {
         id: 9,
-        name: 'Crab Pool Security',
-        price: '$30.00',
-        image: 'img/Nissy/Newimages/10.jpg',
-        category: 'skincare',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam odio quidem aliquid voluptatem veritatis maxime eaque voluptatum expedita illo excepturi atque at assumenda quod, delectus ipsa aliquam cupiditate cum tempora.',
+        name: 'HAIR BEAUTY',
+        price: '₹ 150.00 - ₹ 550',
+        image: 'img/products/hairbeauty1.jpg',
+        category: 'Haircare',
+        description: 'Revitalize your hair with our Herbal Hair Powder, crafted from natural ingredients to enhance your hair care routine. This powerful formula is designed to:\n\n- Strengthen hair follicles for overall health\n- Correct dandruff problems for a healthier scalp\n- Remove stickiness for a clean, fresh feel\n- Control hair fall and stimulate hair growth for fuller, more vibrant hair\n\nExperience the benefits of a natural solution that supports strong, healthy hair with every use. Ideal for anyone seeking effective, gentle care for their hair.',
         weightOptions: ['1L', '250ml', '500ml'],
-        images: ['img/Nissy/Newimages/3.jpg', 'img/Nissy/Newimages/6.jpg'],
+        images: ['img/products/hairbeauty1.jpg', 'img/products/hairbeauty2.jpg', 'img/products/hairbeauty3.jpg'],
         availability: "In Stock",
-        shipping: "01 day shipping. <samp>Free pickup today</samp>",
+        shipping: "2 - 3 days shipping (Free Shipping).",
         weightDetail: "0.5 kg",
         rate: " ₹ 400.00",
         selfLife: '6 months',
+        productdescription: "INGREDIENTS:\n\n• Acacia Concinna\n• Soapnut\n• White Turmeric\n• Vetiver\n• Sweet Flag\n• Green Mung\n• Fenugreek\n• Babchi Seeds\n• Dried Amla\n• Neem Leaves\n• Curry Leaves\n• Egyptian Privet\n• Hibiscus Leaves\n• Hibiscus\n• Neem Flowers\n• Avaram\n• Maul Sari Flowers\n• Rose Edouard Petals\n\nSHELF LIFE: 6 MONTHS.",
+        information: "DIRECTION FOR USE:\n\n• Mix the required amount of Nissy Herbal Hair Powder with water.\n• Smoothly apply the mixture on your hair and its roots.\n• After 2 minutes, rinse off thoroughly with water.\n\nBENEFITS:\n\n• Keeps hair follicles strong and healthy.\n• Corrects dandruff problems.\n• Prevents hair dryness.\n• Helps prevent head lice.\n• Helps retain the natural color of hair.\n• Assists in getting rid of gray hair.\n• Removes stickiness from the hair.\n• Controls hair fall and stimulates hair growth.",
         productImage: [
-            "img/product/details/product-details-1.jpg",
-            "img/product/details/thumb-4.jpg",
-            "img/product/details/thumb-2.jpg",
-            "img/product/details/thumb-3.jpg",
-            "img/product/details/thumb-4.jpg"
+            "img/products/hairbeauty1.jpg",
+            "img/products/hairbeauty2.jpg",
+            "img/products/hairbeauty3.jpg",
+            "img/products/hairbeauty4.jpg",
+            "img/products/hairbeauty5.jpg"
         ],
         weights: [
-            { id: "weight1", value: "1KG", label: "1KG", price: 1000 },
-            { id: "weight2", value: "250GM", label: "250GM", price: 100 },
-            { id: "weight3", value: "500GM", label: "500GM", price: 101 }
+            { id: "weight1", value: "500GM", label: "500GM", price: 550 },
+            { id: "weight2", value: "100GM", label: "100GM", price: 150 },
+            { id: "weight3", value: "300GM", label: "300GM", price: 350 }
         ],
     },
 
     {
         id: 10,
-        name: 'Crab Pool Security',
-        price: '₹ 400.00',
-        image: 'img/Nissy/Newimages/4.jpg',
-        category: 'Malt',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam odio quidem aliquid voluptatem veritatis maxime eaque voluptatum expedita illo excepturi atque at assumenda quod, delectus ipsa aliquam cupiditate cum tempora.',
+        name: 'ENERGY BALLS',
+        price: '₹ 280.00 - ₹ 1250',
+        image: 'img/products/balls4.jpg',
+        category: 'HEALTHY SNACKS',
+        description: 'Enjoy a delicious and nutritious snack with our Energy Balls, crafted from a wholesome blend of Almonds, Cashews, Peanuts, Black Dates, and Poppy Seeds. These treats are completely free from preservatives, chemicals, and white sugar, with no added country sugar.\n\nPerfect as a healthy snack for babies or a crunchy treat for anyone, our Energy Balls provide a natural and satisfying crunch. Ideal for those seeking a wholesome and tasty snack option that’s as good for you as it is enjoyable.',
         weightOptions: ['1L', '250ml', '500ml'],
-        images: ['img/Nissy/Newimages/3.jpg', 'img/Nissy/Newimages/6.jpg','img/Nissy/Newimages/1.jpg'],
-        availability: "out od Stock",
-        shipping: "01 day shipping. <samp>Free pickup today</samp>",
+        images: ['img/products/balls1.jpg', 'img/products/balls2.jpg','img/products/balls3.jpg'],
+        availability: "out of Stock",
+        shipping: "2 - 3 days shipping (Free Shipping).",
         weightDetail: "0.5 kg",
         rate: " ₹ 400.00",
         selfLife: '2 months',
+        productdescription: "INGREDIENTS:\n\nAlmond, Cashew, Peanut, Black Dates, Poppy Seeds\n\nSHELF LIFE: 20 days",
+        information: "HEALTH BENEFITS:\n\n• Helps increase hemoglobin.\n• Boosts energy and blood flow.\n• Provides necessary protein for cell growth in the body.\n• Reduces the amount of bad cholesterol.\n• Enhances digestive health.\n• Helps to avoid diabetes and high blood pressure.",
+        productImage: [
+            "img/products/balls1.jpg",
+            "img/products/balls2.jpg",
+            "img/products/balls3.jpg",
+            "img/products/balls4.jpg",
+            "img/products/balls1.jpg"
+        ],
+        weights: [
+            { id: "weight1", value: "1125GM", label: "1225KG", price: 1250 },
+            { id: "weight2", value: "225GM", label: "225GM", price: 280 },
+            { id: "weight3", value: "550GM", label: "550GM", price: 510 }
+        ],
+    },
+
+    {
+        id: 11,
+        name: 'MALT COMBO',
+        price: '₹ 280.00 - ₹ 1250',
+        image: 'img/products/maltcombo.jpg',
+        category: 'COMBO PACK',
+        description: 'MALT COMBO:\n\n Discover our wholesome malt trio—ABC Malt, Beetroot Malt, and Carrot Malt. Each blend is crafted from natural ingredients including apple, beetroot, carrot, almond, cashew, and country sugar, offering a nutritious and delicious alternative to tea and coffee. These malts are perfect for children, providing a healthy drink option that supports their growth and development. Packed with essential nutrients, our malts are designed to be both tasty and beneficial, making them an ideal choice for a balanced diet. Give your family the gift of health with our natural malt drinks—free from preservatives and artificial ingredients, and full of the goodness they need to thrive.',
+        weightOptions: ['1L', '250ml', '500ml'],
+        images: ['img/products/abc1.jpg', 'img/products/beetroot1.jpg','img/products/carrot1.jpg'],
+        availability: "In Stock",
+        shipping: "2 - 3 days shipping (Free Shipping).",
+        weightDetail: "0.5 kg",
+        rate: " ₹ 400.00",
+        selfLife: '2 months',
+        productdescription: "MALT COMBO PACK:\n\n ABC MALT - 250GM,\n BEETROOT MALT - 250GM,\n CARROT MALT - 250GM,\n\n SHELF LIFE: 6 months",
+        information: "TO MAKE A DELICIOUS NISSY MALT:\n\n • Take 1-2 teaspoons of NISSY malt mix to your mug.\n • Pour 200 ml of milk, either hot or cold.\n • Stir well and enjoy it.\n • Don’t boil it along with milk.",
+        productImage: [
+            "img/products/maltcombo.jpg",
+            "img/products/abc1.jpg",
+            "img/products/beetroot1.jpg",
+            "img/products/carrot1.jpg"
+            
+        ],
+        weights: [
+            { id: "weight1", value: "1125GM", label: "1225KG", price: 1250 },
+            { id: "weight2", value: "225GM", label: "225GM", price: 280 },
+            { id: "weight3", value: "550GM", label: "550GM", price: 510 }
+        ],
+    },
+
+    {
+        id: 12,
+        name: 'COMBOPACK-1',
+        price: '₹ 280.00 - ₹ 1250',
+        image: 'img/products/COMBOPACK1.jpg',
+        category: 'COMBO PACK',
+        description: 'Our ABC Malt is a wholesome blend of natural ingredients, This nutritious malt mix is designed to support your overall well-being with its array of health benefits.\n Key Benefits:\n Gut Health: Promises to heal the gut and promote healthy digestion.\n Radiant Skin: Helps maintain a natural glow of the skin.\n Brain Development: Supports healthy brain growth for improved cognitive function.\n Memory Power: Enhances your memory and mental clarity.\n\n Enjoy a delicious and healthy drink that nurtures your body from within. Perfect for those seeking a natural, nourishing alternative to regular beverages.\nBoost your daily protein intake with our Nutritional Energy Drink Mix, It is designed to fulfill your daily protein needs and is suitable for anyone. Enjoy the wholesome benefits of this nutrient-rich blend, crafted to support a healthy and active lifestyle for all age groups.',
+        weightOptions: ['1L', '250ml', '500ml'],
+        images: ['img/products/COMBOPACK1.jpg', 'img/products/abc1.jpg','img/products/nutrimix1.jpg'],
+        availability: "In Stock",
+        shipping: "2 - 3 days shipping (Free Shipping).",
+        weightDetail: "0.5 kg",
+        rate: " ₹ 400.00",
+        selfLife: '2 months',
+        productdescription: "COMBO PACK-1:\n\n ABC MALT - 250GM,\n NUTRITIONAL ENERGY DRINK MIX - 250GM.\n\n SHELF LIFE: 6 months.",
+        information: "TO MAKE A DELICIOUS NISSY MIX:\n\n • Take 1-2 teaspoons of NISSY malt mix to your mug.\n • Pour 200 ml of milk, either hot or cold.\n • Stir well and enjoy it.\n • Do not boil it along with milk.",
+        productImage: [
+            "img/products/COMBOPACK1.jpg",
+            "img/products/abc1.jpg",
+            "img/products/nutrimix1.jpg"
+            
+        ],
+        weights: [
+            { id: "weight1", value: "1125GM", label: "1225KG", price: 1250 },
+            { id: "weight2", value: "225GM", label: "225GM", price: 280 },
+            { id: "weight3", value: "550GM", label: "550GM", price: 510 }
+        ],
+    },
+
+    {
+        id: 13,
+        name: 'COMBO PACK-2',
+        price: '₹ 280.00 - ₹ 1250',
+        image: 'img/products/COMBOPACK2.jpg',
+        category: 'COMBO PACK',
+        description: 'Experience the natural goodness of our Beetroot Malt, a wholesome blend crafted from Beetroot, Jaggery powder, Cashew, Almond, and Elachi. Made with care, this malt is 100% natural and homemade, with no preservatives, chemicals, or white sugar. Enjoy a delicious and nutritious treat that’s pure, healthy, and packed with the goodness of nature.\n\nEnjoy a delicious and healthy drink that nurtures your body from within. Perfect for those seeking a natural, nourishing alternative to regular beverages.\nBoost your daily protein intake with our Nutritional Energy Drink Mix, It is designed to fulfill your daily protein needs and is suitable for anyone. Enjoy the wholesome benefits of this nutrient-rich blend, crafted to support a healthy and active lifestyle for all age groups.',
+        weightOptions: ['1L', '250ml', '500ml'],
+        images: ['img/products/COMBOPACK2.jpg', 'img/products/beetroot1.jpg','img/products/nutrimix1.jpg'],
+        availability: "In Stock",
+        shipping: "2 - 3 days shipping (Free Shipping).",
+        weightDetail: "0.5 kg",
+        rate: " ₹ 400.00",
+        selfLife: '2 months',
+        productdescription: "COMBO PACK-1:\n\n BEETROOT MALT - 250GM,\n NUTRITIONAL ENERGY DRINK MIX - 250GM.\n\n SHELF LIFE: 6 months.",
+        information: "TO MAKE A DELICIOUS NISSY MIX:\n\n • Take 1-2 teaspoons of NISSY malt mix to your mug.\n • Pour 200 ml of milk, either hot or cold.\n • Stir well and enjoy it.\n • Do not boil it along with milk.",
+        productImage: [
+            "img/products/COMBOPACK2.jpg",
+            "img/products/beetroot1.jpg",
+            "img/products/nutrimix1.jpg"
+            
+        ],
+        weights: [
+            { id: "weight1", value: "1125GM", label: "1225KG", price: 1250 },
+            { id: "weight2", value: "225GM", label: "225GM", price: 280 },
+            { id: "weight3", value: "550GM", label: "550GM", price: 510 }
+        ],
+    },
+
+    {
+        id: 14,
+        name: 'COMBO-4',
+        price: '₹ 280.00 - ₹ 1250',
+        image: 'img/Nissy/Newimages/4.jpg',
+        category: 'HEALTHY SNACKS',
+        description: 'Enjoy a delicious and nutritious snack with our Energy Balls, crafted from a wholesome blend of Almonds, Cashews, Peanuts, Black Dates, and Poppy Seeds. These treats are completely free from preservatives, chemicals, and white sugar, with no added country sugar.\n\nPerfect as a healthy snack for babies or a crunchy treat for anyone, our Energy Balls provide a natural and satisfying crunch. Ideal for those seeking a wholesome and tasty snack option that’s as good for you as it is enjoyable.',
+        weightOptions: ['1L', '250ml', '500ml'],
+        images: ['img/Nissy/Newimages/3.jpg', 'img/Nissy/Newimages/6.jpg','img/Nissy/Newimages/1.jpg'],
+        availability: "out of Stock",
+        shipping: "2 - 3 days shipping (Free Shipping).",
+        weightDetail: "0.5 kg",
+        rate: " ₹ 400.00",
+        selfLife: '2 months',
+        productdescription: "INGREDIENTS:\n\nAlmond, Cashew, Peanut, Black Dates, Poppy Seeds\n\nSHELF LIFE: 20 days",
+        information: "HEALTH BENEFITS:\n\n• Helps increase hemoglobin.\n• Boosts energy and blood flow.\n• Provides necessary protein for cell growth in the body.\n• Reduces the amount of bad cholesterol.\n• Enhances digestive health.\n• Helps to avoid diabetes and high blood pressure.",
         productImage: [
             "img/product/details/product-details-1.jpg",
             "img/product/details/thumb-4.jpg",
@@ -287,9 +423,9 @@ const products = [
             "img/product/details/thumb-4.jpg"
         ],
         weights: [
-            { id: "weight1", value: "1KG", label: "1KG", price: 200 },
-            { id: "weight2", value: "250GM", label: "250GM", price: 100 },
-            { id: "weight3", value: "500GM", label: "500GM", price: 90 }
+            { id: "weight1", value: "1125GM", label: "1225KG", price: 1250 },
+            { id: "weight2", value: "225GM", label: "225GM", price: 280 },
+            { id: "weight3", value: "550GM", label: "550GM", price: 510 }
         ],
     },
     // Add more products as needed
@@ -298,18 +434,22 @@ const products = [
 
 const Bannerimages = [
     { src: "img/banner/herobanner1.jpg", alt: "First slide",category: "Malt", },
-    { src: "img/banner/herobanner2.jpg", alt: "Second slide" , category: "babyfood",},
-    { src: "img/banner/herobanner3.jpg", alt: "Third slide" , category: "skincare",},
-    { src: "img/banner/herobanner4.jpg", alt: "Fourth slide", category: "naturalprotienpowder" },
+    { src: "img/banner/herobanner2.jpg", alt: "Second slide" , category: "Baby Food",},
+    { src: "img/banner/herobanner3.jpg", alt: "Third slide" , category: "SKIN CARE",},
+    { src: "img/banner/herobanner4.jpg", alt: "Fourth slide", category: "NATURAL PROTEIN POWDER" },
     { src: "img/banner/herobanner5.jpg", alt: "Fifth slide", category: "Malt" }
 ];
 
 const categoryItems = [
-    { src: "img/Category/3.jpg", category: "Malt", alt: "Alternate Text" },
-    { src: "img/Category/Me.jpg", category: "babyfood", alt: "Alternate Text" },
-    { src: "img/Category/2.jpg", category: "skincare", alt: "Alternate Text" },
-    { src: "img/Category/1.jpg", category: "naturalprotienpowder", alt: "Alternate Text" }
+    { src: "img/Category/3.jpg", category: "Malt", alt: "Malt" },
+    { src: "img/Category/Me.jpg", category: "Baby Food", alt: "Baby Food" },
+    { src: "img/Category/2.jpg", category: "SKIN CARE", alt: "Skin Care" },
+    { src: "img/Category/1.jpg", category: "NATURAL PROTEIN POWDER", alt: "Natural Protien Powder" },
+    { src: "img/Category/2.jpg", category: "Haircare", alt: "Haircare" },
+    { src: "img/products/maltcombo.jpg", category: "COMBO PACK", alt: "COMBO PACK" },
+    { src: "img/Category/3.jpg", category: "HEALTHY SNACKS", alt: "HEALTHY SNACKS" },
 ];
+
 
 function generateProductHTML(product) {
     const weightOptionsHTML = product.weights.map(weight =>
@@ -321,6 +461,7 @@ function generateProductHTML(product) {
         `<img src="${img}" alt="image">`).join('');
 
     return `
+
                 <div class="featured__filter-items col-lg-3 col-md-6 col-sm-6 mix ${product.category}">
                     <div class="featured__item">
                         <div class="featured__item__pic set-bg" onclick="location.href='shop-details.html?id=${product.id}'"> 
@@ -515,12 +656,30 @@ function addToCart(productId, selectedWeight, quantity, pricePerUnit) {
 function renderProducts(products) {
     const container = document.querySelector('.featured__filter');
     container.innerHTML = products.map(generateProductHTML).join('');
+    container.classList.add('fade-in');
 }
-
 function filterProductsByCategory(category) {
     const filteredProducts = products.filter(product => product.category === category);
-    renderProducts(filteredProducts);
+    const container = document.querySelector('.featured__filter');
+    
+    container.classList.add('fade-out');
+    container.classList.remove('fade-in');
+
+    setTimeout(() => {
+        renderProducts(filteredProducts);
+
+        container.classList.remove('fade-out');
+
+        setTimeout(() => {
+            container.classList.add('fade-in');
+        }, 0); 
+    }, 500); 
 }
+
+// function filterProductsByCategory(category) {
+//     const filteredProducts = products.filter(product => product.category === category);
+//     renderProducts(filteredProducts);
+// }
 
 function setActiveCategory(category) {
     filterProductsByCategory(category);
@@ -638,10 +797,7 @@ function showSlides(id) {
 }
 
 
-function updateFavoriteUI() {
-    
-    console.log('Updating favorite UI...');
-    
+function updateFavoriteUI() {    
     const favoriteLinks = document.querySelectorAll('.product__item__pic__hover li a');
     const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
     
@@ -789,7 +945,8 @@ $(document).ready(function() {
             imgElement.src = item.src;
             imgElement.alt = item.alt;
             imgElement.dataset.category = item.category;
-           
+            imgElement.setAttribute('data-aos', 'zoom-in-down');
+
             imgElement.addEventListener('click', function() {
                 window.location.href = `shop-grid.html?category=${item.category}`;
             });
@@ -842,3 +999,5 @@ $(document).ready(function () {
 });
 
 $('#exampleModalCenter .modal-body').html(content); 
+
+
