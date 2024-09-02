@@ -649,7 +649,7 @@ function addToCart(productId, selectedWeight, quantity, pricePerUnit) {
     updateCartCount();
     closeNav(productId);
 
-    showToast('Item added to cart!','success');
+    showToast('Item added in your cart!','success');
 }
 
 
@@ -676,10 +676,6 @@ function filterProductsByCategory(category) {
     }, 500); 
 }
 
-// function filterProductsByCategory(category) {
-//     const filteredProducts = products.filter(product => product.category === category);
-//     renderProducts(filteredProducts);
-// }
 
 function setActiveCategory(category) {
     filterProductsByCategory(category);
@@ -693,11 +689,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const cartCount = localStorage.getItem('cartCount') || 0;
     document.querySelector('.fa-shopping-bag + span').textContent = cartCount;
 
-    // const favoriteCount = localStorage.getItem('favoriteCount') || 0;
-    // document.querySelector('.fa-heart + span').textContent = favoriteCount;
-
     updateCartCount();
-    // updateFavoriteCount();
 });
 
 function openNav(id) {
@@ -957,7 +949,7 @@ $(document).ready(function() {
         $('.owl-carousel').owlCarousel({
             loop: true,
             margin: 20,
-            nav: true,
+            nav: false,
             dots: true,
             autoplay: false,
             autoplayTimeout: 5000,

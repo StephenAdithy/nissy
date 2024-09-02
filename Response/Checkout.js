@@ -16,13 +16,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div>
                         <img src="${item.image}" class="prodimg" alt="${item.name}">
                     </div>
-                    <div class="checkoutitems">
+                    <div class="checkoutitems" style="align-content:center;">
                         <strong>${item.name}</strong><br>
                         <strong>₹${(item.pricePerUnit).toFixed(2)}</strong><br> 
                         <strong>Qty: ${item.quantity}</strong><br>
                         <strong>Weight: ${item.weight}</strong>
                     </div>
-                    <div>
+                    <div style="align-content:center;">
                         <button class="remove-item" data-index="${index}">
                             <i class="fa fa-window-close closebtn" aria-hidden="true"></i>
                         </button>                                     
@@ -112,8 +112,9 @@ document.addEventListener('DOMContentLoaded', () => {
             weight: item.weight,
             image: item.image
         }));
-
+        const orderId = generateOrderId(); 
         const orderJSON = {
+            orderId: orderId, 
             personalDetails: personalDetails,
             orderDetails: orderDetails,
             totalAmount: total.toFixed(2)
@@ -154,6 +155,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+function generateOrderId() {
+    const timestamp = Date.now(); 
+    const randomNum = Math.floor(Math.random() * 100000);
+    return `Nissy-${timestamp}-${randomNum}`;
+}
+
 
 function clearCart() {
     localStorage.removeItem('cart');
