@@ -144,7 +144,6 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(response => response.json())
         .then(data => {
             showToast('Order submitted successfully!','success');
-            showOrderConfirmationPopup(orderJSON.orderId);
             clearForm();
             if (localStorage.getItem('orderFromCart')) {
                 clearCart(); 
@@ -156,24 +155,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-
-function showOrderConfirmationPopup(orderId) {
-    const popup = document.getElementById('orderConfirmationPopup');
-    const orderIdDisplay = document.getElementById('orderIdDisplay');
-    orderIdDisplay.textContent = orderId;
-    popup.style.display = 'block';
-
-    const closeButton = document.querySelector('.close-popup');
-    closeButton.addEventListener('click', () => {
-        popup.style.display = 'none';
-    });
-
-    window.addEventListener('click', (event) => {
-        if (event.target === popup) {
-            popup.style.display = 'none';
-        }
-    });
-}
 
 function generateOrderId() {
     const timestamp = Date.now(); 
