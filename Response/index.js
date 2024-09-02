@@ -286,7 +286,7 @@ const products = [
         name: 'ENERGY BALLS',
         price: '₹ 280.00 - ₹ 1250',
         image: 'img/products/balls4.jpg',
-        category: 'HEALTHY SNACKS',
+        category: 'Energy Balls',
         description: 'Enjoy a delicious and nutritious snack with our Energy Balls, crafted from a wholesome blend of Almonds, Cashews, Peanuts, Black Dates, and Poppy Seeds. These treats are completely free from preservatives, chemicals, and white sugar, with no added country sugar.\n\nPerfect as a healthy snack for babies or a crunchy treat for anyone, our Energy Balls provide a natural and satisfying crunch. Ideal for those seeking a wholesome and tasty snack option that’s as good for you as it is enjoyable.',
         weightOptions: ['1L', '250ml', '500ml'],
         images: ['img/products/balls1.jpg', 'img/products/balls2.jpg','img/products/balls3.jpg'],
@@ -401,10 +401,10 @@ const products = [
 
     {
         id: 14,
-        name: 'COMBO-4',
+        name: 'COMBO-3',
         price: '₹ 280.00 - ₹ 1250',
         image: 'img/Nissy/Newimages/4.jpg',
-        category: 'HEALTHY SNACKS',
+        category: 'COMBO PACK',
         description: 'Enjoy a delicious and nutritious snack with our Energy Balls, crafted from a wholesome blend of Almonds, Cashews, Peanuts, Black Dates, and Poppy Seeds. These treats are completely free from preservatives, chemicals, and white sugar, with no added country sugar.\n\nPerfect as a healthy snack for babies or a crunchy treat for anyone, our Energy Balls provide a natural and satisfying crunch. Ideal for those seeking a wholesome and tasty snack option that’s as good for you as it is enjoyable.',
         weightOptions: ['1L', '250ml', '500ml'],
         images: ['img/Nissy/Newimages/3.jpg', 'img/Nissy/Newimages/6.jpg','img/Nissy/Newimages/1.jpg'],
@@ -444,10 +444,9 @@ const categoryItems = [
     { src: "img/Category/3.jpg", category: "Malt", alt: "Malt" },
     { src: "img/Category/Me.jpg", category: "Baby Food", alt: "Baby Food" },
     { src: "img/Category/2.jpg", category: "SKIN CARE", alt: "Skin Care" },
-    { src: "img/Category/1.jpg", category: "NATURAL PROTEIN POWDER", alt: "Natural Protien Powder" },
-    { src: "img/Category/2.jpg", category: "Haircare", alt: "Haircare" },
+    { src: "img/Category/1.jpg", category: "Haircare", alt: "Haircare" },
     { src: "img/products/maltcombo.jpg", category: "COMBO PACK", alt: "COMBO PACK" },
-    { src: "img/Category/3.jpg", category: "HEALTHY SNACKS", alt: "HEALTHY SNACKS" },
+    { src: "img/products/balls4.jpg", category: "Energy Balls", alt: "Energy Balls" },
 ];
 
 
