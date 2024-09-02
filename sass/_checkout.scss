@@ -59,7 +59,6 @@
         border: 1px solid $border;
         padding-left: 20px;
         font-size: 16px;
-        color: #b2b2b2;
         border-radius: 4px;
 
         &.checkout__input__add {
@@ -194,6 +193,8 @@
         color: $normal-color;
         font-weight: 700;
         border-bottom: 1px solid #e1e1e1;
+        border-top: 1px solid #e1e1e1;
+        padding-top: 15px;
         padding-bottom: 15px;
         margin-bottom: 25px;
 
