@@ -2053,6 +2053,24 @@ body {
   white-space: normal;
 }
 
+.sidenav::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidenav::-webkit-scrollbar-thumb {
+  background-color: green;
+  border-radius: 10px;
+}
+
+.sidenav::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+.sidenav {
+  scrollbar-width: thin;
+  scrollbar-color: green #f1f1f1;
+}
+
 /*---------------------
   Breadcrumb
 -----------------------*/
