@@ -56,7 +56,7 @@ const products = [
     {
         id: 2,
         name: 'Carrot Malt',
-        price: '₹ 320.00 - ₹ 11300', 
+        price: '₹ 320.00 - ₹ 11300',
         image: 'img/products/carrot1.jpg',
         category: 'Malt',
         description: 'Discover the vibrant flavors of our Carrot Malt, a nourishing blend made from Carrot, Jaggery powder, Cashew, Almond, and Elachi. Our malt is 100% natural and homemade, free from preservatives, chemicals, and white sugar. Indulge in a wholesome, delicious treat that brings together the pure goodness of nature in every sip.',
@@ -88,7 +88,7 @@ const products = [
         category: 'Baby Food',
         description: 'Our Baby Cereal is a nourishing blend made from Rice, Almonds, Yellow Moong dhal, Bengal gram dhal, Split gram dhal, and Urad dhal. Carefully crafted at home, this cereal is 100% natural and free from preservatives, chemicals, and white sugar. It’s the perfect first food for your 6-month-old, providing wholesome nutrition that you can trust.',
         weightOptions: ['1L', '250ml', '500ml'],
-        images: ['img/products/Cereal1.jpg', 'img/products/Cereal2.jpg','img/products/Cereal3.jpg'],
+        images: ['img/products/Cereal1.jpg', 'img/products/Cereal2.jpg', 'img/products/Cereal3.jpg'],
         availability: "In Stock",
         shipping: "2 - 3 days shipping (Free Shipping).",
         weightDetail: "0.5 kg",
@@ -115,7 +115,7 @@ const products = [
         category: 'NATURAL PROTEIN POWDER',
         description: 'Boost your daily protein intake with our Nutritional Energy Drink Mix, a natural protein powder crafted from Almonds, Cashew, Pistachio, Bengal gram, Green gram, Soybeans, Black gram, Barley, and Country Sugar.Homemade and 100% natural, this mix contains no preservatives, chemicals, or white sugar. It is designed to fulfill your daily protein needs and is suitable for anyone over the age of 1. Enjoy the wholesome benefits of this nutrient-rich blend, crafted to support a healthy and active lifestyle for all age groups.',
         weightOptions: ['1L', '250ml', '500ml'],
-        images: ['img/products/nutrimix1.jpg', 'img/products/nutrimix2.jpg','img/products/nutrimix3.jpg'],
+        images: ['img/products/nutrimix1.jpg', 'img/products/nutrimix2.jpg', 'img/products/nutrimix3.jpg'],
         availability: "In Stock",
         shipping: "2 - 3 days shipping (Free Shipping).",
         weightDetail: "0.5 kg",
@@ -286,7 +286,7 @@ const products = [
         category: 'Energy Balls',
         description: 'Enjoy a delicious and nutritious snack with our Energy Balls, crafted from a wholesome blend of Almonds, Cashews, Peanuts, Black Dates, and Poppy Seeds. These treats are completely free from preservatives, chemicals, and white sugar, with no added country sugar.\n\nPerfect as a healthy snack for babies or a crunchy treat for anyone, our Energy Balls provide a natural and satisfying crunch. Ideal for those seeking a wholesome and tasty snack option that’s as good for you as it is enjoyable.',
         weightOptions: ['1L', '250ml', '500ml'],
-        images: ['img/products/balls1.jpg', 'img/products/balls2.jpg','img/products/balls3.jpg'],
+        images: ['img/products/balls1.jpg', 'img/products/balls2.jpg', 'img/products/balls3.jpg'],
         availability: "out of Stock",
         shipping: "2 - 3 days shipping (Free Shipping).",
         weightDetail: "0.5 kg",
@@ -316,7 +316,7 @@ const products = [
         category: 'COMBO PACK',
         description: 'MALT COMBO:\n\n Discover our wholesome malt trio—ABC Malt, Beetroot Malt, and Carrot Malt. Each blend is crafted from natural ingredients including apple, beetroot, carrot, almond, cashew, and country sugar, offering a nutritious and delicious alternative to tea and coffee. These malts are perfect for children, providing a healthy drink option that supports their growth and development. Packed with essential nutrients, our malts are designed to be both tasty and beneficial, making them an ideal choice for a balanced diet. Give your family the gift of health with our natural malt drinks—free from preservatives and artificial ingredients, and full of the goodness they need to thrive.',
         weightOptions: ['1L', '250ml', '500ml'],
-        images: ['img/products/abc1.jpg', 'img/products/beetroot1.jpg','img/products/carrot1.jpg'],
+        images: ['img/products/abc1.jpg', 'img/products/beetroot1.jpg', 'img/products/carrot1.jpg'],
         availability: "In Stock",
         shipping: "2 - 3 days shipping (Free Shipping).",
         weightDetail: "0.5 kg",
@@ -329,7 +329,7 @@ const products = [
             "img/products/abc1.jpg",
             "img/products/beetroot1.jpg",
             "img/products/carrot1.jpg"
-            
+
         ],
         weights: [
             { id: "weight1", value: "500GM", label: "500GM", price: 1250 },
@@ -346,7 +346,7 @@ const products = [
         category: 'COMBO PACK',
         description: 'Our ABC Malt is a wholesome blend of natural ingredients, This nutritious malt mix is designed to support your overall well-being with its array of health benefits.\n Key Benefits:\n Gut Health: Promises to heal the gut and promote healthy digestion.\n Radiant Skin: Helps maintain a natural glow of the skin.\n Brain Development: Supports healthy brain growth for improved cognitive function.\n Memory Power: Enhances your memory and mental clarity.\n\n Enjoy a delicious and healthy drink that nurtures your body from within. Perfect for those seeking a natural, nourishing alternative to regular beverages.\nBoost your daily protein intake with our Nutritional Energy Drink Mix, It is designed to fulfill your daily protein needs and is suitable for anyone. Enjoy the wholesome benefits of this nutrient-rich blend, crafted to support a healthy and active lifestyle for all age groups.',
         weightOptions: ['1L', '250ml', '500ml'],
-        images: ['img/products/COMBOPACK1.jpg', 'img/products/abc1.jpg','img/products/nutrimix1.jpg'],
+        images: ['img/products/COMBOPACK1.jpg', 'img/products/abc1.jpg', 'img/products/nutrimix1.jpg'],
         availability: "In Stock",
         shipping: "2 - 3 days shipping (Free Shipping).",
         weightDetail: "0.5 kg",
@@ -358,7 +358,7 @@ const products = [
             "img/products/COMBOPACK1.jpg",
             "img/products/abc1.jpg",
             "img/products/nutrimix1.jpg"
-            
+
         ],
         weights: [
             { id: "weight1", value: "500GM", label: "500GM", price: 1250 }
@@ -375,7 +375,7 @@ const products = [
         category: 'COMBO PACK',
         description: 'Experience the natural goodness of our Beetroot Malt, a wholesome blend crafted from Beetroot, Jaggery powder, Cashew, Almond, and Elachi. Made with care, this malt is 100% natural and homemade, with no preservatives, chemicals, or white sugar. Enjoy a delicious and nutritious treat that’s pure, healthy, and packed with the goodness of nature.\n\nEnjoy a delicious and healthy drink that nurtures your body from within. Perfect for those seeking a natural, nourishing alternative to regular beverages.\nBoost your daily protein intake with our Nutritional Energy Drink Mix, It is designed to fulfill your daily protein needs and is suitable for anyone. Enjoy the wholesome benefits of this nutrient-rich blend, crafted to support a healthy and active lifestyle for all age groups.',
         weightOptions: ['1L', '250ml', '500ml'],
-        images: ['img/products/COMBOPACK2.jpg', 'img/products/beetroot1.jpg','img/products/nutrimix1.jpg'],
+        images: ['img/products/COMBOPACK2.jpg', 'img/products/beetroot1.jpg', 'img/products/nutrimix1.jpg'],
         availability: "In Stock",
         shipping: "2 - 3 days shipping (Free Shipping).",
         weightDetail: "0.5 kg",
@@ -387,7 +387,7 @@ const products = [
             "img/products/COMBOPACK2.jpg",
             "img/products/beetroot1.jpg",
             "img/products/nutrimix1.jpg"
-            
+
         ],
         weights: [
             { id: "weight1", value: "500GM", label: "500GM", price: 1250 }
@@ -405,7 +405,7 @@ const products = [
         category: 'COMBO PACK',
         description: 'Boost your daily protein intake with our Nutritional Energy Drink Mix, a natural protein powder crafted from Almonds, Cashew, Pistachio, Bengal gram, Green gram, Soybeans, Black gram, Barley, and Country Sugar.Homemade and 100% natural, this mix contains no preservatives, chemicals, or white sugar. It is designed to fulfill your daily protein needs and is suitable for anyone over the age of 1. Enjoy the wholesome benefits of this nutrient-rich blend, crafted to support a healthy and active lifestyle for all age groups.\n\n Elevate your health with our Nutritional Energy Drink Mix for Diabetes. This nutrient-rich mix is designed to meet your daily protein needs, helping to prevent weight loss, boost energy, strengthen bones, and enrich the immune system. Crafted with care, it contains no preservatives, chemicals, or white sugar. Homemade and 100% natural, our mix is suitable for individuals of all ages, offering a natural and effective way to support overall health and vitality. Enjoy the benefits of pure, wholesome nutrition with every serving.',
         weightOptions: ['1L', '250ml', '500ml'],
-        images: ['img/products/COMBOPACK3.jpg', 'img/products/nutrimix1.jpg','img/products/diabetes1.jpg'],
+        images: ['img/products/COMBOPACK3.jpg', 'img/products/nutrimix1.jpg', 'img/products/diabetes1.jpg'],
         availability: "out of Stock",
         shipping: "2 - 3 days shipping (Free Shipping).",
         weightDetail: "0.5 kg",
@@ -417,7 +417,7 @@ const products = [
             "img/products/COMBOPACK3.jpg",
             "img/products/nutrimix1.jpg",
             "img/products/diabetes1.jpg"
-            
+
         ],
         weights: [
             { id: "weight1", value: "500GM", label: "500GM", price: 450 }
@@ -433,7 +433,7 @@ const products = [
         category: 'Napkin',
         description: 'Boost your daily protein intake with our Nutritional Energy Drink Mix, a natural protein powder crafted from Almonds, Cashew, Pistachio, Bengal gram, Green gram, Soybeans, Black gram, Barley, and Country Sugar.Homemade and 100% natural, this mix contains no preservatives, chemicals, or white sugar. It is designed to fulfill your daily protein needs and is suitable for anyone over the age of 1. Enjoy the wholesome benefits of this nutrient-rich blend, crafted to support a healthy and active lifestyle for all age groups.\n\n Elevate your health with our Nutritional Energy Drink Mix for Diabetes. This nutrient-rich mix is designed to meet your daily protein needs, helping to prevent weight loss, boost energy, strengthen bones, and enrich the immune system. Crafted with care, it contains no preservatives, chemicals, or white sugar. Homemade and 100% natural, our mix is suitable for individuals of all ages, offering a natural and effective way to support overall health and vitality. Enjoy the benefits of pure, wholesome nutrition with every serving.',
         weightOptions: ['1L', '250ml', '500ml'],
-        images: ['img/products/COMBOPACK3.jpg', 'img/products/nutrimix1.jpg','img/products/diabetes1.jpg'],
+        images: ['img/products/COMBOPACK3.jpg', 'img/products/nutrimix1.jpg', 'img/products/diabetes1.jpg'],
         availability: "out of Stock",
         shipping: "2 - 3 days shipping (Free Shipping).",
         weightDetail: "0.5 kg",
@@ -445,7 +445,7 @@ const products = [
             "img/products/COMBOPACK3.jpg",
             "img/products/nutrimix1.jpg",
             "img/products/diabetes1.jpg"
-            
+
         ],
         weights: [
             { id: "weight1", value: "500GM", label: "500GM", price: 450 }
@@ -457,17 +457,17 @@ const products = [
 
 
 const Bannerwebimages = [
-    { src: "img/banner/nbanner1.png", alt: "First slide",category: "Malt", },
-    { src: "img/banner/nbanner2.png", alt: "Second slide" , category: "Baby Food",},
-    { src: "img/banner/nbanner3.png", alt: "Third slide" , category: "SKIN CARE",},
+    { src: "img/banner/nbanner1.png", alt: "First slide", category: "Malt", },
+    { src: "img/banner/nbanner2.png", alt: "Second slide", category: "Baby Food", },
+    { src: "img/banner/nbanner3.png", alt: "Third slide", category: "SKIN CARE", },
     { src: "img/banner/nbanner4.png", alt: "Fourth slide", category: "NATURAL PROTEIN POWDER" },
     { src: "img/banner/nbanner5.png", alt: "Fifth slide", category: "Malt" }
 ];
 
 const Bannermobimages = [
-    { src: "img/banner/herobanner1.jpg", alt: "First slide",category: "Malt", },
-    { src: "img/banner/herobanner2.jpg", alt: "Second slide" , category: "Baby Food",},
-    { src: "img/banner/herobanner3.jpg", alt: "Third slide" , category: "SKIN CARE",},
+    { src: "img/banner/herobanner1.jpg", alt: "First slide", category: "Malt", },
+    { src: "img/banner/herobanner2.jpg", alt: "Second slide", category: "Baby Food", },
+    { src: "img/banner/herobanner3.jpg", alt: "Third slide", category: "SKIN CARE", },
     { src: "img/banner/herobanner4.jpg", alt: "Fourth slide", category: "NATURAL PROTEIN POWDER" },
     { src: "img/banner/herobanner5.jpg", alt: "Fifth slide", category: "Malt" }
 ];
@@ -547,7 +547,7 @@ function generateProductHTML(product) {
 function addToCartWithSelectedWeight(productId) {
     const selectedWeightElement = document.querySelector(`input[name='weight-${productId}']:checked`);
     if (!selectedWeightElement) {
-        showToast(`Please select any weight`,'error')
+        showToast(`Please select any weight`, 'error')
         return;
     }
 
@@ -556,14 +556,14 @@ function addToCartWithSelectedWeight(productId) {
 
     const quantityElement = document.getElementById(`quantity-${productId}`);
     if (!quantityElement) {
-        showToast('Please select the Quantity','error');
+        showToast('Please select the Quantity', 'error');
         return;
     }
 
     const quantity = parseInt(quantityElement.textContent);
 
     if (isNaN(quantity)) {
-        showToast('Invalid quantity value','error');
+        showToast('Invalid quantity value', 'error');
         return;
     }
 
@@ -573,17 +573,17 @@ function addToCartWithSelectedWeight(productId) {
 
 function buyNow(productId) {
     const product = products.find(p => p.id === productId);
-    
+
     const selectedWeightElement = document.querySelector(`input[name="weight-${productId}"]:checked`);
-    
+
     if (!selectedWeightElement) {
-        showToast('Please select a weight option.','error');
+        showToast('Please select a weight option.', 'error');
         return;
     }
-    
+
     const selectedWeight = selectedWeightElement.value;
     const pricePerUnit = parseFloat(selectedWeightElement.getAttribute('data-price'));
-    
+
     const quantity = parseInt(document.getElementById(`quantity-${productId}`).textContent);
 
     const productToCheckout = {
@@ -618,7 +618,7 @@ function updatePrice(productId) {
 function updatePrice1(productId) {
     const selectedWeightElement = document.querySelector("input[name='weight']:checked");
     const quantityElement = document.getElementById(`quantity-${productId}`);
-    
+
     if (selectedWeightElement && quantityElement) {
         const pricePerUnit = parseFloat(selectedWeightElement.getAttribute('data-price'));
         const quantity = parseInt(quantityElement.value);
@@ -634,15 +634,15 @@ function showToast(message, type = 'success') {
     const toastMessage = toast.querySelector('.toast-message');
 
     toast.classList.remove('success', 'error');
-    
+
     if (type === 'success') {
         toast.classList.add('success');
     } else if (type === 'error') {
         toast.classList.add('error');
     }
 
-    toastMessage.textContent = message; 
-    toast.classList.add('show'); 
+    toastMessage.textContent = message;
+    toast.classList.add('show');
 
     setTimeout(() => {
         toast.classList.remove('show');
@@ -658,12 +658,12 @@ function addToCart(productId, selectedWeight, quantity, pricePerUnit) {
     const product = products.find(p => p.id === productId);
 
     if (!selectedWeight) {
-        showToast('Please select a weight option','error');
+        showToast('Please select a weight option', 'error');
         return;
     }
 
     if (isNaN(quantity) || quantity < 1) {
-        showToast('Please select a valid quantity.','error');
+        showToast('Please select a valid quantity.', 'error');
         return;
     }
 
@@ -678,7 +678,7 @@ function addToCart(productId, selectedWeight, quantity, pricePerUnit) {
     }
 
     localStorage.setItem('cart', JSON.stringify(cart));
-    showToast('Item added in your cart!','success');
+    showToast('Item added in your cart!', 'success');
 
     updateCartCount();
     closeNav(productId);
@@ -694,7 +694,7 @@ function renderProducts(products) {
 function filterProductsByCategory(category) {
     const filteredProducts = products.filter(product => product.category === category);
     const container = document.querySelector('.featured__filter');
-    
+
     container.classList.add('fade-out');
     container.classList.remove('fade-in');
 
@@ -705,8 +705,8 @@ function filterProductsByCategory(category) {
 
         setTimeout(() => {
             container.classList.add('fade-in');
-        }, 0); 
-    }, 500); 
+        }, 0);
+    }, 500);
 }
 
 
@@ -729,10 +729,10 @@ function openNav(id) {
     const screenWidth = window.innerWidth;
 
     let width;
-    if (screenWidth <= 768) { 
+    if (screenWidth <= 768) {
         width = "100%";
     } else {
-        width = "500px"; 
+        width = "500px";
     }
 
     document.getElementById(`mySidenav-${id}`).style.width = width;
@@ -756,18 +756,18 @@ function closeNav(id) {
     const sidebar = document.getElementById(`mySidenav-${id}`);
     const radioButtons = sidebar.querySelectorAll('input[type="radio"]');
     radioButtons.forEach(radio => {
-        radio.checked = false; 
+        radio.checked = false;
     });
 
     const priceDisplay = document.getElementById(`calculated-price-${id}`);
     const quantityDisplay = document.getElementById(`quantity-${id}`);
-    
+
     if (priceDisplay) {
-        priceDisplay.textContent = "0"; 
+        priceDisplay.textContent = "0";
     }
-    
+
     if (quantityDisplay) {
-        quantityDisplay.textContent = "1"; 
+        quantityDisplay.textContent = "1";
     }
     document.getElementById(`mySidenav-${id}`).style.width = "0";
     document.getElementById(`overlay-${id}`).style.display = "none";
@@ -822,15 +822,15 @@ function showSlides(id) {
 }
 
 
-function updateFavoriteUI() {    
+function updateFavoriteUI() {
     const favoriteLinks = document.querySelectorAll('.product__item__pic__hover li a');
     const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-    
+
     favoriteLinks.forEach(link => {
         const productId = parseInt(link.getAttribute('onclick').match(/(\d+)/)[0], 10);
-        
+
         console.log(`Product ID: ${productId}, Is Favorite: ${favorites.includes(productId)}`);
-        
+
         if (favorites.includes(productId)) {
             link.classList.add('favorite');
         } else {
@@ -858,10 +858,10 @@ function toggleFavorite(productId) {
 
     if (isFavorite) {
         favorites.splice(productIndex, 1);
-        showToast('Removed from favorites', 'success'); 
+        showToast('Removed from favorites', 'success');
     } else {
         favorites.push(productId);
-        showToast('Added to favorites', 'success'); 
+        showToast('Added to favorites', 'success');
     }
 
     localStorage.setItem('favorites', JSON.stringify(favorites));
@@ -876,18 +876,18 @@ function loadFavorites() {
     const emptyFavoritesMessage = document.getElementById('emptyFavoritesMessage');
 
     if (favorites.length === 0) {
-        favoritesList.innerHTML = '';  
+        favoritesList.innerHTML = '';
         if (emptyFavoritesMessage) {
-            emptyFavoritesMessage.style.display = 'block';  
+            emptyFavoritesMessage.style.display = 'block';
         }
     } else {
-        emptyFavoritesMessage.style.display = 'none'; 
-    favoritesList.innerHTML = '';
+        emptyFavoritesMessage.style.display = 'none';
+        favoritesList.innerHTML = '';
 
-    favorites.forEach(id => {
-        const product = products.find(p => p.id === id);
-        if (product) {
-            favoritesList.innerHTML += `
+        favorites.forEach(id => {
+            const product = products.find(p => p.id === id);
+            if (product) {
+                favoritesList.innerHTML += `
                 <div class="Wish-list-main">
                     <div class="Wish-list-img">
                         <img src="${product.image}" alt="${product.name}">
@@ -900,15 +900,15 @@ function loadFavorites() {
                     <div class="Wish-list-close" onclick="removeFavorite(${id})">&times;</div>
                 </div>
             `;
-        }
-    });
-}
+            }
+        });
+    }
 }
 function removeFavorite(productId) {
     let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
     favorites = favorites.filter(id => id !== productId);
     localStorage.setItem('favorites', JSON.stringify(favorites));
-    showToast(`WishList Removed Successfully`,'success');
+    showToast(`WishList Removed Successfully`, 'success');
     updateFavoriteCount();
     loadFavorites();
     updateFavoriteUI(productId);
@@ -934,12 +934,10 @@ window.onload = function () {
 };
 
 
-
 $(document).ready(function() {
-    // Function to create Bootstrap carousel
     function createBootstrapCarousel(items, carouselId) {
         const carouselContainer = document.getElementById(carouselId);
-        carouselContainer.innerHTML = ''; // Clear the existing content
+        carouselContainer.innerHTML = ''; 
 
         items.forEach((item, index) => {
             const carouselItem = document.createElement('div');
@@ -958,10 +956,9 @@ $(document).ready(function() {
         });
     }
 
-    // Function to create Owl carousel
     function createOwlCarousel(items) {
         const carouselContainer = document.getElementById('owl-carousel-items');
-        carouselContainer.innerHTML = ''; // Clear the existing content
+        carouselContainer.innerHTML = ''; 
 
         items.forEach(item => {
             const carouselItem = document.createElement('div');
@@ -1010,11 +1007,11 @@ $(document).ready(function() {
         });
     }
 
-    // Call the functions to initialize the carousels
     createBootstrapCarousel(Bannerwebimages, 'carousel-items-webview');
     createBootstrapCarousel(Bannermobimages, 'carousel-items-mobileview');
     createOwlCarousel(categoryItems);
 });
+
 
 
 var content = '';
@@ -1029,6 +1026,6 @@ $(document).ready(function () {
     });
 });
 
-$('#exampleModalCenter .modal-body').html(content); 
+$('#exampleModalCenter .modal-body').html(content);
 
 
