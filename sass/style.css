@@ -2071,6 +2071,26 @@ body {
   scrollbar-color: green #f1f1f1;
 }
 
+body {
+  overflow-x: hidden;
+}
+
+.webview {
+  display: none;
+}
+
+.mobileview {
+  display: block;
+}
+
+@media (min-width: 1024px) {
+  .webview {
+    display: block;
+  }
+  .mobileview {
+    display: none;
+  }
+}
 /*---------------------
   Breadcrumb
 -----------------------*/
