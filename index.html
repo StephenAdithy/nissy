@@ -102,7 +102,10 @@
             <!-- Second Swiper -->
             <div class="col-lg-12 bannerhero">
                 <div id="bootstrapCarousel" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner" id="carousel-items-bootstrap">
+                    <div class="carousel-inner webview" id="carousel-items-webview">
+                        <!-- Dynamic content for Bootstrap Carousel -->
+                    </div>
+                    <div class="carousel-inner mobileview" id="carousel-items-mobileview">
                         <!-- Dynamic content for Bootstrap Carousel -->
                     </div>
                     <a class="carousel-control-prev" href="#bootstrapCarousel" role="button" data-slide="prev">
@@ -150,6 +153,7 @@
                             <li><a data-category="Haircare">Hair Care</a></li>
                             <li><a data-category="COMBO PACK">Special Combo</a></li>
                             <li><a data-category="HEALTHY SNACKS">Healthy Snacks</a></li>
+                            <li><a data-category="Napkin">Napkin</a></li>
                         </ul>
                     </div>
                 </div>
@@ -306,6 +310,9 @@
                     <div class="footer__about">
                         <div class="footer__about__logo">
                             <a href="./index.html"><img src="img/Nissy/Logo.png" alt=""></a>
+                            <a href="./index.html">
+                                <img src="img/products/fssai.jpg" alt="" style="width: 90px;">
+                              </a>
                         </div>
                         <ul>
                             <li>155 ZYON COTTAGE,KOTTAKULAM - 627805.TENKASI DIST</li>
@@ -458,5 +465,24 @@
 }
 .owl-carousel .owl-dot.active {
     background: green !important; 
+}
+body {
+    overflow-x: hidden;
+}
+
+.webview{
+    display: none;
+}
+
+.mobileview{
+    display: block;
+}
+@media (min-width: 1024px) {
+    .webview{
+    display: block;
+}
+.mobileview{
+    display: none;
+}
 }
 </style>
