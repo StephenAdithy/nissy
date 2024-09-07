@@ -7,7 +7,7 @@ const products = [
         category: 'Malt',
         description: 'ABC Malt—a delicious and nutritious blend made from Apple, Beetroot, Carrot, Almonds, and Cashews. Crafted with care, our malt is 100% natural and homemade, with no preservatives, chemicals, or white sugar. Enjoy the wholesome goodness of pure ingredients in every spoonful, perfect for those who value health and taste.',
         weightOptions: ['1L', '250ml', '500ml'],
-        images: ['img/products/abc1.jpg', 'img/products/abc 2.jpg', 'img/products/abc 3.jpg'],
+        images: ['img/products/abc1.jpg', 'img/products/abc2.jpg', 'img/products/abc3.jpg'],
         availability: "In Stock",
         shipping: "2 - 3 days shipping (Free Shipping).",
         weightDetail: "0.5 kg",
@@ -16,8 +16,8 @@ const products = [
         information: "TO MAKE A DELICIOUS NISSY ABC MALT:\n\n• Take 1-2 teaspoons of NISSY ABC malt mix to your mug.\n• Pour 200 ml of milk either hot or cold.\n• Stir well and enjoy it.\n(Don’t boil it along with milk.)\n\nHEALTH BENEFITS:\n\n• Encourage healthy brain growth\n• Enhances your memory power.\n• Promises to heal the gut well\n• Helps maintain the glow of the skin.\n• Beneficial for both skin and hair\n• Regulating your blood pressure",
         productImage: [
             "img/products/abc1.jpg",
-            "img/products/abc 2.jpg",
-            "img/products/abc 3.jpg",
+            "img/products/abc2.jpg",
+            "img/products/abc3.jpg",
             "img/products/Untitled design.png",
         ],
         weights: [
@@ -39,7 +39,6 @@ const products = [
         shipping: "2 - 3 days shipping (Free Shipping).",
         weightDetail: "0.5 kg",
         rate: " ₹ 270.00-₹ 1000.00",
-        selfLife: '2 months',
         productdescription: "INGREDIENTS:\n\nBeetroot, Jaggery powder, Cashew, Almond and Elachi\n\nSHELF LIFE: 6 months",
         information: "TO MAKE A DELICIOUS NISSY BEETROOT MALT:\n\n• Take 1-2 teaspoons of NISSY Beetroot malt mix to your mug\n• Pour 200 ml of milk either hot or cold\n• Stir well and enjoy it.\n• Don’t boil it along with milk.\n\nHEALTH BENEFITS:\n\n• It increases hemoglobin.\n• Very suitable for pregnant women and children\n• Boosts immunity and stamina\n• Helps keep the skin glowing\n• Keeps blood pressure and sugar levels under control",
         productImage: [
@@ -58,23 +57,22 @@ const products = [
         id: 2,
         name: 'Carrot Malt',
         price: '₹ 320.00 - ₹ 11300', 
-        image: 'img/products/Carrot1.jpg',
+        image: 'img/products/carrot1.jpg',
         category: 'Malt',
         description: 'Discover the vibrant flavors of our Carrot Malt, a nourishing blend made from Carrot, Jaggery powder, Cashew, Almond, and Elachi. Our malt is 100% natural and homemade, free from preservatives, chemicals, and white sugar. Indulge in a wholesome, delicious treat that brings together the pure goodness of nature in every sip.',
         weightOptions: ['1L', '250ml', '500ml'],
-        images: ['img/products/Carrot1.jpg', 'img/products/Carrot2.jpg', 'img/products/Carrot3.jpg'],
+        images: ['img/products/carrot1.jpg', 'img/products/carrot2.jpg', 'img/products/carrot3.jpg'],
         availability: "In Stock",
         shipping: "2 - 3 days shipping (Free Shipping).",
         weightDetail: "0.5 kg",
         rate: '₹ 320.00 - ₹ 1200',
-        selfLife: '1 months',
         productdescription: "INGREDIENTS:\n\nCarrot, Jaggery powder, Cashew, Almond and Elachi\n\nSHELF LIFE: 6 months",
         information: "TO MAKE A DELICIOUS NISSY CARROT MALT:\n\n• Take 1-2 teaspoons of NISSY CARROT malt mix to your mug\n• Pour 200 ml of milk either hot or cold\n• Stir well and enjoy it.\n• Don’t boil it along with milk.\n\nHEALTH BENEFITS:\n\n• Enhances the EyeSight.\n• Promotes Hair Growth.\n• Manages Blood Pressure.\n• Helps to attain Glowing Skin.\n• Naturally Detoxifies the body.",
         productImage: [
-            "img/products/Carrot1.jpg",
-            "img/products/Carrot2.jpg",
-            "img/products/Carrot3.jpg",
-            "img/products/Carrot1.jpg",
+            "img/products/carrot1.jpg",
+            "img/products/carrot2.jpg",
+            "img/products/carrot3.jpg",
+            "img/products/carrot4.jpg",
         ],
         weights: [
             { id: "weight1", value: "1KG", label: "1KG", price: 1130 },
@@ -90,7 +88,7 @@ const products = [
         category: 'Baby Food',
         description: 'Our Baby Cereal is a nourishing blend made from Rice, Almonds, Yellow Moong dhal, Bengal gram dhal, Split gram dhal, and Urad dhal. Carefully crafted at home, this cereal is 100% natural and free from preservatives, chemicals, and white sugar. It’s the perfect first food for your 6-month-old, providing wholesome nutrition that you can trust.',
         weightOptions: ['1L', '250ml', '500ml'],
-        images: ['img/products/cereal1.jpg', 'img/products/cereal2.jpg','img/products/cereal3.jpg'],
+        images: ['img/products/Cereal1.jpg', 'img/products/Cereal2.jpg','img/products/Cereal3.jpg'],
         availability: "In Stock",
         shipping: "2 - 3 days shipping (Free Shipping).",
         weightDetail: "0.5 kg",
@@ -100,10 +98,9 @@ const products = [
         information: "TO MAKE A DELICIOUS BABY CEREAL:\n\n• Take about 100ml of water into the bowl.\n• Add 1 or 2 scoops of NISSY Baby Cereal as needed and mix it well.\n• Place it on the stove and heat it till it becomes a paste.\n• Stir and feed the baby using a clean spoon.\n\nBENEFITS:\n\n• Rich in fiber, carbohydrates, protein, calcium, and magnesium.\n• Improves the growth of the brain and bones.\n• Boosts immunity and helps to gain weight.",
         productImage: [
             "img/products/cereal.jpg",
-            "img/products/cereal1.jpg",
-            "img/products/cereal2.jpg",
-            "img/products/cereal3.jpg",
-            "img/products/cereal.jpg"
+            "img/products/Cereal1.jpg",
+            "img/products/Cereal2.jpg",
+            "img/products/Cereal3.jpg"
         ],
         weights: [
             { id: "weight1", value: "1KG", label: "1KG", price: 1050 },
@@ -114,11 +111,11 @@ const products = [
     {
         id: 4,
         name: 'NUTRITIONAL ENERGY DRINK MIX',
-        price: '₹ 250.00 - ₹ 850', image: 'img/products/nutrimix0.jpg',
+        price: '₹ 249.00 - ₹ 799', image: 'img/products/nutrimix0.jpg',
         category: 'NATURAL PROTEIN POWDER',
         description: 'Boost your daily protein intake with our Nutritional Energy Drink Mix, a natural protein powder crafted from Almonds, Cashew, Pistachio, Bengal gram, Green gram, Soybeans, Black gram, Barley, and Country Sugar.Homemade and 100% natural, this mix contains no preservatives, chemicals, or white sugar. It is designed to fulfill your daily protein needs and is suitable for anyone over the age of 1. Enjoy the wholesome benefits of this nutrient-rich blend, crafted to support a healthy and active lifestyle for all age groups.',
         weightOptions: ['1L', '250ml', '500ml'],
-        images: ['img/products/nutrimix1.jpg', 'img/products/Nutrimix2.jpg','img/products/Nutrimix3.jpg'],
+        images: ['img/products/nutrimix1.jpg', 'img/products/nutrimix2.jpg','img/products/nutrimix3.jpg'],
         availability: "In Stock",
         shipping: "2 - 3 days shipping (Free Shipping).",
         weightDetail: "0.5 kg",
@@ -129,14 +126,14 @@ const products = [
         productImage: [
             "img/products/nutrimix0.jpg",
             "img/products/nutrimix1.jpg",
-            "img/products/Nutrimix2.jpg",
-            "img/products/Nutrimix3.jpg",
+            "img/products/nutrimix2.jpg",
+            "img/products/nutrimix3.jpg",
             "img/products/nutrimix0.jpg"
         ],
         weights: [
-            { id: "weight1", value: "1KG", label: "1KG", price: 850 },
-            { id: "weight2", value: "250GM", label: "250GM", price: 250 },
-            { id: "weight3", value: "500GM", label: "500GM", price: 450 }
+            { id: "weight1", value: "1KG", label: "1KG", price: 799 },
+            { id: "weight2", value: "250GM", label: "250GM", price: 249 },
+            { id: "weight3", value: "500GM", label: "500GM", price: 449 }
         ],
     },
     {
@@ -146,7 +143,7 @@ const products = [
         category: 'NATURAL PROTEIN POWDER',
         description: 'Elevate your health with our Nutritional Energy Drink Mix for Diabetes. This nutrient-rich mix is designed to meet your daily protein needs, helping to prevent weight loss, boost energy, strengthen bones, and enrich the immune system. Crafted with care, it contains no preservatives, chemicals, or white sugar. Homemade and 100% natural, our mix is suitable for individuals of all ages, offering a natural and effective way to support overall health and vitality. Enjoy the benefits of pure, wholesome nutrition with every serving.',
         weightOptions: ['1L', '250ml', '500ml'],
-        images: ['img/products/diabetes2.jpg', 'img/products/diabetes3.jpg', 'img/products/diabetes4.jpg'],
+        images: ['img/products/diabetes1.jpg', 'img/products/diabetes2.jpg', 'img/products/diabetes3.jpg'],
         availability: "In Stock",
         shipping: "2 - 3 days shipping (Free Shipping).",
         weightDetail: "0.5 kg",
@@ -286,7 +283,7 @@ const products = [
         name: 'ENERGY BALLS',
         price: '₹ 280.00 - ₹ 1250',
         image: 'img/products/balls4.jpg',
-        category: 'HEALTHY SNACKS',
+        category: 'Energy Balls',
         description: 'Enjoy a delicious and nutritious snack with our Energy Balls, crafted from a wholesome blend of Almonds, Cashews, Peanuts, Black Dates, and Poppy Seeds. These treats are completely free from preservatives, chemicals, and white sugar, with no added country sugar.\n\nPerfect as a healthy snack for babies or a crunchy treat for anyone, our Energy Balls provide a natural and satisfying crunch. Ideal for those seeking a wholesome and tasty snack option that’s as good for you as it is enjoyable.',
         weightOptions: ['1L', '250ml', '500ml'],
         images: ['img/products/balls1.jpg', 'img/products/balls2.jpg','img/products/balls3.jpg'],
@@ -335,9 +332,9 @@ const products = [
             
         ],
         weights: [
-            { id: "weight1", value: "1125GM", label: "1225KG", price: 1250 },
-            { id: "weight2", value: "225GM", label: "225GM", price: 280 },
-            { id: "weight3", value: "550GM", label: "550GM", price: 510 }
+            { id: "weight1", value: "500GM", label: "500GM", price: 1250 },
+            // { id: "weight2", value: "2pack", label: "2pack", price: 280 },
+            // { id: "weight3", value: "3pack", label: "3pack", price: 510 }
         ],
     },
 
@@ -364,9 +361,9 @@ const products = [
             
         ],
         weights: [
-            { id: "weight1", value: "1125GM", label: "1225KG", price: 1250 },
-            { id: "weight2", value: "225GM", label: "225GM", price: 280 },
-            { id: "weight3", value: "550GM", label: "550GM", price: 510 }
+            { id: "weight1", value: "500GM", label: "500GM", price: 1250 }
+            // { id: "weight2", value: "225GM", label: "225GM", price: 280 },
+            // { id: "weight3", value: "550GM", label: "550GM", price: 510 }
         ],
     },
 
@@ -384,7 +381,7 @@ const products = [
         weightDetail: "0.5 kg",
         rate: " ₹ 400.00",
         selfLife: '2 months',
-        productdescription: "COMBO PACK-1:\n\n BEETROOT MALT - 250GM,\n NUTRITIONAL ENERGY DRINK MIX - 250GM.\n\n SHELF LIFE: 6 months.",
+        productdescription: "COMBO PACK-2:\n\n BEETROOT MALT - 250GM,\n NUTRITIONAL ENERGY DRINK MIX - 250GM.\n\n SHELF LIFE: 6 months.",
         information: "TO MAKE A DELICIOUS NISSY MIX:\n\n • Take 1-2 teaspoons of NISSY malt mix to your mug.\n • Pour 200 ml of milk, either hot or cold.\n • Stir well and enjoy it.\n • Do not boil it along with milk.",
         productImage: [
             "img/products/COMBOPACK2.jpg",
@@ -393,46 +390,81 @@ const products = [
             
         ],
         weights: [
-            { id: "weight1", value: "1125GM", label: "1225KG", price: 1250 },
-            { id: "weight2", value: "225GM", label: "225GM", price: 280 },
-            { id: "weight3", value: "550GM", label: "550GM", price: 510 }
+            { id: "weight1", value: "500GM", label: "500GM", price: 1250 }
+            // { id: "weight2", value: "225GM", label: "225GM", price: 280 },
+            // { id: "weight3", value: "550GM", label: "550GM", price: 510 }
         ],
     },
 
     {
         id: 14,
-        name: 'COMBO-4',
+        name: 'COMBO-3',
+        name: 'COMBO-3',
         price: '₹ 280.00 - ₹ 1250',
-        image: 'img/Nissy/Newimages/4.jpg',
-        category: 'HEALTHY SNACKS',
-        description: 'Enjoy a delicious and nutritious snack with our Energy Balls, crafted from a wholesome blend of Almonds, Cashews, Peanuts, Black Dates, and Poppy Seeds. These treats are completely free from preservatives, chemicals, and white sugar, with no added country sugar.\n\nPerfect as a healthy snack for babies or a crunchy treat for anyone, our Energy Balls provide a natural and satisfying crunch. Ideal for those seeking a wholesome and tasty snack option that’s as good for you as it is enjoyable.',
+        image: 'img/products/COMBOPACK3.jpg',
+        category: 'COMBO PACK',
+        description: 'Boost your daily protein intake with our Nutritional Energy Drink Mix, a natural protein powder crafted from Almonds, Cashew, Pistachio, Bengal gram, Green gram, Soybeans, Black gram, Barley, and Country Sugar.Homemade and 100% natural, this mix contains no preservatives, chemicals, or white sugar. It is designed to fulfill your daily protein needs and is suitable for anyone over the age of 1. Enjoy the wholesome benefits of this nutrient-rich blend, crafted to support a healthy and active lifestyle for all age groups.\n\n Elevate your health with our Nutritional Energy Drink Mix for Diabetes. This nutrient-rich mix is designed to meet your daily protein needs, helping to prevent weight loss, boost energy, strengthen bones, and enrich the immune system. Crafted with care, it contains no preservatives, chemicals, or white sugar. Homemade and 100% natural, our mix is suitable for individuals of all ages, offering a natural and effective way to support overall health and vitality. Enjoy the benefits of pure, wholesome nutrition with every serving.',
         weightOptions: ['1L', '250ml', '500ml'],
-        images: ['img/Nissy/Newimages/3.jpg', 'img/Nissy/Newimages/6.jpg','img/Nissy/Newimages/1.jpg'],
+        images: ['img/products/COMBOPACK3.jpg', 'img/products/nutrimix1.jpg','img/products/diabetes1.jpg'],
         availability: "out of Stock",
         shipping: "2 - 3 days shipping (Free Shipping).",
         weightDetail: "0.5 kg",
         rate: " ₹ 400.00",
         selfLife: '2 months',
-        productdescription: "INGREDIENTS:\n\nAlmond, Cashew, Peanut, Black Dates, Poppy Seeds\n\nSHELF LIFE: 20 days",
-        information: "HEALTH BENEFITS:\n\n• Helps increase hemoglobin.\n• Boosts energy and blood flow.\n• Provides necessary protein for cell growth in the body.\n• Reduces the amount of bad cholesterol.\n• Enhances digestive health.\n• Helps to avoid diabetes and high blood pressure.",
+        productdescription: "COMBO PACK-3:\n\n NUTRITIONAL ENERGY DRINK MIX - 250GM,\n NUTRITIONAL ENERGY DRINK MIX FOR DIABETES - 200GM.\n\n SHELF LIFE: 6 months.",
+        information: "TO MAKE A DELICIOUS NUTRITIONAL ENERGY DRINK MIX:\n\n• Add 1-2 teaspoons of NISSY ENERGY DRINK MIX to your mug\n• Pour 200ml of hot milk\n• Stir well and enjoy it\n\nHEALTH BENEFITS:\n\n• Rich in protein\n• Boosts energy and strength\n• Strengthens the bones and nerves\n• Relieves joint and knee pains\n• Promotes heart health\n• Increases metabolism level\n• Improves stamina & endurance\n• Strengthens muscle fibers\n• Enriches the immune system\n• Ensures healthy brain function\n• Blood sugar control",
         productImage: [
-            "img/product/details/product-details-1.jpg",
-            "img/product/details/thumb-4.jpg",
-            "img/product/details/thumb-2.jpg",
-            "img/product/details/thumb-3.jpg",
-            "img/product/details/thumb-4.jpg"
+            "img/products/COMBOPACK3.jpg",
+            "img/products/nutrimix1.jpg",
+            "img/products/diabetes1.jpg"
+            
         ],
         weights: [
-            { id: "weight1", value: "1125GM", label: "1225KG", price: 1250 },
-            { id: "weight2", value: "225GM", label: "225GM", price: 280 },
-            { id: "weight3", value: "550GM", label: "550GM", price: 510 }
+            { id: "weight1", value: "500GM", label: "500GM", price: 450 }
+            // { id: "weight2", value: "225GM", label: "225GM", price: 280 },
+            // { id: "weight3", value: "550GM", label: "550GM", price: 510 }
         ],
     },
-    // Add more products as needed
+    {
+        id: 14,
+        name: 'COMBO-3',
+        price: '₹ 280.00 - ₹ 1250',
+        image: 'img/products/COMBOPACK3.jpg',
+        category: 'Napkin',
+        description: 'Boost your daily protein intake with our Nutritional Energy Drink Mix, a natural protein powder crafted from Almonds, Cashew, Pistachio, Bengal gram, Green gram, Soybeans, Black gram, Barley, and Country Sugar.Homemade and 100% natural, this mix contains no preservatives, chemicals, or white sugar. It is designed to fulfill your daily protein needs and is suitable for anyone over the age of 1. Enjoy the wholesome benefits of this nutrient-rich blend, crafted to support a healthy and active lifestyle for all age groups.\n\n Elevate your health with our Nutritional Energy Drink Mix for Diabetes. This nutrient-rich mix is designed to meet your daily protein needs, helping to prevent weight loss, boost energy, strengthen bones, and enrich the immune system. Crafted with care, it contains no preservatives, chemicals, or white sugar. Homemade and 100% natural, our mix is suitable for individuals of all ages, offering a natural and effective way to support overall health and vitality. Enjoy the benefits of pure, wholesome nutrition with every serving.',
+        weightOptions: ['1L', '250ml', '500ml'],
+        images: ['img/products/COMBOPACK3.jpg', 'img/products/nutrimix1.jpg','img/products/diabetes1.jpg'],
+        availability: "out of Stock",
+        shipping: "2 - 3 days shipping (Free Shipping).",
+        weightDetail: "0.5 kg",
+        rate: " ₹ 400.00",
+        selfLife: '2 months',
+        productdescription: "COMBO PACK-3:\n\n NUTRITIONAL ENERGY DRINK MIX - 250GM,\n NUTRITIONAL ENERGY DRINK MIX FOR DIABETES - 200GM.\n\n SHELF LIFE: 6 months.",
+        information: "TO MAKE A DELICIOUS NUTRITIONAL ENERGY DRINK MIX:\n\n• Add 1-2 teaspoons of NISSY ENERGY DRINK MIX to your mug\n• Pour 200ml of hot milk\n• Stir well and enjoy it\n\nHEALTH BENEFITS:\n\n• Rich in protein\n• Boosts energy and strength\n• Strengthens the bones and nerves\n• Relieves joint and knee pains\n• Promotes heart health\n• Increases metabolism level\n• Improves stamina & endurance\n• Strengthens muscle fibers\n• Enriches the immune system\n• Ensures healthy brain function\n• Blood sugar control",
+        productImage: [
+            "img/products/COMBOPACK3.jpg",
+            "img/products/nutrimix1.jpg",
+            "img/products/diabetes1.jpg"
+            
+        ],
+        weights: [
+            { id: "weight1", value: "500GM", label: "500GM", price: 450 }
+            // { id: "weight2", value: "225GM", label: "225GM", price: 280 },
+            // { id: "weight3", value: "550GM", label: "550GM", price: 510 }
+        ],
+    },
 ];
 
 
-const Bannerimages = [
+const Bannerwebimages = [
+    { src: "img/banner/nbanner1.png", alt: "First slide",category: "Malt", },
+    { src: "img/banner/nbanner2.png", alt: "Second slide" , category: "Baby Food",},
+    { src: "img/banner/nbanner3.png", alt: "Third slide" , category: "SKIN CARE",},
+    { src: "img/banner/nbanner4.png", alt: "Fourth slide", category: "NATURAL PROTEIN POWDER" },
+    { src: "img/banner/nbanner5.png", alt: "Fifth slide", category: "Malt" }
+];
+
+const Bannermobimages = [
     { src: "img/banner/herobanner1.jpg", alt: "First slide",category: "Malt", },
     { src: "img/banner/herobanner2.jpg", alt: "Second slide" , category: "Baby Food",},
     { src: "img/banner/herobanner3.jpg", alt: "Third slide" , category: "SKIN CARE",},
@@ -444,10 +476,11 @@ const categoryItems = [
     { src: "img/Category/3.jpg", category: "Malt", alt: "Malt" },
     { src: "img/Category/Me.jpg", category: "Baby Food", alt: "Baby Food" },
     { src: "img/Category/2.jpg", category: "SKIN CARE", alt: "Skin Care" },
-    { src: "img/Category/1.jpg", category: "NATURAL PROTEIN POWDER", alt: "Natural Protien Powder" },
-    { src: "img/Category/2.jpg", category: "Haircare", alt: "Haircare" },
+    { src: "img/Category/1.jpg", category: "Haircare", alt: "Haircare" },
+    { src: "img/Category/1.jpg", category: "Haircare", alt: "Haircare" },
     { src: "img/products/maltcombo.jpg", category: "COMBO PACK", alt: "COMBO PACK" },
-    { src: "img/Category/3.jpg", category: "HEALTHY SNACKS", alt: "HEALTHY SNACKS" },
+    { src: "img/products/balls4.jpg", category: "Energy Balls", alt: "Energy Balls" },
+    { src: "img/products/balls4.jpg", category: "Energy Balls", alt: "Energy Balls" },
 ];
 
 
@@ -645,11 +678,11 @@ function addToCart(productId, selectedWeight, quantity, pricePerUnit) {
     }
 
     localStorage.setItem('cart', JSON.stringify(cart));
+    showToast('Item added in your cart!','success');
 
     updateCartCount();
     closeNav(productId);
 
-    showToast('Item added in your cart!','success');
 }
 
 
@@ -903,14 +936,15 @@ window.onload = function () {
 
 
 $(document).ready(function() {
-    function createBootstrapCarousel(items) {
-        const carouselContainer = document.getElementById('carousel-items-bootstrap');
-        carouselContainer.innerHTML = ''; 
+    // Function to create Bootstrap carousel
+    function createBootstrapCarousel(items, carouselId) {
+        const carouselContainer = document.getElementById(carouselId);
+        carouselContainer.innerHTML = ''; // Clear the existing content
 
         items.forEach((item, index) => {
             const carouselItem = document.createElement('div');
             carouselItem.className = `carousel-item ${index === 0 ? 'active' : ''}`;
-            
+
             const imgElement = document.createElement('img');
             imgElement.addEventListener('click', () => {
                 window.location.href = `shop-grid.html?category=${item.category}`;
@@ -918,20 +952,21 @@ $(document).ready(function() {
             imgElement.className = 'd-block w-100 h-500';
             imgElement.src = item.src;
             imgElement.alt = item.alt;
-            
+
             carouselItem.appendChild(imgElement);
             carouselContainer.appendChild(carouselItem);
         });
     }
 
+    // Function to create Owl carousel
     function createOwlCarousel(items) {
         const carouselContainer = document.getElementById('owl-carousel-items');
-        carouselContainer.innerHTML = ''; 
+        carouselContainer.innerHTML = ''; // Clear the existing content
 
         items.forEach(item => {
             const carouselItem = document.createElement('div');
             carouselItem.className = 'item';
-            
+
             const imgElement = document.createElement('img');
             imgElement.className = 'sect1 mb-4';
             imgElement.src = item.src;
@@ -942,6 +977,7 @@ $(document).ready(function() {
             imgElement.addEventListener('click', function() {
                 window.location.href = `shop-grid.html?category=${item.category}`;
             });
+
             carouselItem.appendChild(imgElement);
             carouselContainer.appendChild(carouselItem);
         });
@@ -974,9 +1010,12 @@ $(document).ready(function() {
         });
     }
 
-    createBootstrapCarousel(Bannerimages);
+    // Call the functions to initialize the carousels
+    createBootstrapCarousel(Bannerwebimages, 'carousel-items-webview');
+    createBootstrapCarousel(Bannermobimages, 'carousel-items-mobileview');
     createOwlCarousel(categoryItems);
 });
+
 
 var content = '';
 

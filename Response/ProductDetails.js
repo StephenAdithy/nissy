@@ -83,7 +83,6 @@ function loadProductDetails(id) {
         infoList.querySelector("li:nth-child(1) span").innerText = 0;
         infoList.querySelector("li:nth-child(2) span").innerText = product.availability;
         infoList.querySelector("li:nth-child(3) span").innerHTML = product.shipping;
-        infoList.querySelector("li:nth-child(4) span").innerText = product.selfLife;
     }
 }
 
@@ -208,6 +207,10 @@ function handleAddToCart(productId) {
 
     if (product) {
         addToCart(productId, selectedWeight, quantity, pricePerUnit);
+        let selectedWeightElement = document.querySelector("input[name='weight']:checked");
+    if (selectedWeightElement) {
+        selectedWeightElement.checked = false;
+    }
     } else {
         console.error('Product not found');
     }

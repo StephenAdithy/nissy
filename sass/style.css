@@ -2071,6 +2071,26 @@ body {
   scrollbar-color: green #f1f1f1;
 }
 
+body {
+  overflow-x: hidden;
+}
+
+.webview {
+  display: none;
+}
+
+.mobileview {
+  display: block;
+}
+
+@media (min-width: 1024px) {
+  .webview {
+    display: block;
+  }
+  .mobileview {
+    display: none;
+  }
+}
 /*---------------------
   Breadcrumb
 -----------------------*/
@@ -2132,6 +2152,7 @@ body {
   color: #1c1c1c;
   line-height: 39px;
   display: block;
+  cursor: pointer;
 }
 .sidebar__item .latest-product__text {
   position: relative;
@@ -2594,6 +2615,7 @@ body {
   padding: 16px 28px 14px;
   margin-right: 6px;
   margin-bottom: 5px;
+  cursor: pointer;
 }
 .product__details__text .heart-icon {
   display: inline-block;
